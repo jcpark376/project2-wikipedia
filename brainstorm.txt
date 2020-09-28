@@ -1,0 +1,10 @@
+Output: for a given wikipedia article, how many non-English articles exist?
+
+Potential features
+-Is this a location? <span id="coordinates"> exists for most locations
+-Length of article
+-Number of links
+-How many images
+-How many references
+-Date of the initial creation
+-Number of headings in table of contents
