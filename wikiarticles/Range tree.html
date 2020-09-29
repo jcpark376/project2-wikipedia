@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Range tree - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"2ba6a0c2-a2ee-487c-9e72-14ca664fc92d","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Range_tree","wgTitle":"Range tree","wgCurRevisionId":958651927,"wgRevisionId":958651927,"wgArticleId":14514547,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Trees (data structures)","Geometric data structures"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Range_tree","wgRelevantArticleId":14514547,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q818944"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":
+"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<link href="//en.m.wikipedia.org/wiki/Range_tree" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Range_tree&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Range_tree&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Range_tree" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Range_tree rootpage-Range_tree skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Range tree</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><table class="infobox" style="width:22em"><tbody><tr><th colspan="2" style="text-align:center;font-size:125%;font-weight:bold">Range tree</th></tr><tr><th scope="row"><a href="/wiki/List_of_data_structures" title="List of data structures">Type</a></th><td>tree</td></tr><tr><th scope="row">Invented</th><td>1979</td></tr><tr><th scope="row">Invented by</th><td><a class="mw-redirect" href="/wiki/Jon_Louis_Bentley" title="Jon Louis Bentley">Jon Louis Bentley</a></td></tr><tr><th colspan="2" style="text-align:center"><a href="/wiki/Time_complexity" title="Time complexity">Time complexity</a> in <a href="/wiki/Big_O_notation" title="Big O notation">big O notation</a></th></tr><tr><td colspan="2" style="text-align:center"><table class="infobox" style="padding:0;border:none;margin:auto;width:auto;min-width:100%;font-size:100%;clear:none;float:none;background-color:transparent"><tbody><tr><th scope="row" style="white-space:nowrap;">Algorithm</th><td>
+</td><td>
+<b>Average</b></td><td>
+<b>Worst case</b></td></tr><tr><th scope="row" style="white-space:nowrap;">Space</th><td>
+</td><td>
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log ^{d-1}n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log ^{d-1}n)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(n\log ^{d-1}n)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a35f590b482e5c2772ac500016102d1d829200e" style="vertical-align: -0.838ex; width:13.311ex; height:3.176ex;"/></span></td><td>
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log ^{d-1}n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log ^{d-1}n)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(n\log ^{d-1}n)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a35f590b482e5c2772ac500016102d1d829200e" style="vertical-align: -0.838ex; width:13.311ex; height:3.176ex;"/></span></td></tr><tr><th scope="row" style="white-space:nowrap;">Search</th><td>
+</td><td>
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d}n+k)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(\log ^{d}n+k)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9312fe5a8de4d58497ddcac118796736c2d06629" style="vertical-align: -0.838ex; width:13.48ex; height:3.176ex;"/></span></td><td>
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d}n+k)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(\log ^{d}n+k)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9312fe5a8de4d58497ddcac118796736c2d06629" style="vertical-align: -0.838ex; width:13.48ex; height:3.176ex;"/></span></td></tr></tbody></table></td></tr></tbody></table>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, a <b>range tree</b> is an <a class="mw-redirect" href="/wiki/Ordered_tree_data_structure" title="Ordered tree data structure">ordered tree</a> <a href="/wiki/Data_structure" title="Data structure">data structure</a> to hold a list of points. It allows all points within a given range to be <a class="mw-redirect" href="/wiki/Range_query" title="Range query">reported</a> efficiently, and is typically used in two or higher dimensions. Range trees were introduced by <a class="mw-redirect" href="/wiki/Jon_Louis_Bentley" title="Jon Louis Bentley">Jon Louis Bentley</a> in 1979.<sup class="reference" id="cite_ref-Bentley79_1-0"><a href="#cite_note-Bentley79-1">[1]</a></sup> Similar data structures were discovered independently by Lueker,<sup class="reference" id="cite_ref-Lueker78_2-0"><a href="#cite_note-Lueker78-2">[2]</a></sup> Lee and Wong,<sup class="reference" id="cite_ref-LeeWong80_3-0"><a href="#cite_note-LeeWong80-3">[3]</a></sup> and Willard.<sup class="reference" id="cite_ref-Willard79_4-0"><a href="#cite_note-Willard79-4">[4]</a></sup>
+The range tree is an alternative to the <a href="/wiki/K-d_tree" title="K-d tree"><i>k</i>-d tree</a>. Compared to <i>k</i>-d trees, range trees offer faster query times of (in <a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a>) <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d}n+k)}</annotation>
+</semantics>
+</math></span><img alt="O(\log^dn+k)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9312fe5a8de4d58497ddcac118796736c2d06629" style="vertical-align: -0.838ex; width:13.48ex; height:3.176ex;"/></span> but worse storage of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log ^{d-1}n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log ^{d-1}n)}</annotation>
+</semantics>
+</math></span><img alt="O(n\log^{d-1} n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a35f590b482e5c2772ac500016102d1d829200e" style="vertical-align: -0.838ex; width:13.311ex; height:3.176ex;"/></span>, where <i>n</i> is the number of points stored in the tree, <i>d</i> is the dimension of each point and <i>k</i> is the number of points reported by a given query.
+</p><p><a href="/wiki/Bernard_Chazelle" title="Bernard Chazelle">Bernard Chazelle</a> improved this to query time <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d-1}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d-1}n+k)}</annotation>
+</semantics>
+</math></span><img alt="O(\log^{d-1} n + k)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d8ec3b35521f0bff4c75d53f8181797721d7f513" style="vertical-align: -0.838ex; width:15.58ex; height:3.176ex;"/></span> and space complexity <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O\left(n\left({\frac {\log n}{\log \log n}}\right)^{d-1}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>n</mi>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+</mrow>
+<mrow>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O\left(n\left({\frac {\log n}{\log \log n}}\right)^{d-1}\right)}</annotation>
+</semantics>
+</math></span><img alt="O\left(n\left(\frac{\log n}{\log\log n}\right)^{d-1}\right)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/85b11376867cb32e5050caecac9ad8985a2e3418" style="vertical-align: -3.171ex; width:22.799ex; height:7.509ex;"/></span>.<sup class="reference" id="cite_ref-Chazelle90_1_5-0"><a href="#cite_note-Chazelle90_1-5">[5]</a></sup><sup class="reference" id="cite_ref-Chazelle90_2_6-0"><a href="#cite_note-Chazelle90_2-6">[6]</a></sup>
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Data_structure"><span class="tocnumber">1</span> <span class="toctext">Data structure</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operations"><span class="tocnumber">2</span> <span class="toctext">Operations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Construction"><span class="tocnumber">2.1</span> <span class="toctext">Construction</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Range_queries"><span class="tocnumber">2.2</span> <span class="toctext">Range queries</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Data_structure">Data structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=1" title="Edit section: Data structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:442px;"><a class="image" href="/wiki/File:1-dimensional-range-tree.svg"><img alt="An example of a 1-dimensional range tree." class="thumbimage" data-file-height="142" data-file-width="604" decoding="async" height="103" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/1-dimensional-range-tree.svg/440px-1-dimensional-range-tree.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/1-dimensional-range-tree.svg/660px-1-dimensional-range-tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/1-dimensional-range-tree.svg/880px-1-dimensional-range-tree.svg.png 2x" width="440"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:1-dimensional-range-tree.svg" title="Enlarge"></a></div>An example of a 1-dimensional range tree. Each node which is not a leaf stores the maximum value in its left subtree.</div></div></div>
+<p>A range tree on a set of 1-dimensional points is a balanced <a href="/wiki/Binary_search_tree" title="Binary search tree">binary search tree</a> on those points. The points stored in the tree are stored in the leaves of the tree; each internal node stores the largest value contained in its left subtree.
+A range tree on a set of points in <i>d</i>-dimensions is a <a href="/wiki/Recursive_data_type" title="Recursive data type">recursively defined</a> multi-level <a href="/wiki/Binary_search_tree" title="Binary search tree">binary search tree</a>. Each level of the data structure is a binary search tree on one of the <i>d</i>-dimensions.
+The first level is a binary search tree on the first of the <i>d</i>-coordinates. Each vertex <i>v</i> of this tree contains an associated structure that is a (<i>d</i>−1)-dimensional range tree on the last (<i>d</i>−1)-coordinates of the points stored in the subtree of <i>v</i>.
+</p>
+<h2><span class="mw-headline" id="Operations">Operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=2" title="Edit section: Operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Construction">Construction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=3" title="Edit section: Construction">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A 1-dimensional range tree on a set of <i>n</i> points is a binary search tree, which can be constructed in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(n\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1" style="vertical-align: -0.838ex; width:10.118ex; height:2.843ex;"/></span> time. Range trees in higher dimensions are constructed recursively by constructing a balanced binary search tree on the first coordinate of the points, and then, for each vertex <i>v</i> in this tree, constructing a (<i>d</i>−1)-dimensional range tree on the points contained in the subtree of <i>v</i>. Constructing a range tree this way would require <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log ^{d}n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log ^{d}n)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(n\log ^{d}n)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c081c8af02814b7a0807c486f03ead35d9aebcc" style="vertical-align: -0.838ex; width:11.21ex; height:3.176ex;"/></span> time.
+</p><p>This construction time can be improved for 2-dimensional range trees to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(n\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1" style="vertical-align: -0.838ex; width:10.118ex; height:2.843ex;"/></span>.<sup class="reference" id="cite_ref-DutchBook3E_7-0"><a href="#cite_note-DutchBook3E-7">[7]</a></sup>
+Let <i>S</i> be a set of <i>n</i> 2-dimensional points. If <i>S</i> contains only one point, return a leaf containing that point. Otherwise, construct the associated structure of <i>S</i>, a 1-dimensional range tree on the <i>y</i>-coordinates of the points in <i>S</i>. Let <i>x</i><sub>m</sub> be the median <i>x</i>-coordinate of the points. Let <i>S</i><sub>L</sub> be the set of points with <i>x</i>-coordinate less than or equal to <i>x</i><sub>m</sub> and let <i>S</i><sub>R</sub> be the set of points with <i>x</i>-coordinate greater than <i>x</i><sub>m</sub>. Recursively construct <i>v</i><sub>L</sub>, a 2-dimensional range tree on <i>S</i><sub>L</sub>, and <i>v</i><sub>R</sub>, a 2-dimensional range tree on <i>S</i><sub>R</sub>. Create a vertex <i>v</i> with left-child <i>v</i><sub>L</sub> and right-child <i>v</i><sub>R</sub>.
+If we sort the points by their <i>y</i>-coordinates at the start of the algorithm, and maintain this ordering when splitting the points by their <i>x</i>-coordinate, we can construct the associated structures of each subtree in linear time.
+This reduces the time to construct a 2-dimensional range tree to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(n\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1" style="vertical-align: -0.838ex; width:10.118ex; height:2.843ex;"/></span>, and also reduces the time to construct a <i>d</i>-dimensional range tree to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log ^{d-1}n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log ^{d-1}n)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(n\log ^{d-1}n)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a35f590b482e5c2772ac500016102d1d829200e" style="vertical-align: -0.838ex; width:13.311ex; height:3.176ex;"/></span>.
+</p>
+<h3><span class="mw-headline" id="Range_queries">Range queries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=4" title="Edit section: Range queries">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:1-dimensional-range-query.svg"><img alt="A 1-dimensional range query." class="thumbimage" data-file-height="201" data-file-width="261" decoding="async" height="169" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/1-dimensional-range-query.svg/220px-1-dimensional-range-query.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/1-dimensional-range-query.svg/330px-1-dimensional-range-query.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/1-dimensional-range-query.svg/440px-1-dimensional-range-query.svg.png 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:1-dimensional-range-query.svg" title="Enlarge"></a></div>A 1-dimensional range query [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>]. Points stored in the subtrees shaded in gray will be reported. find(<i>x</i><sub>1</sub>) and find(<i>x</i><sub>2</sub>) will be reported if they are inside the query interval.</div></div></div>
+<p>A <a href="/wiki/Range_query_(data_structures)" title="Range query (data structures)">range query</a> on a range tree reports the set of points that lie inside a given interval. To report the points that lie in the interval [<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>], we start by searching for <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub>. At some vertex in the tree, the search paths to <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> will diverge. Let <i>v</i><sub>split</sub> be the last vertex that these two search paths have in common. For every vertex <i>v</i> in the search path from <i>v</i><sub>split</sub> to <i>x</i><sub>1</sub>, if the value stored at <i>v</i> is greater than <i>x</i><sub>1</sub>, report every point in the right-subtree of <i>v</i>. If <i>v</i> is a leaf, report the value stored at <i>v</i> if it is inside the query interval.  Similarly, reporting all of the points stored in the left-subtrees of the vertices with values less than <i>x</i><sub>2</sub> along the search path from <i>v</i><sub>split</sub> to <i>x</i><sub>2</sub>, and report the leaf of this path if it lies within the query interval.
+</p><p>Since the range tree is a balanced binary tree, the search paths to <i>x</i><sub>1</sub> and <i>x</i><sub>2</sub> have length <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/aae0f22048ba6b7c05dbae17b056bfa16e21807d" style="vertical-align: -0.838ex; width:8.336ex; height:2.843ex;"/></span>. Reporting all of the points stored in the subtree of a vertex can be done in linear time using any <a href="/wiki/Tree_traversal" title="Tree traversal">tree traversal</a> algorithm. It follows that the time to perform a range query is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log n+k)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(\log n+k)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1a7c999f07c8c2b6ba6e06e8532628f7e1c097b6" style="vertical-align: -0.838ex; width:12.388ex; height:2.843ex;"/></span>, where <i>k</i> is the number of points in the query interval.
+</p><p>Range queries in <i>d</i>-dimensions are similar. Instead of reporting all of the points stored in the subtrees of the search paths, perform a (<i>d</i>−1)-dimensional range query on the associated structure of each subtree. Eventually, a 1-dimensional range query will be performed and the correct points will be reported. Since a <i>d</i>-dimensional query consists of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/aae0f22048ba6b7c05dbae17b056bfa16e21807d" style="vertical-align: -0.838ex; width:8.336ex; height:2.843ex;"/></span> (<i>d</i>−1)-dimensional range queries, it follows that the time required to perform a <i>d</i>-dimensional range query is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d}n+k)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(\log ^{d}n+k)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9312fe5a8de4d58497ddcac118796736c2d06629" style="vertical-align: -0.838ex; width:13.48ex; height:3.176ex;"/></span>, where <i>k</i> is the number of points in the query interval. This can be reduced to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\log ^{d-1}n+k)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>log</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>d</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo>+</mo>
+<mi>k</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\log ^{d-1}n+k)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle O(\log ^{d-1}n+k)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d8ec3b35521f0bff4c75d53f8181797721d7f513" style="vertical-align: -0.838ex; width:15.58ex; height:3.176ex;"/></span> using a variant of <a href="/wiki/Fractional_cascading" title="Fractional cascading">fractional cascading</a>.<sup class="reference" id="cite_ref-Lueker78_2-1"><a href="#cite_note-Lueker78-2">[2]</a></sup><sup class="reference" id="cite_ref-Willard79_4-1"><a href="#cite_note-Willard79-4">[4]</a></sup><sup class="reference" id="cite_ref-DutchBook3E_7-1"><a href="#cite_note-DutchBook3E-7">[7]</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/K-d_tree" title="K-d tree"><i>k</i>-d tree</a></li>
+<li><a href="/wiki/Segment_tree" title="Segment tree">Segment tree</a></li>
+<li><a href="/wiki/Range_searching" title="Range searching">Range searching</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Bentley79-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bentley79_1-0">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFBentley1979">Bentley, J. L. (1979). <a class="external text" href="http://www.dtic.mil/get-tr-doc/pdf?AD=ADA061627" rel="nofollow">"Decomposable searching problems"</a>. <i>Information Processing Letters</i>. <b>8</b> (5): 244–251. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2F0020-0190%2879%2990117-0" rel="nofollow">10.1016/0020-0190(79)90117-0</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Information+Processing+Letters&amp;rft.atitle=Decomposable+searching+problems&amp;rft.volume=8&amp;rft.issue=5&amp;rft.pages=244-251&amp;rft.date=1979&amp;rft_id=info%3Adoi%2F10.1016%2F0020-0190%2879%2990117-0&amp;rft.aulast=Bentley&amp;rft.aufirst=J.+L.&amp;rft_id=http%3A%2F%2Fwww.dtic.mil%2Fget-tr-doc%2Fpdf%3FAD%3DADA061627&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-Lueker78-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Lueker78_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Lueker78_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFLueker1978">Lueker, G. S. (1978). "A data structure for orthogonal range queries". <i>19th Annual Symposium on Foundations of Computer Science (sfcs 1978)</i>. pp. 28–21. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1109%2FSFCS.1978.1" rel="nofollow">10.1109/SFCS.1978.1</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=A+data+structure+for+orthogonal+range+queries&amp;rft.btitle=19th+Annual+Symposium+on+Foundations+of+Computer+Science+%28sfcs+1978%29&amp;rft.pages=28-21&amp;rft.date=1978&amp;rft_id=info%3Adoi%2F10.1109%2FSFCS.1978.1&amp;rft.aulast=Lueker&amp;rft.aufirst=G.+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-LeeWong80-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-LeeWong80_3-0">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFLeeWong1980">Lee, D. T.; Wong, C. K. (1980). "Quintary trees: A file structure for multidimensional database systems". <i>ACM Transactions on Database Systems</i>. <b>5</b> (3): 339. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1145%2F320613.320618" rel="nofollow">10.1145/320613.320618</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+Transactions+on+Database+Systems&amp;rft.atitle=Quintary+trees%3A+A+file+structure+for+multidimensional+database+systems&amp;rft.volume=5&amp;rft.issue=3&amp;rft.pages=339&amp;rft.date=1980&amp;rft_id=info%3Adoi%2F10.1145%2F320613.320618&amp;rft.aulast=Lee&amp;rft.aufirst=D.+T.&amp;rft.au=Wong%2C+C.+K.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-Willard79-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Willard79_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Willard79_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation techreport cs1" id="CITEREFWillard">Willard, Dan E. <i>The super-</i>b<i>-tree algorithm</i> (Technical report). Cambridge, MA: Aiken Computer Lab, Harvard University. TR-03-79.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=The+super-b-tree+algorithm&amp;rft.place=Cambridge%2C+MA&amp;rft.pub=Aiken+Computer+Lab%2C+Harvard+University&amp;rft.aulast=Willard&amp;rft.aufirst=Dan+E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-Chazelle90_1-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Chazelle90_1_5-0">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFChazelle1990">Chazelle, Bernard (1990). <a class="external text" href="http://www.cs.princeton.edu/~chazelle/pubs/LBOrthoRangeSearchReporting.pdf" rel="nofollow">"Lower Bounds for Orthogonal Range Searching: I. The Reporting Case"</a> <span class="cs1-format">(PDF)</span>. <i>ACM</i>. <b>37</b>: 200–212.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM&amp;rft.atitle=Lower+Bounds+for+Orthogonal+Range+Searching%3A+I.+The+Reporting+Case&amp;rft.volume=37&amp;rft.pages=200-212&amp;rft.date=1990&amp;rft.aulast=Chazelle&amp;rft.aufirst=Bernard&amp;rft_id=http%3A%2F%2Fwww.cs.princeton.edu%2F~chazelle%2Fpubs%2FLBOrthoRangeSearchReporting.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-Chazelle90_2-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Chazelle90_2_6-0">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFChazelle1990">Chazelle, Bernard (1990). <a class="external text" href="http://www.cs.princeton.edu/~chazelle/pubs/LBOrthoRangeSearchArithmetic.pdf" rel="nofollow">"Lower Bounds for Orthogonal Range Searching: II. The Arithmetic Model"</a> <span class="cs1-format">(PDF)</span>. <i>ACM</i>. <b>37</b>: 439–463.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM&amp;rft.atitle=Lower+Bounds+for+Orthogonal+Range+Searching%3A+II.+The+Arithmetic+Model&amp;rft.volume=37&amp;rft.pages=439-463&amp;rft.date=1990&amp;rft.aulast=Chazelle&amp;rft.aufirst=Bernard&amp;rft_id=http%3A%2F%2Fwww.cs.princeton.edu%2F~chazelle%2Fpubs%2FLBOrthoRangeSearchArithmetic.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-DutchBook3E-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-DutchBook3E_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-DutchBook3E_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFde_BergCheongvan_KreveldOvermars2008">de Berg, Mark; Cheong, Otfried; van Kreveld, Marc; Overmars, Mark (2008). <i>Computational Geometry</i>. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1007%2F978-3-540-77974-2" rel="nofollow">10.1007/978-3-540-77974-2</a>. <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-3-540-77973-5" title="Special:BookSources/978-3-540-77973-5"><bdi>978-3-540-77973-5</bdi></a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computational+Geometry&amp;rft.date=2008&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-540-77974-2&amp;rft.isbn=978-3-540-77973-5&amp;rft.aulast=de+Berg&amp;rft.aufirst=Mark&amp;rft.au=Cheong%2C+Otfried&amp;rft.au=van+Kreveld%2C+Marc&amp;rft.au=Overmars%2C+Mark&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARange+tree"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Range_tree&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="https://www.cgal.org/Manual/latest/doc_html/cgal_manual/SearchStructures/Chapter_main.html" rel="nofollow">Range and Segment Trees</a> in <a href="/wiki/CGAL" title="CGAL">CGAL</a>, the  Computational Geometry Algorithms Library.</li>
+<li><a class="external text" href="http://www.cs.uu.nl/docs/vakken/ga/2019/slides/slides5b.pdf" rel="nofollow">Lecture 8: Range Trees</a>, Marc van Kreveld.</li>
+<li><a class="external text" href="https://github.com/syhlalala/PAM/tree/master/range_query" rel="nofollow">Range Trees</a> using <a href="/wiki/PAM_library" title="PAM library">PAM</a>, the parallel augmented map library.</li></ul>
+<div aria-labelledby="Tree_data_structures" class="navbox" role="navigation" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:CS_trees" title="Template:CS trees"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:CS_trees" title="Template talk:CS trees"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:CS_trees&amp;action=edit"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Edit this template">e</abbr></a></li></ul></div><div id="Tree_data_structures" style="font-size:114%;margin:0 4em"><a href="/wiki/Tree_(data_structure)" title="Tree (data structure)">Tree data structures</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Search_tree" title="Search tree">Search trees</a><br/>(<a href="/wiki/Set_(abstract_data_type)" title="Set (abstract data type)">dynamic sets</a>/<a href="/wiki/Associative_array" title="Associative array">associative arrays</a>)</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/2%E2%80%933_tree" title="2–3 tree">2–3</a></li>
+<li><a href="/wiki/2%E2%80%933%E2%80%934_tree" title="2–3–4 tree">2–3–4</a></li>
+<li><a href="/wiki/AA_tree" title="AA tree">AA</a></li>
+<li><a href="/wiki/(a,b)-tree" title="(a,b)-tree">(a,b)</a></li>
+<li><a href="/wiki/AVL_tree" title="AVL tree">AVL</a></li>
+<li><a href="/wiki/B-tree" title="B-tree">B</a></li>
+<li><a href="/wiki/B%2B_tree" title="B+ tree">B+</a></li>
+<li><a class="mw-redirect" href="/wiki/B*-tree" title="B*-tree">B*</a></li>
+<li><a href="/wiki/Bx-tree" title="Bx-tree">B<sup>x</sup></a></li>
+<li>(<a href="/wiki/Optimal_binary_search_tree" title="Optimal binary search tree">Optimal</a>) <a href="/wiki/Binary_search_tree" title="Binary search tree">Binary search</a></li>
+<li><a href="/wiki/Dancing_tree" title="Dancing tree">Dancing</a></li>
+<li><a href="/wiki/HTree" title="HTree">HTree</a></li>
+<li><a href="/wiki/Interval_tree" title="Interval tree">Interval</a></li>
+<li><a href="/wiki/Order_statistic_tree" title="Order statistic tree">Order statistic</a></li>
+<li>(<a href="/wiki/Left-leaning_red%E2%80%93black_tree" title="Left-leaning red–black tree">Left-leaning</a>) <a href="/wiki/Red%E2%80%93black_tree" title="Red–black tree">Red–black</a></li>
+<li><a href="/wiki/Scapegoat_tree" title="Scapegoat tree">Scapegoat</a></li>
+<li><a href="/wiki/Splay_tree" title="Splay tree">Splay</a></li>
+<li><a href="/wiki/T-tree" title="T-tree">T</a></li>
+<li><a href="/wiki/Treap" title="Treap">Treap</a></li>
+<li><a href="/wiki/UB-tree" title="UB-tree">UB</a></li>
+<li><a href="/wiki/Weight-balanced_tree" title="Weight-balanced tree">Weight-balanced</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Heap_(data_structure)" title="Heap (data structure)">Heaps</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Binary_heap" title="Binary heap">Binary</a></li>
+<li><a href="/wiki/Binomial_heap" title="Binomial heap">Binomial</a></li>
+<li><a href="/wiki/Brodal_queue" title="Brodal queue">Brodal</a></li>
+<li><a href="/wiki/Fibonacci_heap" title="Fibonacci heap">Fibonacci</a></li>
+<li><a href="/wiki/Leftist_tree" title="Leftist tree">Leftist</a></li>
+<li><a href="/wiki/Pairing_heap" title="Pairing heap">Pairing</a></li>
+<li><a href="/wiki/Skew_heap" title="Skew heap">Skew</a></li>
+<li><a href="/wiki/Van_Emde_Boas_tree" title="Van Emde Boas tree">van Emde Boas</a></li>
+<li><a href="/wiki/Weak_heap" title="Weak heap">Weak</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Trie" title="Trie">Tries</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ctrie" title="Ctrie">Ctrie</a></li>
+<li><a href="/wiki/C-trie" title="C-trie">C-trie (compressed ADT)</a></li>
+<li><a href="/wiki/Hash_tree_(persistent_data_structure)" title="Hash tree (persistent data structure)">Hash</a></li>
+<li><a href="/wiki/Radix_tree" title="Radix tree">Radix</a></li>
+<li><a href="/wiki/Suffix_tree" title="Suffix tree">Suffix</a></li>
+<li><a href="/wiki/Ternary_search_tree" title="Ternary search tree">Ternary search</a></li>
+<li><a href="/wiki/X-fast_trie" title="X-fast trie">X-fast</a></li>
+<li><a href="/wiki/Y-fast_trie" title="Y-fast trie">Y-fast</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a class="mw-redirect" href="/wiki/Spatial_index" title="Spatial index">Spatial</a> data partitioning trees</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ball_tree" title="Ball tree">Ball</a></li>
+<li><a href="/wiki/BK-tree" title="BK-tree">BK</a></li>
+<li><a class="mw-redirect" href="/wiki/BSP_tree" title="BSP tree">BSP</a></li>
+<li><a href="/wiki/Cartesian_tree" title="Cartesian tree">Cartesian</a></li>
+<li><a href="/wiki/Hilbert_R-tree" title="Hilbert R-tree">Hilbert R</a></li>
+<li><a href="/wiki/K-d_tree" title="K-d tree"><i>k</i>-d</a> (<a href="/wiki/Implicit_k-d_tree" title="Implicit k-d tree">implicit <i>k</i>-d</a>)</li>
+<li><a href="/wiki/M-tree" title="M-tree">M</a></li>
+<li><a href="/wiki/Metric_tree" title="Metric tree">Metric</a></li>
+<li><a class="mw-redirect" href="/wiki/MVP_tree" title="MVP tree">MVP</a></li>
+<li><a href="/wiki/Octree" title="Octree">Octree</a></li>
+<li><a href="/wiki/Priority_R-tree" title="Priority R-tree">Priority R</a></li>
+<li><a href="/wiki/Quadtree" title="Quadtree">Quad</a></li>
+<li><a href="/wiki/R-tree" title="R-tree">R</a></li>
+<li><a href="/wiki/R%2B_tree" title="R+ tree">R+</a></li>
+<li><a href="/wiki/R*_tree" title="R* tree">R*</a></li>
+<li><a href="/wiki/Segment_tree" title="Segment tree">Segment</a></li>
+<li><a href="/wiki/Vantage-point_tree" title="Vantage-point tree">VP</a></li>
+<li><a href="/wiki/X-tree" title="X-tree">X</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Other trees</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cover_tree" title="Cover tree">Cover</a></li>
+<li><a href="/wiki/Exponential_tree" title="Exponential tree">Exponential</a></li>
+<li><a href="/wiki/Fenwick_tree" title="Fenwick tree">Fenwick</a></li>
+<li><a href="/wiki/Finger_tree" title="Finger tree">Finger</a></li>
+<li><a href="/wiki/Fractal_tree_index" title="Fractal tree index">Fractal tree index</a></li>
+<li><a href="/wiki/Fusion_tree" title="Fusion tree">Fusion</a></li>
+<li><a href="/wiki/Hash_calendar" title="Hash calendar">Hash calendar</a></li>
+<li><a href="/wiki/IDistance" title="IDistance">iDistance</a></li>
+<li><a class="mw-redirect" href="/wiki/K-ary_tree" title="K-ary tree">K-ary</a></li>
+<li><a href="/wiki/Left-child_right-sibling_binary_tree" title="Left-child right-sibling binary tree">Left-child right-sibling</a></li>
+<li><a href="/wiki/Link/cut_tree" title="Link/cut tree">Link/cut</a></li>
+<li><a href="/wiki/Log-structured_merge-tree" title="Log-structured merge-tree">Log-structured merge</a></li>
+<li><a href="/wiki/Merkle_tree" title="Merkle tree">Merkle</a></li>
+<li><a href="/wiki/PQ_tree" title="PQ tree">PQ</a></li>
+<li><a class="mw-selflink selflink">Range</a></li>
+<li><a href="/wiki/SPQR_tree" title="SPQR tree">SPQR</a></li>
+<li><a href="/wiki/Top_tree" title="Top tree">Top</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw2325
+Cached time: 20200922183031
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.256 seconds
+Real time usage: 0.752 seconds
+Preprocessor visited node count: 794/1000000
+Post‐expand include size: 29334/2097152 bytes
+Template argument size: 241/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 28837/5000000 bytes
+Lua time usage: 0.110/10.000 seconds
+Lua memory usage: 3.3 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  643.841      1 -total
+ 64.95%  418.146      1 Template:Reflist
+ 59.94%  385.909      4 Template:Cite_journal
+ 21.92%  141.114      1 Template:Infobox_data_structure
+ 18.39%  118.405      1 Template:Infobox
+ 11.81%   76.021      1 Template:CS-Trees
+ 10.52%   67.740      1 Template:Navbox
+  6.99%   44.997      1 Template:Infobox3cols
+  1.48%    9.517      2 Template:Cite_book
+  1.00%    6.468      1 Template:Cite_techreport
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:14514547-0!canonical!math=5 and timestamp 20200922183031 and revision id 958651927
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Range_tree&amp;oldid=958651927">https://en.wikipedia.org/w/index.php?title=Range_tree&amp;oldid=958651927</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Trees_(data_structures)" title="Category:Trees (data structures)">Trees (data structures)</a></li><li><a href="/wiki/Category:Geometric_data_structures" title="Category:Geometric data structures">Geometric data structures</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Range+tree" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Range+tree" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Range_tree" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Range_tree" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Range_tree">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Range_tree&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Range_tree&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Range_tree" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Range_tree" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Range_tree&amp;oldid=958651927" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Range_tree&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Range_tree&amp;id=958651927&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q818944" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Range_tree&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Range_tree&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-de"><a class="interlanguage-link-target" href="https://de.wikipedia.org/wiki/Bereichsbaum" hreflang="de" lang="de" title="Bereichsbaum – German">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a class="interlanguage-link-target" href="https://fa.wikipedia.org/wiki/%D8%AF%D8%B1%D8%AE%D8%AA_%D9%85%D8%AD%D8%AF%D9%88%D8%AF%D9%87" hreflang="fa" lang="fa" title="درخت محدوده – Persian">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a class="interlanguage-link-target" href="https://fr.wikipedia.org/wiki/Arbre_de_port%C3%A9e" hreflang="fr" lang="fr" title="Arbre de portée – French">Français</a></li></ul>
+<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q818944#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 25 May 2020, at 00:39<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Range_tree&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.256","walltime":"0.752","ppvisitednodes":{"value":794,"limit":1000000},"postexpandincludesize":{"value":29334,"limit":2097152},"templateargumentsize":{"value":241,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":28837,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  643.841      1 -total"," 64.95%  418.146      1 Template:Reflist"," 59.94%  385.909      4 Template:Cite_journal"," 21.92%  141.114      1 Template:Infobox_data_structure"," 18.39%  118.405      1 Template:Infobox"," 11.81%   76.021      1 Template:CS-Trees"," 10.52%   67.740      1 Template:Navbox","  6.99%   44.997      1 Template:Infobox3cols","  1.48%    9.517      2 Template:Cite_book","  1.00%    6.468      1 Template:Cite_techreport"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"10.000"},"limitreport-memusage":{"value":3456291,"limit":52428800}},"cachereport":{"origin":"mw2325","timestamp":"20200922183031","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Range tree","url":"https:\/\/en.wikipedia.org\/wiki\/Range_tree","sameAs":"http:\/\/www.wikidata.org\/entity\/Q818944","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q818944","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-12-01T19:35:59Z","dateModified":"2020-05-25T00:39:50Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":128,"wgHostname":"mw2363"});});</script>
+</body></html>
