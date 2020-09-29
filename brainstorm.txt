@@ -8,3 +8,4 @@ Potential features
 -How many references
 -Date of the initial creation
 -Number of headings in table of contents
+-Does it contain US state names?

@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Stretched grid method - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"14f4b307-1a91-49bf-9684-d754fd22cb51","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Stretched_grid_method","wgTitle":"Stretched grid method","wgCurRevisionId":970789518,"wgRevisionId":970789518,"wgArticleId":33932698,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from June 2017","All articles needing additional references","Mesh generation","Numerical differential equations"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Stretched_grid_method","wgRelevantArticleId"
+:33932698,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q7623487"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":
+"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<link href="//en.m.wikipedia.org/wiki/Stretched_grid_method" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Stretched_grid_method&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Stretched_grid_method&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Stretched_grid_method" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Stretched_grid_method rootpage-Stretched_grid_method skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Stretched grid method</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a class="image" href="/wiki/File:Question_book-new.svg"><img alt="" data-file-height="399" data-file-width="512" decoding="async" height="39" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" width="50"/></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Stretched_grid_method&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Referencing_for_beginners" title="Help:Referencing for beginners">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br/><small><span class="plainlinks"><i>Find sources:</i> <a class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Stretched+grid+method%22" rel="nofollow">"Stretched grid method"</a> – <a class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Stretched+grid+method%22+-wikipedia" rel="nofollow">news</a> <b>·</b> <a class="external text" href="//www.google.com/search?&amp;q=%22Stretched+grid+method%22+site:news.google.com/newspapers&amp;source=newspapers" rel="nofollow">newspapers</a> <b>·</b> <a class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Stretched+grid+method%22+-wikipedia" rel="nofollow">books</a> <b>·</b> <a class="external text" href="//scholar.google.com/scholar?q=%22Stretched+grid+method%22" rel="nofollow">scholar</a> <b>·</b> <a class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Stretched+grid+method%22&amp;acc=on&amp;wc=on" rel="nofollow">JSTOR</a></span></small></span> <small class="date-container"><i>(<span class="date">June 2017</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>The <b>stretched grid method</b> (<b>SGM</b>) is a <a href="/wiki/Numerical_analysis" title="Numerical analysis">numerical technique</a> for finding approximate solutions of various mathematical and engineering problems that can be related to an elastic grid behavior.
+In particular, meteorologists use the stretched grid method for weather prediction<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> and engineers use the stretched grid method to design tents and other <a href="/wiki/Tensile_structure" title="Tensile structure">tensile structures</a>.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#FEM_and_BEM_mesh_refinement"><span class="tocnumber">1</span> <span class="toctext">FEM and BEM mesh refinement</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Minimum_surface_problem_solution"><span class="tocnumber">2</span> <span class="toctext">Minimum surface problem solution</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Tensile_fabric_structures_form_finding"><span class="tocnumber">3</span> <span class="toctext">Tensile fabric structures form finding</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Unfolding_problem_and_cutting_pattern_generation"><span class="tocnumber">4</span> <span class="toctext">Unfolding problem and cutting pattern generation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="FEM_and_BEM_mesh_refinement">FEM and BEM mesh refinement</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=1" title="Edit section: FEM and BEM mesh refinement">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In recent decades the <a href="/wiki/Finite_element_method" title="Finite element method">finite element</a> and <a href="/wiki/Boundary_element_method" title="Boundary element method">boundary element methods</a> (FEM and BEM) have become a mainstay for industrial engineering design and analysis. Increasingly larger and more complex designs are being simulated using the FEM or BEM. However, some problems of FEM and BEM  engineering analysis are still on the cutting edge. The first problem is a reliability of engineering analysis that strongly depends upon the quality of initial data generated at the pre-processing stage. It is known that automatic element <a href="/wiki/Mesh_generation" title="Mesh generation">mesh generation</a> techniques at this stage have become commonly used tools for the analysis of complex real-world models.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> With FEM and BEM increasing in  popularity comes the incentive to improve automatic meshing algorithms. However, all of these algorithms can create distorted and even unusable grid elements. Several techniques exist which can take an existing mesh and improve its quality. For instance <a href="/wiki/Smoothing" title="Smoothing">smoothing</a> (also referred to as <a class="mw-redirect" href="/wiki/Mesh_refinement" title="Mesh refinement">mesh refinement</a>) is one such method, which repositions nodal locations, so as to minimize element distortion. The Stretched Grid Method (SGM) allows the obtaining of pseudo-regular meshes very easily and quickly in a one-step solution(see <sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>).
+</p><p>Let one assume that there is an arbitrary triangle grid embedded into plane polygonal single-coherent contour and produced by an automeshing procedure (see fig. 1) It may be assumed further that the grid considered as a physical nodal system is distorted by a number of distortions. It is supposed that the total potential energy of this system is proportional to the length of some <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ n}</annotation>
+</semantics>
+</math></span><img alt="\ n" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaf8b0f621a23f81aa20d63b5cd59d3dcad83ccb" style="vertical-align: -0.338ex; width:1.975ex; height:1.676ex;"/></span>-dimensional vector with all network segments as its components.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Grid_inside.jpg"><img alt="" class="thumbimage" data-file-height="325" data-file-width="398" decoding="async" height="180" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grid_inside.jpg/220px-Grid_inside.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grid_inside.jpg/330px-Grid_inside.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/3/3b/Grid_inside.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Grid_inside.jpg" title="Enlarge"></a></div>Fig. 1 A triangle grid bounded by plane polygonal single-coherent contour</div></div></div>
+<p>Thus, the potential energy takes the following form
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Pi =D\sum _{j=1}^{n}{R_{j}}^{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Π<!-- Π --></mi>
+<mo>=</mo>
+<mi>D</mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Pi =D\sum _{j=1}^{n}{R_{j}}^{2}}</annotation>
+</semantics>
+</math></span><img alt="\Pi =D\sum _{{j=1}}^{n}{R_{j}}^{2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5cdc2d74891bcf7076ed18f5c31a738dfb862816" style="vertical-align: -3.338ex; width:14.623ex; height:7.176ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ n}</annotation>
+</semantics>
+</math></span><img alt="\ n" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaf8b0f621a23f81aa20d63b5cd59d3dcad83ccb" style="vertical-align: -0.338ex; width:1.975ex; height:1.676ex;"/></span> - total number of segments in the network,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ R_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ R_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ R_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8e20fbe66f00da8acc9f0aeebd28bac30c0667f0" style="vertical-align: -1.005ex; width:3.254ex; height:2.843ex;"/></span> - The length of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ D}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>D</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ D}</annotation>
+</semantics>
+</math></span><img alt="\ D" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/48383587167b826b6d844b78dfb16e6c4ecd9aa5" style="vertical-align: -0.338ex; width:2.505ex; height:2.176ex;"/></span> - an arbitrary constant.</li></ul>
+<p>The length of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span> may be expressed by two nodal co-ordinates as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ R={\sqrt {(X_{12}-X_{11})^{2}+(X_{22}-X_{21})^{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>R</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>12</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>11</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>21</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</msqrt>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ R={\sqrt {(X_{12}-X_{11})^{2}+(X_{22}-X_{21})^{2}}}}</annotation>
+</semantics>
+</math></span><img alt="\ R={\sqrt  {(X_{{12}}-X_{{11}})^{2}+(X_{{22}}-X_{{21}})^{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/21f3d3184e12197bbc63be8b9071c28b89536ce4" style="vertical-align: -1.671ex; width:37.217ex; height:4.843ex;"/></span></dd></dl>
+<p>It may also be supposed that co-ordinate vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4978f130955f50bc5bc2bc5c4e3e8d080e8a4622" style="vertical-align: -0.838ex; width:4.886ex; height:2.843ex;"/></span> of all nodes is associated with non-distorted network and co-ordinate vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X'\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msup>
+<mi>X</mi>
+<mo>′</mo>
+</msup>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X'\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\ X'\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7aff3715d1e16c52d00ff97dfd2fe4c1b96961ec" style="vertical-align: -0.838ex; width:5.587ex; height:3.009ex;"/></span> is associated with the distorted network. The expression for vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4978f130955f50bc5bc2bc5c4e3e8d080e8a4622" style="vertical-align: -0.838ex; width:4.886ex; height:2.843ex;"/></span> may be written as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X\}=\{\ X'\}+\{\Delta \ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msup>
+<mi>X</mi>
+<mo>′</mo>
+</msup>
+<mo fence="false" stretchy="false">}</mo>
+<mo>+</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X\}=\{\ X'\}+\{\Delta \ X\}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \{\ X\}=\{\ X'\}+\{\Delta \ X\}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4af0e3f61bcee87d3945d8872060453e4ac20a9c" style="vertical-align: -0.838ex; width:23.233ex; height:3.009ex;"/></span></dd></dl>
+<p>The vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4978f130955f50bc5bc2bc5c4e3e8d080e8a4622" style="vertical-align: -0.838ex; width:4.886ex; height:2.843ex;"/></span> determination is related to minimization of the quadratic form <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \Pi }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi mathvariant="normal">Π<!-- Π --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \Pi }</annotation>
+</semantics>
+</math></span><img alt="\ \Pi " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3309c8d5a6b9d4643256b90ce920d8a1d699d640" style="vertical-align: -0.338ex; width:2.324ex; height:2.176ex;"/></span> by incremental vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\Delta \ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\Delta \ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\Delta \ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5b98c0a1fbd848f7c1962b7ab3fb3e8723cb4945" style="vertical-align: -0.838ex; width:6.821ex; height:2.843ex;"/></span>, i.e.
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\frac {\partial \Pi }{\partial \Delta X_{kl}}}=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<mi mathvariant="normal">Π<!-- Π --></mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\frac {\partial \Pi }{\partial \Delta X_{kl}}}=0}</annotation>
+</semantics>
+</math></span><img alt="{\frac  {\partial \Pi }{\partial \Delta X_{{kl}}}}=0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf12b9b94c08def32e8955cb52dde7ded41dcfff" style="vertical-align: -2.338ex; width:11.854ex; height:5.843ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ l}</annotation>
+</semantics>
+</math></span><img alt="\ l" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bb1795cab06ab852289d136914a38f87d5ad25ca" style="vertical-align: -0.338ex; width:1.274ex; height:2.176ex;"/></span> - is the number of interior node of the area,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ k}</annotation>
+</semantics>
+</math></span><img alt="\ k" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c682e4c73906031c21d3ec3951990a6111eeacb6" style="vertical-align: -0.338ex; width:1.792ex; height:2.176ex;"/></span> - the number of co-ordinate</li></ul>
+<p>After all transformations we may write the following two independent systems of linear algebraic equations
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]\{\Delta X_{1}\}=\{\ B_{1}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]\{\Delta X_{1}\}=\{\ B_{1}\}}</annotation>
+</semantics>
+</math></span><img alt="[\ A]\{\Delta X_{1}\}=\{\ B_{1}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/915700b2b6e320327e9451e3cda424431d11e4c3" style="vertical-align: -0.838ex; width:19.679ex; height:2.843ex;"/></span></dd>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]\{\Delta X_{2}\}=\{\ B_{2}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]\{\Delta X_{2}\}=\{\ B_{2}\}}</annotation>
+</semantics>
+</math></span><img alt="[\ A]\{\Delta X_{2}\}=\{\ B_{2}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/144135eba2453a545dbe73b04519d029bf3a09b0" style="vertical-align: -0.838ex; width:19.679ex; height:2.843ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]}</annotation>
+</semantics>
+</math></span><img alt="[\ A]" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1c19ea6b23eb8211ba229277021e564f6922c13b" style="vertical-align: -0.838ex; width:3.617ex; height:2.843ex;"/></span> - symmetrical matrix in the banded form similar to global stiffness matrix of FEM assemblage,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\Delta \ X_{1}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\Delta \ X_{1}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\Delta \ X_{1}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/476fd3380ba789402b40890520d6715facc65ffd" style="vertical-align: -0.838ex; width:7.82ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\Delta \ X_{2}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\Delta \ X_{2}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\Delta \ X_{2}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe7aa1c5be0219554df395fd608fd57225fd4df1" style="vertical-align: -0.838ex; width:7.82ex; height:2.843ex;"/></span>- incremental vectors of co-ordinates of all nodes at axes 1, 2,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ B_{1}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ B_{1}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ B_{1}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4dd53ade75212da3842a09d096df8bf06814bbe5" style="vertical-align: -0.838ex; width:5.724ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ B_{2}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ B_{2}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ B_{2}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/43f12caa247f888521bd3f7acf4835e68831153e" style="vertical-align: -0.838ex; width:5.724ex; height:2.843ex;"/></span> - the right part vectors that are combined by co-ordinates of all nodes in axes 1, 2.</li></ul>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:2D_mesh.jpg"><img alt="" class="thumbimage" data-file-height="210" data-file-width="558" decoding="async" height="83" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2D_mesh.jpg/220px-2D_mesh.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2D_mesh.jpg/330px-2D_mesh.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/2D_mesh.jpg/440px-2D_mesh.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:2D_mesh.jpg" title="Enlarge"></a></div>Fig. 2 Left: distorted 2D grid, right: corrected grid</div></div></div>
+<p>The solution of both systems, keeping all boundary nodes conservative, obtains new interior node positions corresponding to a non-distorted mesh with pseudo-regular elements. For example, Fig. 2 presents the rectangular area covered by a triangular mesh. The initial auto mesh possesses some degenerative triangles (left mesh). The final mesh (right mesh) produced by the SGM procedure is pseudo-regular without any distorted elements.                               
+</p><p>As above systems are linear, the procedure elapses very quickly to a one-step solution. Moreover, each final interior node position meets the requirement of co-ordinate arithmetic mean of nodes surrounding it and meets the <a href="/wiki/Delaunay_triangulation" title="Delaunay triangulation">Delaunay</a> criteria too. Therefore, the SGM has all the positive values peculiar to Laplacian and other kinds of smoothing approaches but much easier and reliable because of integer-valued final matrices representation. Finally, the described above SGM is perfectly applicable not only to 2D meshes but to 3D meshes consisting of any uniform cells as well as to mixed or transient meshes.
+</p>
+<h2><span class="mw-headline" id="Minimum_surface_problem_solution">Minimum surface problem solution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=2" title="Edit section: Minimum surface problem solution">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Mathematically the surface embedded into a non-plane closed curve is called minimum if its area is minimal amongst all the surfaces passing through this curve. The best-known minimum surface sample is a <a href="/wiki/Soap_film" title="Soap film">soap film</a> bounded by wire frame. Usually to create a minimum surface, a fictitious constitutive law, which maintains a constant prestress, independent of any changes in strain, is used.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> The alternative approximated approach to the minimum surface problem solution is based on SGM. This formulation allows one to minimize the surface embedded into non-plane and plane closed contours.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Cathenoid_11.jpg"><img alt="" class="thumbimage" data-file-height="411" data-file-width="521" decoding="async" height="174" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cathenoid_11.jpg/220px-Cathenoid_11.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cathenoid_11.jpg/330px-Cathenoid_11.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cathenoid_11.jpg/440px-Cathenoid_11.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Cathenoid_11.jpg" title="Enlarge"></a></div>Fig 3. <a href="/wiki/Catenoid" title="Catenoid">Catenoidal</a> surface</div></div></div>
+<p>The idea is to approximate a surface part embedded into 3D non-plane contour by an arbitrary triangle grid. To converge such triangle grid to grid with minimum area one should solve the same two systems described above.  Increments of the third nodal co-ordinates may be determined additionally by similar system at axis 3 in the following way
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]\{\Delta X_{3}\}=\{\ B_{3}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]\{\Delta X_{3}\}=\{\ B_{3}\}}</annotation>
+</semantics>
+</math></span><img alt="[\ A]\{\Delta X_{3}\}=\{\ B_{3}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf7d8cbdabf244436e310d99f1528c9ef09dd0a4" style="vertical-align: -0.838ex; width:19.679ex; height:2.843ex;"/></span></dd></dl>
+<p>Solving all three systems simultaneously one can obtain a new grid that  will be the approximating <a href="/wiki/Minimal_surface" title="Minimal surface">minimal surface</a> embedded into non-plane closed curve because of the minimum of the function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \Pi }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi mathvariant="normal">Π<!-- Π --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \Pi }</annotation>
+</semantics>
+</math></span><img alt="\ \Pi " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3309c8d5a6b9d4643256b90ce920d8a1d699d640" style="vertical-align: -0.338ex; width:2.324ex; height:2.176ex;"/></span> where parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j=1,2,3}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mn>3</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j=1,2,3}</annotation>
+</semantics>
+</math></span><img alt="\ j=1,2,3" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d380c334b877f42f8c9f32e17bec692875de765a" style="vertical-align: -0.671ex; width:10.192ex; height:2.509ex;"/></span>.
+</p><p>As an example the surface of <a href="/wiki/Catenoid" title="Catenoid">catenoid</a> which is calculated by the described above approach is presented in Fig 3. The radii of rings and the height of catenoid are equal to 1.0. The numerical area of catenoidal surface determined by SGM is equal to 2,9967189 (exact value is 2.992).
+</p>
+<h2><span class="mw-headline" id="Tensile_fabric_structures_form_finding">Tensile fabric structures form finding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=3" title="Edit section: Tensile fabric structures form finding">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Hypar.jpg"><img alt="" class="thumbimage" data-file-height="501" data-file-width="787" decoding="async" height="140" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Hypar.jpg/220px-Hypar.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Hypar.jpg/330px-Hypar.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Hypar.jpg/440px-Hypar.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Hypar.jpg" title="Enlarge"></a></div>Fig. 4 Hypar (hyperbolic paraboloid)</div></div></div> <div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Saddle_type.jpg"><img alt="" class="thumbimage" data-file-height="337" data-file-width="477" decoding="async" height="155" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Saddle_type.jpg/220px-Saddle_type.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Saddle_type.jpg/330px-Saddle_type.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Saddle_type.jpg/440px-Saddle_type.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Saddle_type.jpg" title="Enlarge"></a></div>Fig. 5 Saddle-type awning</div></div></div>
+<p>For structural analysis, the configuration of the structure is generally known à priori. This is not the case for <a href="/wiki/Tensile_structure" title="Tensile structure">tensile structures</a> such as tension <a href="/wiki/Fabric_structure" title="Fabric structure">fabric structures</a>. Since the membrane in a tension structure possesses no flexural stiffness, its form or configuration depends upon initial prestressing and the loads to which it is subjected. Thus, the load-bearing behaviour and the shape of the membrane cannot be separated and cannot be generally described by simple geometric models only. The membrane shape, the loads on the structure and the internal stresses interact in a non-linear manner to satisfy the equilibrium equations. 
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Dancepol_net.jpg"><img alt="" class="thumbimage" data-file-height="400" data-file-width="640" decoding="async" height="138" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dancepol_net.jpg/220px-Dancepol_net.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dancepol_net.jpg/330px-Dancepol_net.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dancepol_net.jpg/440px-Dancepol_net.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Dancepol_net.jpg" title="Enlarge"></a></div>Fig. 6 The dancefloor cover grid model</div></div></div> <div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Dancepol.jpg"><img alt="" class="thumbimage" data-file-height="447" data-file-width="596" decoding="async" height="165" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dancepol.jpg/220px-Dancepol.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dancepol.jpg/330px-Dancepol.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dancepol.jpg/440px-Dancepol.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Dancepol.jpg" title="Enlarge"></a></div>Fig. 7 Render of the dancefloor cover</div></div></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Dancepol_real.jpg"><img alt="" class="thumbimage" data-file-height="580" data-file-width="743" decoding="async" height="172" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Dancepol_real.jpg/220px-Dancepol_real.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Dancepol_real.jpg/330px-Dancepol_real.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Dancepol_real.jpg/440px-Dancepol_real.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Dancepol_real.jpg" title="Enlarge"></a></div>Fig. 8 Real dancefloor cover</div></div></div>
+<p>The preliminary design of tension structures involves the determination of an initial configuration referred to as form finding. In addition to satisfying the equilibrium conditions, the initial configuration must accommodate both architectural (aesthetics) and structural (strength and stability) requirements. Further, the requirements of space and clearance should be met, the membrane principal stresses must be tensile to avoid wrinkling, and the radii of the double-curved surface should be small enough to resist out-of-plane loads and to insure structural stability (work <sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup>). Several variations on form finding approaches based on FEM have been developed to assist engineers in the design of tension fabric structures. All of them are based on the same assumption as that used for analysing the behaviour of tension structures under various loads. However, as it is noted by some researchers it might sometimes be preferable to use the so-called ‘<a class="mw-redirect" href="/wiki/Minimal_surfaces" title="Minimal surfaces">minimal surfaces</a>’ in the design of tension structures.
+</p><p>The physical meaning of SGM consists in convergence of the energy of an arbitrary grid structure embedded into rigid (or elastic) 3D contour to minimum that is equivalent to minimum sum distances between arbitrary pairs of grid nodes. It allows the minimum surface energy problem solution substituting for finding grid structure sum energy minimum finding that provides much more plain final algebraic equation system than the usual FEM formulation. The generalized formulation of SGM presupposes a possibility to apply a set of outer forces and rigid or elastic constrains to grid structure nodes that allows the modelling of various outer effects. We may obtain the following expression for such SGM formulation
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Pi =\sum _{j=1}^{n}D_{j}R_{j}^{2}+\sum _{i=1}^{3}\left(\sum _{k=1}^{m}C_{ik}\Delta X_{ik}^{2}-\sum _{k=1}^{m}P_{ik}\Delta X_{ik}\right)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Π<!-- Π --></mi>
+<mo>=</mo>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>D</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msubsup>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mo>+</mo>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>3</mn>
+</mrow>
+</munderover>
+<mrow>
+<mo>(</mo>
+<mrow>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>C</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msubsup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mo>−<!-- − --></mo>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Pi =\sum _{j=1}^{n}D_{j}R_{j}^{2}+\sum _{i=1}^{3}\left(\sum _{k=1}^{m}C_{ik}\Delta X_{ik}^{2}-\sum _{k=1}^{m}P_{ik}\Delta X_{ik}\right)}</annotation>
+</semantics>
+</math></span><img alt="\Pi =\sum _{{j=1}}^{n}D_{j}R_{j}^{2}+\sum _{{i=1}}^{3}\left(\sum _{{k=1}}^{m}C_{{ik}}\Delta X_{{ik}}^{2}-\sum _{{k=1}}^{m}P_{{ik}}\Delta X_{{ik}}\right)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe8cc97afcd739a26a82080f36ec37442577e967" style="vertical-align: -3.338ex; width:52.323ex; height:7.676ex;"/></span></dd></dl>
+<p>where 	
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ n}</annotation>
+</semantics>
+</math></span><img alt="\ n" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaf8b0f621a23f81aa20d63b5cd59d3dcad83ccb" style="vertical-align: -0.338ex; width:1.975ex; height:1.676ex;"/></span> - total number of grid segments,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ m}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>m</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ m}</annotation>
+</semantics>
+</math></span><img alt="\ m" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d996842f038c3a2e9fb08a5dece4e379a4ff11d5" style="vertical-align: -0.338ex; width:2.621ex; height:1.676ex;"/></span> - total number of nodes,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ R_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ R_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ R_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8e20fbe66f00da8acc9f0aeebd28bac30c0667f0" style="vertical-align: -1.005ex; width:3.254ex; height:2.843ex;"/></span>  - length of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ D_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>D</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ D_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ D_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72f72e6f002beb6202ab15cf33fdbb32f6ff7e82" style="vertical-align: -1.005ex; width:3.415ex; height:2.843ex;"/></span> - stiffness of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \Delta X_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \Delta X_{ik}}</annotation>
+</semantics>
+</math></span><img alt="\ \Delta X_{{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4de7e334597cad39c45f206859f985239df452d9" style="vertical-align: -0.671ex; width:6.097ex; height:2.509ex;"/></span> - coordinate increment of node <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ k}</annotation>
+</semantics>
+</math></span><img alt="\ k" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c682e4c73906031c21d3ec3951990a6111eeacb6" style="vertical-align: -0.338ex; width:1.792ex; height:2.176ex;"/></span> at axis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ i}</annotation>
+</semantics>
+</math></span><img alt="\ i" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc8d2dfe9ddfc5489e5ce676d223cc41a9489763" style="vertical-align: -0.338ex; width:1.383ex; height:2.176ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ C_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>C</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ C_{ik}}</annotation>
+</semantics>
+</math></span><img alt="\ C_{{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7f8c6d6841dbbd0b17551571297c44106bce5d77" style="vertical-align: -0.671ex; width:3.899ex; height:2.509ex;"/></span> - stiffness of an elastic constrain in node <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ k}</annotation>
+</semantics>
+</math></span><img alt="\ k" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c682e4c73906031c21d3ec3951990a6111eeacb6" style="vertical-align: -0.338ex; width:1.792ex; height:2.176ex;"/></span> at axis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ i}</annotation>
+</semantics>
+</math></span><img alt="\ i" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc8d2dfe9ddfc5489e5ce676d223cc41a9489763" style="vertical-align: -0.338ex; width:1.383ex; height:2.176ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ P_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ P_{ik}}</annotation>
+</semantics>
+</math></span><img alt="\ P_{{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1e2a00102ee799aad400960b1e5e0279f5729cbe" style="vertical-align: -0.671ex; width:3.729ex; height:2.509ex;"/></span> - outer force in node <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ k}</annotation>
+</semantics>
+</math></span><img alt="\ k" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c682e4c73906031c21d3ec3951990a6111eeacb6" style="vertical-align: -0.338ex; width:1.792ex; height:2.176ex;"/></span> at axis <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ i}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>i</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ i}</annotation>
+</semantics>
+</math></span><img alt="\ i" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc8d2dfe9ddfc5489e5ce676d223cc41a9489763" style="vertical-align: -0.338ex; width:1.383ex; height:2.176ex;"/></span>.</li></ul>
+<h2><span class="mw-headline" id="Unfolding_problem_and_cutting_pattern_generation">Unfolding problem and cutting pattern generation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=4" title="Edit section: Unfolding problem and cutting pattern generation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Once a satisfactory shape has been found, a <a class="new" href="/w/index.php?title=Cutting_pattern&amp;action=edit&amp;redlink=1" title="Cutting pattern (page does not exist)">cutting pattern</a> may be generated. Tension structures are highly varied in their size, curvature and material stiffness. Cutting pattern approximation is strongly related to each of these factors. It is essential for a cutting pattern generation method to minimize possible approximation and to produce reliable plane cloth data. 
+</p><p>The objective is to develop the shapes described by these data, as close as possible to the ideal doubly curved strips. In general, cutting pattern generation involves two steps. First, the global surface of a tension structure is divided into individual cloths. The corresponding cutting pattern at the second step can be found by simply taking each cloth strip and unfolding it on a planar area. In the case of the ideal doubly curved membrane surface the subsurface cannot be simply unfolded and they must be flattened. For example, in,<sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup><sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> SGM has been used for the flattening problem solution.
+</p><p>The cutting pattern generation problem is actually subdivided into two independent formulations. These are the generation of a distortion-free plane form unfolding each cloth strip and flattening double-curved surfaces that cannot be simply unfolded. Studying the problem carefully one can notice that from the position of <a href="/wiki/Differential_geometry" title="Differential geometry">differential geometry</a> both formulations are the same. We may consider it as an <a class="mw-redirect" href="/wiki/Isometric_mapping" title="Isometric mapping">isometric mapping</a> of a surface onto the plane area that will be <a class="mw-redirect" href="/wiki/Conformal_mapping" title="Conformal mapping">conformal mapping</a> and <a class="mw-redirect" href="/wiki/Equiareal_map" title="Equiareal map">equiareal mapping</a> simultaneously because of invariant angles between any curves and invariance of any pieces of area. In the case of single-curved surface that can be unfolded precisely <a class="mw-redirect" href="/wiki/Equiareal_map" title="Equiareal map">equi-areal</a> mapping allows one to obtain a cutting pattern for fabric structure without any distortions. The second type of surfaces can be <a class="mw-redirect" href="/wiki/Equiareal_map" title="Equiareal map">equi-areal</a> mapped only approximately with some distortions of linear surface elements limited by the fabric properties. Let us assume that two surfaces are <a href="/wiki/Parametric_equation" title="Parametric equation">parameterized</a> so that their <a href="/wiki/First_fundamental_form" title="First fundamental form">first quadratic forms</a> may be written as follows
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle I_{1}=E_{1}(u,v)\operatorname {d} u^{2}+2F_{1}(u,v)\operatorname {d} u\operatorname {d} v+G_{1}(u,v)\operatorname {d} v^{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<msup>
+<mi>u</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mn>2</mn>
+<msub>
+<mi>F</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>u</mi>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>v</mi>
+<mo>+</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<msup>
+<mi>v</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle I_{1}=E_{1}(u,v)\operatorname {d} u^{2}+2F_{1}(u,v)\operatorname {d} u\operatorname {d} v+G_{1}(u,v)\operatorname {d} v^{2}}</annotation>
+</semantics>
+</math></span><img alt="I_{1}=E_{1}(u,v)\operatorname {d}u^{2}+2F_{1}(u,v)\operatorname {d}u\operatorname {d}v+G_{1}(u,v)\operatorname {d}v^{2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bdd9af0b452b8153a2df93b0da4867220dc77c95" style="vertical-align: -0.838ex; width:51.41ex; height:3.176ex;"/></span></dd>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle I_{2}=E_{2}(u,v)\operatorname {d} u^{2}+2F_{2}(u,v)\operatorname {d} u\operatorname {d} v+G_{2}(u,v)\operatorname {d} v^{2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>E</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<msup>
+<mi>u</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mn>2</mn>
+<msub>
+<mi>F</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>u</mi>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>v</mi>
+<mo>+</mo>
+<msub>
+<mi>G</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<msup>
+<mi>v</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle I_{2}=E_{2}(u,v)\operatorname {d} u^{2}+2F_{2}(u,v)\operatorname {d} u\operatorname {d} v+G_{2}(u,v)\operatorname {d} v^{2}}</annotation>
+</semantics>
+</math></span><img alt="I_{2}=E_{2}(u,v)\operatorname {d}u^{2}+2F_{2}(u,v)\operatorname {d}u\operatorname {d}v+G_{2}(u,v)\operatorname {d}v^{2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5cdc5900b57b7465a130ef3ef34f652105bdb46b" style="vertical-align: -0.838ex; width:51.41ex; height:3.176ex;"/></span></dd></dl>
+<p>The condition of <a class="mw-redirect" href="/wiki/Conformal_mapping" title="Conformal mapping">conformal mapping</a> for two surfaces as is formulated in differential geometry requires that
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\sqrt {I_{2}}}=\lambda {\sqrt {I_{1}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+<mo>=</mo>
+<mi>λ<!-- λ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\sqrt {I_{2}}}=\lambda {\sqrt {I_{1}}}}</annotation>
+</semantics>
+</math></span><img alt="{\sqrt  {I_{2}}}=\lambda {\sqrt  {I_{1}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1f53ff7e0c54a3cf49eab96b8e3d97d545cde627" style="vertical-align: -1.005ex; width:13.256ex; height:3.343ex;"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \lambda }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \lambda }</annotation>
+</semantics>
+</math></span><img alt="\ \lambda " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2bfaa6ce1e7dfbb1b20e93a9cc5a7a1859bfeb67" style="vertical-align: -0.338ex; width:1.936ex; height:2.176ex;"/></span> is the ratio of the surface distortion due to conformal mapping.
+</p><p>It is known that the first quadratic form reflects the distance between two surface points <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ (u,v)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ (u,v)}</annotation>
+</semantics>
+</math></span><img alt="\ (u,v)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/93273d16c7b992fda3c43dfcb454a33dcdf1a1b9" style="vertical-align: -0.838ex; width:5.881ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ (u+\operatorname {d} u,v+\operatorname {d} v)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mo stretchy="false">(</mo>
+<mi>u</mi>
+<mo>+</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>u</mi>
+<mo>,</mo>
+<mi>v</mi>
+<mo>+</mo>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>v</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ (u+\operatorname {d} u,v+\operatorname {d} v)}</annotation>
+</semantics>
+</math></span><img alt="\ (u+\operatorname {d}u,v+\operatorname {d}v)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/be201e3d5399f00536e69b3c68c886f3501d46d8" style="vertical-align: -0.838ex; width:17.379ex; height:2.843ex;"/></span>. When <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \lambda }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \lambda }</annotation>
+</semantics>
+</math></span><img alt="\ \lambda " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2bfaa6ce1e7dfbb1b20e93a9cc5a7a1859bfeb67" style="vertical-align: -0.338ex; width:1.936ex; height:2.176ex;"/></span>-ratio is close to 1 the above eqn converges to condition of isometric mapping and to equi-areal mapping respectively because of invariant angles between any curves and invariance of any pieces of area. Remembering that the first stage of form finding is based on triangular mesh of a surface and using the <a class="external text" href="https://en.wikiversity.org/wiki/Nonlinear_finite_elements/Weighted_residual_methods">method of weighted residuals</a> for the description of isometric and equi-areal mapping of the minimum surface onto a plane area we may write the following function which is defined by the sum of integrals along segments of curved triangles
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Pi =D\sum _{j=1}^{n}\oint _{S_{j}}w_{j}\left(\lambda {\sqrt {I_{1}}}-{\sqrt {I_{2}}}\right)^{2}\operatorname {d} s}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Π<!-- Π --></mi>
+<mo>=</mo>
+<mi>D</mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+<mrow class="MJX-TeXAtom-VCENTER">
+<mstyle mathsize="2.07em">
+<mtext>∮<!-- ∮ --></mtext>
+<mspace width="thinmathspace"></mspace>
+</mstyle>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+</msub>
+<mo>⁡<!-- ⁡ --></mo>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>λ<!-- λ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>I</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>s</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Pi =D\sum _{j=1}^{n}\oint _{S_{j}}w_{j}\left(\lambda {\sqrt {I_{1}}}-{\sqrt {I_{2}}}\right)^{2}\operatorname {d} s}</annotation>
+</semantics>
+</math></span><img alt="\Pi =D\sum _{{j=1}}^{n}\oint _{{S_{j}}}w_{j}\left(\lambda {\sqrt  {I_{1}}}-{\sqrt  {I_{2}}}\right)^{2}\operatorname {d}s" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5bd67e0c701290836c3c7f69265feadd19018a9a" style="vertical-align: -3.338ex; width:38.858ex; height:7.176ex;"/></span></dd></dl>
+<p>where 	
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ n}</annotation>
+</semantics>
+</math></span><img alt="\ n" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eaf8b0f621a23f81aa20d63b5cd59d3dcad83ccb" style="vertical-align: -0.338ex; width:1.975ex; height:1.676ex;"/></span> - total number of grid cells,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ w_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ w_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ w_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff8746452e11f022572a836b6f86fbb73cef52e2" style="vertical-align: -1.005ex; width:3.154ex; height:2.343ex;"/></span> - weight ratios,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \Pi }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi mathvariant="normal">Π<!-- Π --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \Pi }</annotation>
+</semantics>
+</math></span><img alt="\ \Pi " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3309c8d5a6b9d4643256b90ce920d8a1d699d640" style="vertical-align: -0.338ex; width:2.324ex; height:2.176ex;"/></span>  - the total mapping residual,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ D}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>D</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ D}</annotation>
+</semantics>
+</math></span><img alt="\ D" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/48383587167b826b6d844b78dfb16e6c4ecd9aa5" style="vertical-align: -0.338ex; width:2.505ex; height:2.176ex;"/></span> - the constant that does not influence the final result and may be used as a scale ratio.</li></ul>
+<p>Considering further weight ratios  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ w_{j}=1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ w_{j}=1}</annotation>
+</semantics>
+</math></span><img alt="\ w_{j}=1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5e02b3e515d6c1e637487bc6ddca3cfee11af4f" style="vertical-align: -1.005ex; width:7.415ex; height:2.843ex;"/></span> we may transform eqn. into approximate finite sum that is a combination of linear distances between nodes of the surface grid and write the basic condition of equi-areal surface mapping as a minimum of following non-linear function
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Pi =D\sum _{j=1}^{n}\oint _{S_{j}}w_{j}\left(\lambda R_{j}-L_{j}\right)^{2}\operatorname {d} s}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Π<!-- Π --></mi>
+<mo>=</mo>
+<mi>D</mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msub>
+<mrow class="MJX-TeXAtom-OP MJX-fixedlimits">
+<mrow class="MJX-TeXAtom-VCENTER">
+<mstyle mathsize="2.07em">
+<mtext>∮<!-- ∮ --></mtext>
+<mspace width="thinmathspace"></mspace>
+</mstyle>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<msub>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+</msub>
+<mo>⁡<!-- ⁡ --></mo>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>λ<!-- λ --></mi>
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>L</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mi mathvariant="normal">d</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>s</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Pi =D\sum _{j=1}^{n}\oint _{S_{j}}w_{j}\left(\lambda R_{j}-L_{j}\right)^{2}\operatorname {d} s}</annotation>
+</semantics>
+</math></span><img alt="\Pi =D\sum _{{j=1}}^{n}\oint _{{S_{j}}}w_{j}\left(\lambda R_{j}-L_{j}\right)^{2}\operatorname {d}s" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1f64eeb17d7f24d41af862d116f021f3c0ab78a0" style="vertical-align: -3.338ex; width:34.902ex; height:7.176ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ R_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ R_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ R_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8e20fbe66f00da8acc9f0aeebd28bac30c0667f0" style="vertical-align: -1.005ex; width:3.254ex; height:2.843ex;"/></span> - initial length of linear segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ L_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>L</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ L_{j}}</annotation>
+</semantics>
+</math></span><img alt="\ L_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f33ed0e41ad11be10163aacc50cd28843ef5242" style="vertical-align: -1.005ex; width:3.073ex; height:2.843ex;"/></span> - final length of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ \lambda }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>λ<!-- λ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ \lambda }</annotation>
+</semantics>
+</math></span><img alt="\ \lambda " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2bfaa6ce1e7dfbb1b20e93a9cc5a7a1859bfeb67" style="vertical-align: -0.338ex; width:1.936ex; height:2.176ex;"/></span> - distortion ratio close to 1 and may be different for each segment.</li></ul>
+<p>The initial and final lengths of segment number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ j}</annotation>
+</semantics>
+</math></span><img alt="\ j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e5596a7f96612923b3136b11fa6d8ac54e4e7e01" style="vertical-align: -0.671ex; width:1.539ex; height:2.509ex;"/></span> may be expressed as usual by two nodal co-ordinates as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle R={\sqrt {(X_{12}-X_{11})^{2}+(X_{22}-X_{21})^{2}+(X_{32}-X_{31})^{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>R</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>12</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>11</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>21</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>32</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>31</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</msqrt>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle R={\sqrt {(X_{12}-X_{11})^{2}+(X_{22}-X_{21})^{2}+(X_{32}-X_{31})^{2}}}}</annotation>
+</semantics>
+</math></span><img alt="R={\sqrt  {(X_{{12}}-X_{{11}})^{2}+(X_{{22}}-X_{{21}})^{2}+(X_{{32}}-X_{{31}})^{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b2a1aa3fa9a887fb981afd88f450333d409b5d9" style="vertical-align: -1.671ex; width:52.782ex; height:4.843ex;"/></span></dd>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle L={\sqrt {(x_{12}-x_{11})^{2}+(x_{22}-x_{21})^{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>L</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>12</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>11</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>22</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>21</mn>
+</mrow>
+</msub>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</msqrt>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle L={\sqrt {(x_{12}-x_{11})^{2}+(x_{22}-x_{21})^{2}}}}</annotation>
+</semantics>
+</math></span><img alt="L={\sqrt  {(x_{{12}}-x_{{11}})^{2}+(x_{{22}}-x_{{21}})^{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/447c0370bea477264130d20443af8e3f472ed7b2" style="vertical-align: -1.671ex; width:34.077ex; height:4.843ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ X_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ X_{ik}}</annotation>
+</semantics>
+</math></span><img alt="\ X_{{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/877b70146afb41668465438372a0adeb4614f2ac" style="vertical-align: -0.671ex; width:4.161ex; height:2.509ex;"/></span> - co-ordinates of nodes of the initial segment,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ x_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ x_{ik}}</annotation>
+</semantics>
+</math></span><img alt="\ x_{{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e481fc76b2b762966cfdfa161ea4a1e6408740dc" style="vertical-align: -0.671ex; width:3.566ex; height:2.009ex;"/></span> - co-ordinates of nodes of the final segment.</li></ul>
+<p>According to the initial assumption we can write <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ x_{32}=x_{31}=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>32</mn>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>31</mn>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ x_{32}=x_{31}=0}</annotation>
+</semantics>
+</math></span><img alt="\ x_{{32}}=x_{{31}}=0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fa3f8062b8a940b1b2153a1cdde44cf103ea737" style="vertical-align: -0.671ex; width:14.352ex; height:2.509ex;"/></span> for the plane surface mapping. The expression for vectors <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ x\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>x</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ x\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ x\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/df85797480d5ceece1071876c9a9a736eb8fae3e" style="vertical-align: -0.838ex; width:4.235ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4978f130955f50bc5bc2bc5c4e3e8d080e8a4622" style="vertical-align: -0.838ex; width:4.886ex; height:2.843ex;"/></span> with co-ordinate increments term use may be written as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ x\}=\{\ X\}+\{\Delta \ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>x</mi>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+<mo>+</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ x\}=\{\ X\}+\{\Delta \ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ x\}=\{\ X\}+\{\Delta \ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/00875c8a4d82a037dce0a4252896629c085abccb" style="vertical-align: -0.838ex; width:21.881ex; height:2.843ex;"/></span></dd></dl>
+<div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Double_Peek.jpg"><img alt="" class="thumbimage" data-file-height="257" data-file-width="586" decoding="async" height="96" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Double_Peek.jpg/220px-Double_Peek.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Double_Peek.jpg/330px-Double_Peek.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Double_Peek.jpg/440px-Double_Peek.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Double_Peek.jpg" title="Enlarge"></a></div>Fig. 9 Cut out of the twin-peaks awning</div></div></div> <div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Patch_to.jpg"><img alt="" class="thumbimage" data-file-height="498" data-file-width="631" decoding="async" height="174" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Patch_to.jpg/220px-Patch_to.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Patch_to.jpg/330px-Patch_to.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/08/Patch_to.jpg/440px-Patch_to.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Patch_to.jpg" title="Enlarge"></a></div>Fig. 10 Initial form of the patch</div></div></div> <div class="thumb tleft"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Patch_unfold.jpg"><img alt="" class="thumbimage" data-file-height="464" data-file-width="404" decoding="async" height="253" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Patch_unfold.jpg/220px-Patch_unfold.jpg" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Patch_unfold.jpg/330px-Patch_unfold.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/2/2c/Patch_unfold.jpg 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Patch_unfold.jpg" title="Enlarge"></a></div>Fig. 11 Plane patch pattern</div></div></div>
+<p>The vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\Delta \ X\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<mtext> </mtext>
+<mi>X</mi>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\Delta \ X\}}</annotation>
+</semantics>
+</math></span><img alt="\{\Delta \ X\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5b98c0a1fbd848f7c1962b7ab3fb3e8723cb4945" style="vertical-align: -0.838ex; width:6.821ex; height:2.843ex;"/></span> definition is made as previously
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\frac {\partial \Pi }{\partial \Delta X_{kl}}}=0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<mi mathvariant="normal">Π<!-- Π --></mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">∂<!-- ∂ --></mi>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+<mi>l</mi>
+</mrow>
+</msub>
+</mrow>
+</mfrac>
+</mrow>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\frac {\partial \Pi }{\partial \Delta X_{kl}}}=0}</annotation>
+</semantics>
+</math></span><img alt="{\frac  {\partial \Pi }{\partial \Delta X_{{kl}}}}=0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf12b9b94c08def32e8955cb52dde7ded41dcfff" style="vertical-align: -2.338ex; width:11.854ex; height:5.843ex;"/></span></dd></dl>
+<p>After transformations we may write the following two independent systems of non-linear algebraic equations
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]\{\Delta X_{1}\}=\{\ B_{1}\}+\{\Delta P_{1}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>+</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]\{\Delta X_{1}\}=\{\ B_{1}\}+\{\Delta P_{1}\}}</annotation>
+</semantics>
+</math></span><img alt="[\ A]\{\Delta X_{1}\}=\{\ B_{1}\}+\{\Delta P_{1}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6674212ecc495c4582aac773bf3217eaf3922eb" style="vertical-align: -0.838ex; width:29.327ex; height:2.843ex;"/></span></dd>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle [\ A]\{\Delta X_{2}\}=\{\ B_{2}\}+\{\Delta P_{2}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">[</mo>
+<mtext> </mtext>
+<mi>A</mi>
+<mo stretchy="false">]</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<msub>
+<mi>B</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>+</mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle [\ A]\{\Delta X_{2}\}=\{\ B_{2}\}+\{\Delta P_{2}\}}</annotation>
+</semantics>
+</math></span><img alt="[\ A]\{\Delta X_{2}\}=\{\ B_{2}\}+\{\Delta P_{2}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5e4c82349628b09c39ae966c93c7b044684c37f6" style="vertical-align: -0.838ex; width:29.327ex; height:2.843ex;"/></span></dd></dl>
+<p>where all the parts of the system can be expressed as previously and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ \Delta P_{1}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ \Delta P_{1}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ \Delta P_{1}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/df1ce116e7608b9c395223784016b02b47403327" style="vertical-align: -0.838ex; width:7.388ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\ \Delta P_{2}\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mtext> </mtext>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\ \Delta P_{2}\}}</annotation>
+</semantics>
+</math></span><img alt="\{\ \Delta P_{2}\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ef2c211633d0109c742d12740e238af1ea2fee8" style="vertical-align: -0.838ex; width:7.388ex; height:2.843ex;"/></span> are vectors of pseudo-stresses at axes 1, 2 that has the following form
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \{\Delta P_{lt}\}=-\left\{\sum _{j=1}^{N}\lambda {\frac {R_{m}}{L_{m}}}(x_{lm}-x_{lt})\right\}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo fence="false" stretchy="false">{</mo>
+<mi mathvariant="normal">Δ<!-- Δ --></mi>
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+<mo fence="false" stretchy="false">}</mo>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mrow>
+<mo>{</mo>
+<mrow>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>N</mi>
+</mrow>
+</munderover>
+<mi>λ<!-- λ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<msub>
+<mi>R</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</msub>
+<msub>
+<mi>L</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</msub>
+</mfrac>
+</mrow>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>m</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+<mi>t</mi>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mo>}</mo>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \{\Delta P_{lt}\}=-\left\{\sum _{j=1}^{N}\lambda {\frac {R_{m}}{L_{m}}}(x_{lm}-x_{lt})\right\}}</annotation>
+</semantics>
+</math></span><img alt="\{\Delta P_{{lt}}\}=-\left\{\sum _{{j=1}}^{N}\lambda {\frac  {R_{m}}{L_{m}}}(x_{{lm}}-x_{{lt}})\right\}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bce78714a3a85c8b602a8109ae2b50bfc49c8bf4" style="vertical-align: -3.338ex; width:36.272ex; height:7.676ex;"/></span></dd></dl>
+<p>where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ N}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>N</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ N}</annotation>
+</semantics>
+</math></span><img alt="\ N" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f8590b443a1c0cbda2860a9393fe10c77de6c8da" style="vertical-align: -0.338ex; width:2.644ex; height:2.176ex;"/></span> - total number of nodes that surround node number <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ t}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>t</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ t}</annotation>
+</semantics>
+</math></span><img alt="\ t" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7b2efca4774f7032b3f7ff6aeb1e086457544bd6" style="vertical-align: -0.338ex; width:1.42ex; height:2.009ex;"/></span>,</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \ l}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mtext> </mtext>
+<mi>l</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \ l}</annotation>
+</semantics>
+</math></span><img alt="\ l" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bb1795cab06ab852289d136914a38f87d5ad25ca" style="vertical-align: -0.338ex; width:1.274ex; height:2.176ex;"/></span> - the number of global axes.</li></ul>
+<p>The above approach is another form of SGM and allows the obtaining of two independent systems of non-linear algebraic equations that can be solved by any standard iteration procedure.  The less Gaussian curvature of the surface is the higher the accuracy of the plane mapping is. As a rule, the plane mapping allows to obtain a pattern with linear dimensions 1–2% less than corresponding spatial lines of a final surface. That is why it is necessary to provide the appropriate margins while patterning. 
+</p><p>The typical sample of cut out — also called a cutout, a <a href="/wiki/Gore_(segment)" title="Gore (segment)">gore (segment)</a>, or a patch — is presented in Figs. 9, 10, 11.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Mesh_generation" title="Mesh generation">Mesh generation</a></li>
+<li><a href="/wiki/Types_of_mesh" title="Types of mesh">Types of mesh</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">
+ QIAN Jian-hua.
+ <a class="external text" href="http://www.adearth.ac.cn/EN/abstract/abstract3792.shtml" rel="nofollow">"Application of a Variable-Resolution Stretched Grid to a Regional Atmospheric Model with Physics Parameterization"</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Zienkiewicz O. C., Kelly D.W., Bettes P. The coupling of the finite element method and boundary solution procedure. // International journal of Numerical Methods in Engineering, vol. 11, N 12, 1977. pp. 355–375.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Popov E.V.,<a class="external text" href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxjb21wdXRlcmdlb21ldHJ5fGd4OjVlYWJhNjY5ZDNiMjkzMzQ" rel="nofollow">On Some Variational Formulations for Minimum Surface</a>.  Transactions of Canadian Society of Mechanics for Engineering, Univ. of Alberta, vol.20, N 4, 1997, pp. 391–400.</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Tabarrok, Y.Xiong. Some Variational Formulations for minimum surface. Acta Mechanica, vol.89/1–4, 1991, pp. 33–43.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">B.Tabarrok, Z.Qin. Form Finding and Cutting Pattern Generation for Fabric Tension Structures, -Microcomputers in Civil Engineering J., № 8, 1993, pp. 377–384).</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Popov E.V. <a class="external text" href="http://www.graphicon.ru/2001/Computational_Geometry/Popov.pdf" rel="nofollow">Geometrical Modeling of Tent Fabric Structures with the Stretched Grid Method</a>. (written in Russian) Proceedings of the 11th International Conference on Computer Graphics&amp;Vision GRAPHICON’2001, UNN, Nizhny Novgorod, 2001. pp. 138–143.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Popov, E.V. <a class="external text" href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxjb21wdXRlcmdlb21ldHJ5fGd4OjUwZWY5ZDJkODQ3MWQxZTU" rel="nofollow">Cutting pattern generation for tent type structures represented by minimum surfaces</a>. The Transactions of the Canadian Society for Mechanical Engineering, Univ. of Alberta, vol. 22, N 4A, 1999, pp. 369–377.</span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stretched_grid_method&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://tent.k3-cottage.com/" rel="nofollow">K3-Tent system for tensile fabric structures formfinding and cutting patterning</a></li>
+<li><a class="external text" href="http://www.kubantent.ru/" rel="nofollow">Kubantent corp</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw2327
+Cached time: 20200902035936
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.248 seconds
+Real time usage: 0.511 seconds
+Preprocessor visited node count: 686/1000000
+Post‐expand include size: 9574/2097152 bytes
+Template argument size: 126/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6371/5000000 bytes
+Lua time usage: 0.037/10.000 seconds
+Lua memory usage: 1.43 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  130.926      1 -total
+ 77.14%  100.992      1 Template:Refimprove
+ 58.47%   76.553      1 Template:Ambox
+ 24.58%   32.186      1 Template:Find_sources_mainspace
+ 11.74%   15.367      1 Template:Reflist
+  1.70%    2.228      1 Template:Main_other
+  1.47%    1.919      1 Template:Column-width
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:33932698-0!canonical!math=5 and timestamp 20200902035936 and revision id 970789518
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Stretched_grid_method&amp;oldid=970789518">https://en.wikipedia.org/w/index.php?title=Stretched_grid_method&amp;oldid=970789518</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Mesh_generation" title="Category:Mesh generation">Mesh generation</a></li><li><a href="/wiki/Category:Numerical_differential_equations" title="Category:Numerical differential equations">Numerical differential equations</a></li></ul></div><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden categories: <ul><li><a href="/wiki/Category:Articles_needing_additional_references_from_June_2017" title="Category:Articles needing additional references from June 2017">Articles needing additional references from June 2017</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Stretched+grid+method" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Stretched+grid+method" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Stretched_grid_method" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Stretched_grid_method" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Stretched_grid_method">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Stretched_grid_method&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Stretched_grid_method&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Stretched_grid_method" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Stretched_grid_method" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Stretched_grid_method&amp;oldid=970789518" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Stretched_grid_method&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Stretched_grid_method&amp;id=970789518&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q7623487" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Stretched_grid_method&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Stretched_grid_method&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"></ul>
+<div class="after-portlet after-portlet-lang"><span class="uls-after-portlet-link"></span><span class="wb-langlinks-add wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q7623487#sitelinks-wikipedia" title="Add interlanguage links">Add links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 2 August 2020, at 11:52<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Stretched_grid_method&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.248","walltime":"0.511","ppvisitednodes":{"value":686,"limit":1000000},"postexpandincludesize":{"value":9574,"limit":2097152},"templateargumentsize":{"value":126,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6371,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  130.926      1 -total"," 77.14%  100.992      1 Template:Refimprove"," 58.47%   76.553      1 Template:Ambox"," 24.58%   32.186      1 Template:Find_sources_mainspace"," 11.74%   15.367      1 Template:Reflist","  1.70%    2.228      1 Template:Main_other","  1.47%    1.919      1 Template:Column-width"]},"scribunto":{"limitreport-timeusage":{"value":"0.037","limit":"10.000"},"limitreport-memusage":{"value":1502968,"limit":52428800}},"cachereport":{"origin":"mw2327","timestamp":"20200902035936","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Stretched grid method","url":"https:\/\/en.wikipedia.org\/wiki\/Stretched_grid_method","sameAs":"http:\/\/www.wikidata.org\/entity\/Q7623487","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q7623487","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2011-12-02T10:47:14Z","dateModified":"2020-08-02T11:52:10Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":136,"wgHostname":"mw2229"});});</script>
+</body></html>
