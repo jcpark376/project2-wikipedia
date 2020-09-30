@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Log-logistic distribution - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"6f905199-24dc-4c27-80de-c902419c444f","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Log-logistic_distribution","wgTitle":"Log-logistic distribution","wgCurRevisionId":980570057,"wgRevisionId":980570057,"wgArticleId":15657106,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: extra text: authors list","CS1 maint: multiple names: authors list","Continuous distributions","Survival analysis","Probability distributions with non-finite variance"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Log-logistic_distribution","wgRelevantArticleId":15657106,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q3258534"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready",
+"skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<meta content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Loglogisticpdf.svg/1200px-Loglogisticpdf.svg.png" property="og:image"/>
+<link href="//en.m.wikipedia.org/wiki/Log-logistic_distribution" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Log-logistic_distribution&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Log-logistic_distribution&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Log-logistic_distribution" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Log-logistic_distribution rootpage-Log-logistic_distribution skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Log-logistic distribution</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><table class="infobox bordered" style="width:22em;width: 325px; max-width: 325px; font-size: 95%;"><caption>Log-logistic</caption><tbody><tr><td colspan="4" style="text-align:center">
+<div>Probability density function</div><a class="image" href="/wiki/File:Loglogisticpdf.svg"><img alt="Loglogisticpdf.svg" data-file-height="975" data-file-width="1300" decoding="async" height="165" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Loglogisticpdf.svg/220px-Loglogisticpdf.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Loglogisticpdf.svg/330px-Loglogisticpdf.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Loglogisticpdf.svg/440px-Loglogisticpdf.svg.png 2x" width="220"/></a><div><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha =1,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha =1,}</annotation>
+</semantics>
+</math></span><img alt="\alpha=1," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b99d217bfa3a15fc9dbe0a37586a63db0b75990a" style="vertical-align: -0.671ex; width:6.395ex; height:2.509ex;"/></span> values of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> as shown in legend</div></td></tr><tr><td colspan="4" style="text-align:center">
+<div>Cumulative distribution function</div><a class="image" href="/wiki/File:Loglogisticcdf.svg"><img alt="Loglogisticcdf.svg" data-file-height="425" data-file-width="485" decoding="async" height="193" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Loglogisticcdf.svg/220px-Loglogisticcdf.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Loglogisticcdf.svg/330px-Loglogisticcdf.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/75/Loglogisticcdf.svg/440px-Loglogisticcdf.svg.png 2x" width="220"/></a><div><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha =1,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha =1,}</annotation>
+</semantics>
+</math></span><img alt="\alpha=1," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b99d217bfa3a15fc9dbe0a37586a63db0b75990a" style="vertical-align: -0.671ex; width:6.395ex; height:2.509ex;"/></span> values of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> as shown in legend</div></td></tr><tr><th scope="row">Parameters</th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha &gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha &gt;0}</annotation>
+</semantics>
+</math></span><img alt="\alpha &gt;0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/edd4f784b6e8bb68fa774213ceacbab2d97825dc" style="vertical-align: -0.338ex; width:5.749ex; height:2.176ex;"/></span> <a href="/wiki/Scale_parameter" title="Scale parameter">scale</a><br/><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;0}</annotation>
+</semantics>
+</math></span><img alt="\beta&gt; 0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a87dc52878418173659e6d0ff8e77ab2897eac9" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span> <a href="/wiki/Shape_parameter" title="Shape parameter">shape</a></td></tr><tr><th scope="row"><a href="/wiki/Support_(mathematics)" title="Support (mathematics)">Support</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x\in [0,\infty )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+<mo>∈<!-- ∈ --></mo>
+<mo stretchy="false">[</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x\in [0,\infty )}</annotation>
+</semantics>
+</math></span><img alt="x\in[0,\infty)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7fdcab24f8202e4a37d346b76fd6a80edcddc03f" style="vertical-align: -0.838ex; width:10.242ex; height:2.843ex;"/></span></td></tr><tr><th scope="row"><a href="/wiki/Probability_density_function" title="Probability density function">PDF</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\frac {(\beta /\alpha )(x/\alpha )^{\beta -1}}{\left(1+(x/\alpha )^{\beta }\right)^{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\frac {(\beta /\alpha )(x/\alpha )^{\beta -1}}{\left(1+(x/\alpha )^{\beta }\right)^{2}}}}</annotation>
+</semantics>
+</math></span><img alt=" \frac{ (\beta/\alpha)(x/\alpha)^{\beta-1} }
+                       { \left (1+(x/\alpha)^{\beta} \right)^2  }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b1371be5f4752531881e8d39dc19bd32a5c4e7b3" style="vertical-align: -3.171ex; width:15.691ex; height:7.176ex;"/></span></td></tr><tr><th scope="row"><a href="/wiki/Cumulative_distribution_function" title="Cumulative distribution function">CDF</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {1 \over 1+(x/\alpha )^{-\beta }}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {1 \over 1+(x/\alpha )^{-\beta }}}</annotation>
+</semantics>
+</math></span><img alt="{ 1 \over 1+(x/\alpha)^{-\beta} }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a02801d33996903ffdcef9cbde9f6b65a5d50ad2" style="vertical-align: -2.671ex; width:13.081ex; height:6.009ex;"/></span></td></tr><tr><th scope="row"><a href="/wiki/Expected_value" title="Expected value">Mean</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\alpha \,\pi /\beta  \over \sin(\pi /\beta )}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>α<!-- α --></mi>
+<mspace width="thinmathspace"></mspace>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+<mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\alpha \,\pi /\beta  \over \sin(\pi /\beta )}}</annotation>
+</semantics>
+</math></span><img alt="{\alpha\,\pi/\beta \over \sin(\pi/\beta)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cd2aad4156b62d4ae652b39e3f4e345139167907" style="vertical-align: -2.671ex; width:9.328ex; height:6.509ex;"/></span><br/>if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;1}</annotation>
+</semantics>
+</math></span><img alt="\beta&gt;1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1476a19e8f0d4cee97bf949617be8ed3cbc676e6" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span>, else undefined</td></tr><tr><th scope="row"><a href="/wiki/Median" title="Median">Median</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha \,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mspace width="thinmathspace"></mspace>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha \,}</annotation>
+</semantics>
+</math></span><img alt="\alpha \," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/652e1fd9c3a2ca00e1a517783cdbb0e18e4181f8" style="vertical-align: -0.338ex; width:1.875ex; height:1.676ex;"/></span></td></tr><tr><th scope="row"><a href="/wiki/Mode_(statistics)" title="Mode (statistics)">Mode</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha \left({\frac {\beta -1}{\beta +1}}\right)^{1/\beta }}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+<mrow>
+<mi>β<!-- β --></mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha \left({\frac {\beta -1}{\beta +1}}\right)^{1/\beta }}</annotation>
+</semantics>
+</math></span><img alt="\alpha\left(\frac{\beta-1}{\beta+1}\right)^{1/\beta}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4bec0a54536dc58fbab3126839ead0d00f4bac9b" style="vertical-align: -2.505ex; width:13.898ex; height:6.676ex;"/></span><br/>if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;1}</annotation>
+</semantics>
+</math></span><img alt="\beta&gt; 1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1476a19e8f0d4cee97bf949617be8ed3cbc676e6" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span>, 0 otherwise</td></tr><tr><th scope="row"><a href="/wiki/Variance" title="Variance">Variance</a></th><td colspan="3">
+<a href="#Moments">See main text</a></td></tr><tr><th scope="row"><a href="/wiki/Moment-generating_function" title="Moment-generating function">MGF</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{tx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>t</mi>
+<mi>x</mi>
+</mrow>
+</msup>
+<msup>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{tx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{tx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e919dd536afe4a7d1a81ff2467f1d83d069078c6" style="vertical-align: -2.671ex; width:27.597ex; height:6.509ex;"/></span><sup class="reference" id="cite_ref-mgf_cite_1-0"><a href="#cite_note-mgf_cite-1">[1]</a></sup><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle =\sum _{n=0}^{\infty }{\frac {(\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>=</mo>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>=</mo>
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</munderover>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mi>t</mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>n</mi>
+<mo>!</mo>
+</mrow>
+</mfrac>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">B</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>n</mi>
+<mi>β<!-- β --></mi>
+</mfrac>
+</mrow>
+<mo>,</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>n</mi>
+<mi>β<!-- β --></mi>
+</mfrac>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle =\sum _{n=0}^{\infty }{\frac {(\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle =\sum _{n=0}^{\infty }{\frac {(\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a2d6166e364c7b8238316a7703e4c99d59dbc06" style="vertical-align: -3.005ex; width:29.343ex; height:6.843ex;"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm {B} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">B</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm {B} }</annotation>
+</semantics>
+</math></span><img alt="\Beta" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/93003d072991ba424a73ed1e081afe55c124b6ce" style="vertical-align: -0.338ex; width:1.646ex; height:2.176ex;"/></span> is the <a href="/wiki/Beta_function" title="Beta function">Beta function</a>.<sup class="reference" id="cite_ref-mgf_cite2_2-0"><a href="#cite_note-mgf_cite2-2">[2]</a></sup></td></tr><tr><th scope="row"><a href="/wiki/Characteristic_function_(probability_theory)" title="Characteristic function (probability theory)">CF</a></th><td colspan="3">
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{itx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>t</mi>
+<mi>x</mi>
+</mrow>
+</msup>
+<msup>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{itx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \beta \alpha ^{-\beta }\int _{0}^{\infty }{\frac {e^{itx}x^{\beta -1}}{(1+(x/\alpha )^{\beta })^{2}}}dx}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0c068bc266856ff65f230e8ef7a13eb0efed34e3" style="vertical-align: -2.671ex; width:27.597ex; height:6.509ex;"/></span><sup class="reference" id="cite_ref-mgf_cite_1-1"><a href="#cite_note-mgf_cite-1">[1]</a></sup><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle =\sum _{n=0}^{\infty }{\frac {(i\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo>=</mo>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>=</mo>
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</munderover>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>i</mi>
+<mi>α<!-- α --></mi>
+<mi>t</mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>n</mi>
+<mo>!</mo>
+</mrow>
+</mfrac>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">B</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>n</mi>
+<mi>β<!-- β --></mi>
+</mfrac>
+</mrow>
+<mo>,</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>n</mi>
+<mi>β<!-- β --></mi>
+</mfrac>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle =\sum _{n=0}^{\infty }{\frac {(i\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle =\sum _{n=0}^{\infty }{\frac {(i\alpha t)^{n}}{n!}}\mathrm {B} (1+{\frac {n}{\beta }},1-{\frac {n}{\beta }})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5248a010e48b8f529fc89a43de70476616bcbaa9" style="vertical-align: -3.005ex; width:30.145ex; height:6.843ex;"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm {B} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">B</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm {B} }</annotation>
+</semantics>
+</math></span><img alt="\Beta" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/93003d072991ba424a73ed1e081afe55c124b6ce" style="vertical-align: -0.338ex; width:1.646ex; height:2.176ex;"/></span> is the <a href="/wiki/Beta_function" title="Beta function">Beta function</a>.<sup class="reference" id="cite_ref-mgf_cite2_2-1"><a href="#cite_note-mgf_cite2-2">[2]</a></sup></td></tr></tbody></table>
+<p>In <a href="/wiki/Probability" title="Probability">probability</a> and <a href="/wiki/Statistics" title="Statistics">statistics</a>, the <b>log-logistic distribution</b> (known as the <b>Fisk distribution</b> in <a href="/wiki/Economics" title="Economics">economics</a>) is a <a class="mw-redirect" href="/wiki/Continuous_probability_distribution" title="Continuous probability distribution">continuous probability distribution</a> for a non-negative <a href="/wiki/Random_variable" title="Random variable">random variable</a>. It is used in <a href="/wiki/Survival_analysis" title="Survival analysis">survival analysis</a> as a <a href="/wiki/Parametric_model" title="Parametric model">parametric model</a> for events whose rate increases initially and decreases later, as, for example, <a href="/wiki/Mortality_rate" title="Mortality rate">mortality rate</a> from cancer following diagnosis or treatment. It has also been used in <a href="/wiki/Hydrology" title="Hydrology">hydrology</a> to model stream flow and <a href="/wiki/Precipitation" title="Precipitation">precipitation</a>, in <a href="/wiki/Economics" title="Economics">economics</a> as a simple model of the <a href="/wiki/Distribution_of_wealth" title="Distribution of wealth">distribution of wealth</a> or <a href="/wiki/Income_distribution" title="Income distribution">income</a>, and in <a href="/wiki/Computer_network" title="Computer network">networking</a> to model the transmission times of data considering both the network and the software.
+</p><p>The log-logistic distribution is the probability distribution of a <a href="/wiki/Random_variable" title="Random variable">random variable</a> whose <a href="/wiki/Logarithm" title="Logarithm">logarithm</a> has a <a href="/wiki/Logistic_distribution" title="Logistic distribution">logistic distribution</a>.
+It is similar in shape to the <a href="/wiki/Log-normal_distribution" title="Log-normal distribution">log-normal distribution</a> but has <a href="/wiki/Heavy-tailed_distribution" title="Heavy-tailed distribution">heavier tails</a>. Unlike the log-normal, its <a href="/wiki/Cumulative_distribution_function" title="Cumulative distribution function">cumulative distribution function</a> can be written in <a class="mw-redirect" href="/wiki/Closed_form_expression" title="Closed form expression">closed form</a>.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Characterization"><span class="tocnumber">1</span> <span class="toctext">Characterization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Alternative_parameterization"><span class="tocnumber">1.1</span> <span class="toctext">Alternative parameterization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Properties"><span class="tocnumber">2</span> <span class="toctext">Properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Moments"><span class="tocnumber">2.1</span> <span class="toctext">Moments</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Quantiles"><span class="tocnumber">2.2</span> <span class="toctext">Quantiles</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Survival_analysis"><span class="tocnumber">3.1</span> <span class="toctext">Survival analysis</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Hydrology"><span class="tocnumber">3.2</span> <span class="toctext">Hydrology</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Economics"><span class="tocnumber">3.3</span> <span class="toctext">Economics</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Networking"><span class="tocnumber">3.4</span> <span class="toctext">Networking</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Related_distributions"><span class="tocnumber">4</span> <span class="toctext">Related distributions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Generalizations"><span class="tocnumber">4.1</span> <span class="toctext">Generalizations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Characterization">Characterization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=1" title="Edit section: Characterization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are several different parameterizations of the distribution in use. The one shown here gives reasonably interpretable parameters and a simple form for the <a href="/wiki/Cumulative_distribution_function" title="Cumulative distribution function">cumulative distribution function</a>.<sup class="reference" id="cite_ref-Shoukri_3-0"><a href="#cite_note-Shoukri-3">[3]</a></sup><sup class="reference" id="cite_ref-Ashkar06_4-0"><a href="#cite_note-Ashkar06-4">[4]</a></sup>
+The parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha &gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha &gt;0}</annotation>
+</semantics>
+</math></span><img alt="\alpha &gt;0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/edd4f784b6e8bb68fa774213ceacbab2d97825dc" style="vertical-align: -0.338ex; width:5.749ex; height:2.176ex;"/></span> is a <a href="/wiki/Scale_parameter" title="Scale parameter">scale parameter</a> and is also the <a href="/wiki/Median" title="Median">median</a> of the distribution. The parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;0}</annotation>
+</semantics>
+</math></span><img alt="\beta &gt;0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a87dc52878418173659e6d0ff8e77ab2897eac9" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span> is a <a href="/wiki/Shape_parameter" title="Shape parameter">shape parameter</a>. The distribution is <a class="mw-redirect" href="/wiki/Unimodal" title="Unimodal">unimodal</a> when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;1}</annotation>
+</semantics>
+</math></span><img alt="\beta&gt;1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1476a19e8f0d4cee97bf949617be8ed3cbc676e6" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span> and its <a href="/wiki/Statistical_dispersion" title="Statistical dispersion">dispersion</a> decreases as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> increases.
+</p><p>The <a href="/wiki/Cumulative_distribution_function" title="Cumulative distribution function">cumulative distribution function</a> is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\begin{aligned}F(x;\alpha ,\beta )&amp;={1 \over 1+(x/\alpha )^{-\beta }}\\[5pt]&amp;={(x/\alpha )^{\beta } \over 1+(x/\alpha )^{\beta }}\\[5pt]&amp;={x^{\beta } \over \alpha ^{\beta }+x^{\beta }}\end{aligned}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.8em 0.3em">
+<mtr>
+<mtd>
+<mi>F</mi>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>;</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<msup>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mrow>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}F(x;\alpha ,\beta )&amp;={1 \over 1+(x/\alpha )^{-\beta }}\\[5pt]&amp;={(x/\alpha )^{\beta } \over 1+(x/\alpha )^{\beta }}\\[5pt]&amp;={x^{\beta } \over \alpha ^{\beta }+x^{\beta }}\end{aligned}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\begin{aligned}F(x;\alpha ,\beta )&amp;={1 \over 1+(x/\alpha )^{-\beta }}\\[5pt]&amp;={(x/\alpha )^{\beta } \over 1+(x/\alpha )^{\beta }}\\[5pt]&amp;={x^{\beta } \over \alpha ^{\beta }+x^{\beta }}\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c860ad7a222ad327423c3055592271831f9ef2d7" style="vertical-align: -10.338ex; width:26.698ex; height:21.843ex;"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x&gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x&gt;0}</annotation>
+</semantics>
+</math></span><img alt="x&gt;0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80d24be5f0eb4a9173da6038badc8659546021d0" style="vertical-align: -0.338ex; width:5.591ex; height:2.176ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha &gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha &gt;0}</annotation>
+</semantics>
+</math></span><img alt="\alpha &gt;0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/edd4f784b6e8bb68fa774213ceacbab2d97825dc" style="vertical-align: -0.338ex; width:5.749ex; height:2.176ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;0.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>0.</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;0.}</annotation>
+</semantics>
+</math></span><img alt="\beta &gt;0." aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7cb4bd448fa1069f2a7406456c5dbc6c68840987" style="vertical-align: -0.671ex; width:6.24ex; height:2.509ex;"/></span>
+</p><p>The <a href="/wiki/Probability_density_function" title="Probability density function">probability density function</a> is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle f(x;\alpha ,\beta )={\frac {(\beta /\alpha )(x/\alpha )^{\beta -1}}{\left(1+(x/\alpha )^{\beta }\right)^{2}}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>f</mi>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>;</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle f(x;\alpha ,\beta )={\frac {(\beta /\alpha )(x/\alpha )^{\beta -1}}{\left(1+(x/\alpha )^{\beta }\right)^{2}}}}</annotation>
+</semantics>
+</math></span><img alt="f(x;\alpha ,\beta )={\frac  {(\beta /\alpha )(x/\alpha )^{{\beta -1}}}{\left(1+(x/\alpha )^{{\beta }}\right)^{2}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d28ea613c4a218c6cbbdcd5d60f405302663c59f" style="vertical-align: -3.171ex; width:28.095ex; height:7.176ex;"/></span></dd></dl>
+<h3><span class="mw-headline" id="Alternative_parameterization">Alternative parameterization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=2" title="Edit section: Alternative parameterization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An alternative parametrization is given by the pair <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu ,s}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+<mo>,</mo>
+<mi>s</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu ,s}</annotation>
+</semantics>
+</math></span><img alt="\mu ,s" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/483d5b6773b54f66b4db7753737564bf23588128" style="vertical-align: -0.838ex; width:3.526ex; height:2.176ex;"/></span> in analogy with the logistic distribution:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu =\ln(\alpha )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+<mo>=</mo>
+<mi>ln</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu =\ln(\alpha )}</annotation>
+</semantics>
+</math></span><img alt="\mu =\ln(\alpha )" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/94395a03f898b4f14fdda0bc1b9f93010e8efc80" style="vertical-align: -0.838ex; width:9.736ex; height:2.843ex;"/></span></dd>
+<dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle s=1/\beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>s</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle s=1/\beta }</annotation>
+</semantics>
+</math></span><img alt="s=1/\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ac569d6d53ae3ef685052469f173a48e5189f0c1" style="vertical-align: -0.838ex; width:7.846ex; height:2.843ex;"/></span></dd></dl>
+<h2><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=3" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Moments">Moments</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=4" title="Edit section: Moments">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle k}</annotation>
+</semantics>
+</math></span><img alt="k" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3c9a2c7b599b37105512c5d570edc034056dd40" style="vertical-align: -0.338ex; width:1.211ex; height:2.176ex;"/></span>th raw <a href="/wiki/Moment_(mathematics)" title="Moment (mathematics)">moment</a> exists only when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle k&lt;\beta ,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>k</mi>
+<mo>&lt;</mo>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle k&lt;\beta ,}</annotation>
+</semantics>
+</math></span><img alt="k&lt;\beta ," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d782023d4738dbc1e6fe599916def2dc0278113d" style="vertical-align: -0.671ex; width:6.289ex; height:2.509ex;"/></span> when it is given by<sup class="reference" id="cite_ref-Tadi82_5-0"><a href="#cite_note-Tadi82-5">[5]</a></sup><sup class="reference" id="cite_ref-TadiBurr80_6-0"><a href="#cite_note-TadiBurr80-6">[6]</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\begin{aligned}\operatorname {E} (X^{k})&amp;=\alpha ^{k}\operatorname {B} (1-k/\beta ,1+k/\beta )\\[5pt]&amp;=\alpha ^{k}\,{k\pi /\beta  \over \sin(k\pi /\beta )}\end{aligned}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="0.8em 0.3em">
+<mtr>
+<mtd>
+<mi mathvariant="normal">E</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+</mrow>
+</msup>
+<mi mathvariant="normal">B</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mi>k</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mi>k</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+</mrow>
+</msup>
+<mspace width="thinmathspace"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>k</mi>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+<mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>k</mi>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}\operatorname {E} (X^{k})&amp;=\alpha ^{k}\operatorname {B} (1-k/\beta ,1+k/\beta )\\[5pt]&amp;=\alpha ^{k}\,{k\pi /\beta  \over \sin(k\pi /\beta )}\end{aligned}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\begin{aligned}\operatorname {E} (X^{k})&amp;=\alpha ^{k}\operatorname {B} (1-k/\beta ,1+k/\beta )\\[5pt]&amp;=\alpha ^{k}\,{k\pi /\beta  \over \sin(k\pi /\beta )}\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/83b5a55c120c2cb22fd80a26bdfb1cf59dab8107" style="vertical-align: -4.838ex; width:33.197ex; height:10.843ex;"/></span></dd></dl>
+<p>where B is the <a href="/wiki/Beta_function" title="Beta function">beta function</a>.
+Expressions for the <a href="/wiki/Expected_value" title="Expected value">mean</a>, <a href="/wiki/Variance" title="Variance">variance</a>, <a href="/wiki/Skewness" title="Skewness">skewness</a> and <a href="/wiki/Kurtosis" title="Kurtosis">kurtosis</a> can be derived from this. Writing <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b=\pi /\beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>b</mi>
+<mo>=</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b=\pi /\beta }</annotation>
+</semantics>
+</math></span><img alt="b=\pi /\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04ffa4234e0e057e4293c3603e343a5059813954" style="vertical-align: -0.838ex; width:7.922ex; height:2.843ex;"/></span> for convenience, the mean is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {E} (X)=\alpha b/\sin b,\quad \beta &gt;1,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">E</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>α<!-- α --></mi>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>b</mi>
+<mo>,</mo>
+<mspace width="1em"></mspace>
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {E} (X)=\alpha b/\sin b,\quad \beta &gt;1,}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {E}(X)=\alpha b/\sin b,\quad \beta &gt;1," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4d8a922b6c5627a42375ae0a2061fb1788c73ee4" style="vertical-align: -0.838ex; width:26.342ex; height:2.843ex;"/></span></dd></dl>
+<p>and the variance is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {Var} (X)=\alpha ^{2}\left(2b/\sin 2b-b^{2}/\sin ^{2}b\right),\quad \beta &gt;2.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Var</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<msup>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mn>2</mn>
+<mi>b</mi>
+<mo>−<!-- − --></mo>
+<msup>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<msup>
+<mi>sin</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>b</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+<mspace width="1em"></mspace>
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>2.</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {Var} (X)=\alpha ^{2}\left(2b/\sin 2b-b^{2}/\sin ^{2}b\right),\quad \beta &gt;2.}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {Var}(X)=\alpha ^{2}\left(2b/\sin 2b-b^{2}/\sin ^{2}b\right),\quad \beta &gt;2." aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a289e8b0dc21f174ed3bb8c1a9a1c8af473e6ddb" style="vertical-align: -1.005ex; width:46.596ex; height:3.343ex;"/></span></dd></dl>
+<p>Explicit expressions for the skewness and kurtosis are lengthy.<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup>
+As <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> tends to infinity the mean tends to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span>, the variance and skewness tend to zero and the excess kurtosis tends to 6/5 (see also <a href="#Related_distributions">related distributions</a> below).
+</p>
+<h3><span class="mw-headline" id="Quantiles">Quantiles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=5" title="Edit section: Quantiles">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="/wiki/Quantile_function" title="Quantile function">quantile function</a> (inverse cumulative distribution function) is :
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle F^{-1}(p;\alpha ,\beta )=\alpha \left({\frac {p}{1-p}}\right)^{1/\beta }.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>F</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo stretchy="false">(</mo>
+<mi>p</mi>
+<mo>;</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>α<!-- α --></mi>
+<msup>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>p</mi>
+<mrow>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mi>p</mi>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle F^{-1}(p;\alpha ,\beta )=\alpha \left({\frac {p}{1-p}}\right)^{1/\beta }.}</annotation>
+</semantics>
+</math></span><img alt="F^{{-1}}(p;\alpha ,\beta )=\alpha \left({\frac  {p}{1-p}}\right)^{{1/\beta }}." aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/054e4bc2066d722ac460d23be09b3b7485ee0c8e" style="vertical-align: -2.505ex; width:29.494ex; height:6.676ex;"/></span></dd></dl>
+<p>It follows that the <a href="/wiki/Median" title="Median">median</a> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span>,
+the lower <a href="/wiki/Quartile" title="Quartile">quartile</a> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 3^{-1/\beta }\alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>3</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 3^{-1/\beta }\alpha }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 3^{-1/\beta }\alpha }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/75c3a7aa8e0e6655eb050e71f0e6fb48a4114fc2" style="vertical-align: -0.338ex; width:6.747ex; height:2.843ex;"/></span>
+and the upper quartile is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 3^{1/\beta }\alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mn>3</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 3^{1/\beta }\alpha }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 3^{1/\beta }\alpha }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0388cc6d9bb883c6c01f1f6ac526bd6fb4f800ed" style="vertical-align: -0.338ex; width:5.468ex; height:2.843ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=6" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:Loglogistichaz.svg"><img alt="" class="thumbimage" data-file-height="425" data-file-width="461" decoding="async" height="203" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Loglogistichaz.svg/220px-Loglogistichaz.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Loglogistichaz.svg/330px-Loglogistichaz.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Loglogistichaz.svg/440px-Loglogistichaz.svg.png 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:Loglogistichaz.svg" title="Enlarge"></a></div><a class="mw-redirect" href="/wiki/Hazard_function" title="Hazard function">Hazard function</a>. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha =1,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha =1,}</annotation>
+</semantics>
+</math></span><img alt="\alpha=1," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b99d217bfa3a15fc9dbe0a37586a63db0b75990a" style="vertical-align: -0.671ex; width:6.395ex; height:2.509ex;"/></span> values of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> as shown in legend</div></div></div>
+<h3><span class="mw-headline" id="Survival_analysis">Survival analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=7" title="Edit section: Survival analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The log-logistic distribution provides one <a href="/wiki/Parametric_model" title="Parametric model">parametric model</a> for <a href="/wiki/Survival_analysis" title="Survival analysis">survival analysis</a>. Unlike the more commonly used <a href="/wiki/Weibull_distribution" title="Weibull distribution">Weibull distribution</a>, it can have a non-<a class="mw-redirect" href="/wiki/Monotonic" title="Monotonic">monotonic</a> <a class="mw-redirect" href="/wiki/Hazard_function" title="Hazard function">hazard function</a>: when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta &gt;1,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>&gt;</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta &gt;1,}</annotation>
+</semantics>
+</math></span><img alt="\beta &gt;1," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/26f3570f539aec12e60e87944cf1f75f1533ec43" style="vertical-align: -0.671ex; width:6.24ex; height:2.509ex;"/></span> the hazard function is <a class="mw-redirect" href="/wiki/Unimodal" title="Unimodal">unimodal</a> (when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> ≤ 1, the hazard decreases monotonically). The fact that the cumulative distribution function can be written in closed form is particularly useful for analysis of survival data with <a href="/wiki/Censoring_(statistics)#life_testing" title="Censoring (statistics)">censoring</a>.<sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup>
+The log-logistic distribution can be used as the basis of an <a href="/wiki/Accelerated_failure_time_model" title="Accelerated failure time model">accelerated failure time model</a> by allowing <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span> to differ between groups, or more generally by introducing covariates that affect <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span> but not <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> by modelling <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \log(\alpha )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \log(\alpha )}</annotation>
+</semantics>
+</math></span><img alt="\log(\alpha )" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4c01723b16efdc36ced8260011894d698fe11fe5" style="vertical-align: -0.838ex; width:6.269ex; height:2.843ex;"/></span> as a linear function of the covariates.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup>
+</p><p>The <a href="/wiki/Survival_function" title="Survival function">survival function</a> is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle S(t)=1-F(t)=[1+(t/\alpha )^{\beta }]^{-1},\,}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>S</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mi>F</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mo stretchy="false">[</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<msup>
+<mo stretchy="false">]</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mo>,</mo>
+<mspace width="thinmathspace"></mspace>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle S(t)=1-F(t)=[1+(t/\alpha )^{\beta }]^{-1},\,}</annotation>
+</semantics>
+</math></span><img alt="S(t)=1-F(t)=[1+(t/\alpha )^{{\beta }}]^{{-1}},\," aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fbf9d6e8b7c075f857d131d44f7ac07c67e43eb7" style="vertical-align: -0.838ex; width:33.874ex; height:3.176ex;"/></span></dd></dl>
+<p>and so the <a class="mw-redirect" href="/wiki/Hazard_function" title="Hazard function">hazard function</a> is
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle h(t)={\frac {f(t)}{S(t)}}={\frac {(\beta /\alpha )(t/\alpha )^{\beta -1}}{1+(t/\alpha )^{\beta }}}.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>h</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>f</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>S</mi>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mi>β<!-- β --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle h(t)={\frac {f(t)}{S(t)}}={\frac {(\beta /\alpha )(t/\alpha )^{\beta -1}}{1+(t/\alpha )^{\beta }}}.}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle h(t)={\frac {f(t)}{S(t)}}={\frac {(\beta /\alpha )(t/\alpha )^{\beta -1}}{1+(t/\alpha )^{\beta }}}.}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/229baa5553543af4c53704c7b3d78f6d355c67db" style="vertical-align: -2.671ex; width:31.017ex; height:6.676ex;"/></span></dd></dl>
+<p>The log-logistic distribution with shape parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta =1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>=</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta =1}</annotation>
+</semantics>
+</math></span><img alt="\beta =1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/73416922785589e358ae2bb10c7633667b4c24a2" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span> is the marginal distribution of the inter-times in a geometric-distributed <a href="/wiki/Counting_process" title="Counting process">counting process</a>.<sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Hydrology">Hydrology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=8" title="Edit section: Hydrology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a class="image" href="/wiki/File:FitLog-logisticdistr.tif"><img alt="" class="thumbimage" data-file-height="465" data-file-width="623" decoding="async" height="164" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/FitLog-logisticdistr.tif/lossless-page1-220px-FitLog-logisticdistr.tif.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/98/FitLog-logisticdistr.tif/lossless-page1-330px-FitLog-logisticdistr.tif.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/98/FitLog-logisticdistr.tif/lossless-page1-440px-FitLog-logisticdistr.tif.png 2x" width="220"/></a> <div class="thumbcaption"><div class="magnify"><a class="internal" href="/wiki/File:FitLog-logisticdistr.tif" title="Enlarge"></a></div>Fitted cumulative log-logistic distribution to maximum one-day October rainfalls using <a href="/wiki/CumFreq" title="CumFreq">CumFreq</a>, see also <a class="mw-redirect" href="/wiki/Distribution_fitting" title="Distribution fitting">Distribution fitting</a></div></div></div>
+<p>The log-logistic distribution has been used in hydrology for modelling stream flow rates and precipitation.<sup class="reference" id="cite_ref-Shoukri_3-1"><a href="#cite_note-Shoukri-3">[3]</a></sup><sup class="reference" id="cite_ref-Ashkar06_4-1"><a href="#cite_note-Ashkar06-4">[4]</a></sup>
+</p><p>Extreme values like maximum one-day rainfall and river discharge per month or per year often follow a <a href="/wiki/Log-normal_distribution" title="Log-normal distribution">log-normal distribution</a>.<sup class="reference" id="cite_ref-11"><a href="#cite_note-11">[11]</a></sup> The log-normal distribution, however, needs a numeric approximation. As the log-logistic distribution, which can be solved analytically, is similar to the log-normal distribution, it can be used instead.
+</p><p>The blue picture illustrates an example of fitting the log-logistic distribution to ranked maximum one-day October rainfalls and it shows the 90% <a class="mw-redirect" href="/wiki/Confidence_belt" title="Confidence belt">confidence belt</a> based on the <a href="/wiki/Binomial_distribution" title="Binomial distribution">binomial distribution</a>. The rainfall data are represented by the <a class="mw-redirect" href="/wiki/Plotting_position" title="Plotting position">plotting position</a> <i>r</i>/(<i>n</i>+1) as part of the <a href="/wiki/Cumulative_frequency_analysis" title="Cumulative frequency analysis">cumulative frequency analysis</a>.
+</p>
+<h3><span class="mw-headline" id="Economics">Economics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=9" title="Edit section: Economics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The log-logistic has been used as a simple model of the <a href="/wiki/Distribution_of_wealth" title="Distribution of wealth">distribution of wealth</a> or <a href="/wiki/Income_distribution" title="Income distribution">income</a> in <a href="/wiki/Economics" title="Economics">economics</a>, where it is known as the Fisk distribution.<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+Its <a href="/wiki/Gini_coefficient" title="Gini coefficient">Gini coefficient</a> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 1/\beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 1/\beta }</annotation>
+</semantics>
+</math></span><img alt="1/\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f6c99413f61c93d4b156a3db9d6f801af6e73a0f" style="vertical-align: -0.838ex; width:3.657ex; height:2.843ex;"/></span>.<sup class="reference" id="cite_ref-KK_13-0"><a href="#cite_note-KK-13">[13]</a></sup>
+</p>
+<div style="margin-left:0">
+<table class="mw-collapsible mw-collapsed" style="background: transparent; text-align: left; border: 1px solid Silver; margin: 0.2em auto auto; width:100%; clear: both; padding: 1px;">
+<tbody><tr>
+<th style="background: #F0F2F5; font-size:87%; padding:0.2em 0.3em; text-align:center;"><div style="display:inline;font-size:115%">Derivation of Gini coefficient</div>
+</th></tr>
+<tr>
+<td style="border: solid 1px Silver; padding: 0.6em; background: White;">
+<p>The Gini coefficient for a continuous probability distribution takes the form:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G={1 \over {\mu }}\int _{0}^{\infty }F(1-F)dx}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>μ<!-- μ --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</msubsup>
+<mi>F</mi>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mi>F</mi>
+<mo stretchy="false">)</mo>
+<mi>d</mi>
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G={1 \over {\mu }}\int _{0}^{\infty }F(1-F)dx}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G={1 \over {\mu }}\int _{0}^{\infty }F(1-F)dx}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae4d04260df301cdf709a0944ebd40a77c094a3c" style="vertical-align: -2.338ex; width:24.116ex; height:5.843ex;"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle F}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>F</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle F}</annotation>
+</semantics>
+</math></span><img alt="F" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/545fd099af8541605f7ee55f08225526be88ce57" style="vertical-align: -0.338ex; width:1.741ex; height:2.176ex;"/></span> is the CDF of the distribution and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu }</annotation>
+</semantics>
+</math></span><img alt="\mu " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fd47b2a39f7a7856952afec1f1db72c67af6161" style="vertical-align: -0.838ex; width:1.402ex; height:2.176ex;"/></span> is the expected value. For the log-logistic distribution, the formula for the Gini coefficient becomes:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G={\sin(\pi /\beta ) \over {\alpha \pi /\beta }}\int _{0}^{\infty }{dx \over {[1+(x/\alpha )^{-\beta }][1+(x/\alpha )^{\beta }]}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>α<!-- α --></mi>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">[</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">]</mo>
+<mo stretchy="false">[</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">]</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G={\sin(\pi /\beta ) \over {\alpha \pi /\beta }}\int _{0}^{\infty }{dx \over {[1+(x/\alpha )^{-\beta }][1+(x/\alpha )^{\beta }]}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G={\sin(\pi /\beta ) \over {\alpha \pi /\beta }}\int _{0}^{\infty }{dx \over {[1+(x/\alpha )^{-\beta }][1+(x/\alpha )^{\beta }]}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc5f6975ebec640621226812e31e296fb7fd60db" style="vertical-align: -2.671ex; width:46.001ex; height:6.509ex;"/></span></dd></dl>
+<p>Defining the substitution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle z=x/\alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>z</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle z=x/\alpha }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle z=x/\alpha }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b2a90d5990f664c27e20068d4203bf903199263b" style="vertical-align: -0.838ex; width:8.166ex; height:2.843ex;"/></span> leads to the simpler equation:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G={\sin(\pi /\beta ) \over {\pi /\beta }}\int _{0}^{\infty }{dz \over {(1+z^{-\beta })(1+z^{\beta })}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+</mrow>
+</msubsup>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>z</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G={\sin(\pi /\beta ) \over {\pi /\beta }}\int _{0}^{\infty }{dz \over {(1+z^{-\beta })(1+z^{\beta })}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G={\sin(\pi /\beta ) \over {\pi /\beta }}\int _{0}^{\infty }{dz \over {(1+z^{-\beta })(1+z^{\beta })}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2edf824867ccd7609efb5c000c19a9ebdd042000" style="vertical-align: -2.671ex; width:37.634ex; height:6.509ex;"/></span></dd></dl>
+<p>And making the substitution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle u=1/(1+z^{\beta })}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>u</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>z</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle u=1/(1+z^{\beta })}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle u=1/(1+z^{\beta })}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/583cb8fe9d9ff1287b7aa58d86069857256a3d9f" style="vertical-align: -0.838ex; width:14.83ex; height:3.176ex;"/></span> further simplifies the Gini coefficient formula to:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G={\sin(\pi /\beta ) \over {\pi }}\int _{0}^{1}u^{-1/\beta }(1-u)^{1/\beta }du}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>π<!-- π --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<msubsup>
+<mo>∫<!-- ∫ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>0</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msubsup>
+<msup>
+<mi>u</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mi>u</mi>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mrow>
+</msup>
+<mi>d</mi>
+<mi>u</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G={\sin(\pi /\beta ) \over {\pi }}\int _{0}^{1}u^{-1/\beta }(1-u)^{1/\beta }du}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G={\sin(\pi /\beta ) \over {\pi }}\int _{0}^{1}u^{-1/\beta }(1-u)^{1/\beta }du}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/38f0ad3ed2013406df92c63b2f77c2989e703e70" style="vertical-align: -2.338ex; width:36.477ex; height:6.176ex;"/></span></dd></dl>
+<p>The integral component is equivalent to the standard <a href="/wiki/Beta_function" title="Beta function">beta function</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>B</mtext>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9911753959845d13aeadb8aaa3f616d0081d2cd1" style="vertical-align: -0.838ex; width:19.808ex; height:2.843ex;"/></span>. The beta function may also be written as:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\text{B}}(x,y)={\Gamma (x)\Gamma (y) \over {\Gamma (x+y)}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>B</mtext>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>,</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>+</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\text{B}}(x,y)={\Gamma (x)\Gamma (y) \over {\Gamma (x+y)}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\text{B}}(x,y)={\Gamma (x)\Gamma (y) \over {\Gamma (x+y)}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0bf2716d5af5f2c887131dfb167db137f868a8f7" style="vertical-align: -2.671ex; width:19.918ex; height:6.509ex;"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \Gamma (\cdot )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mo>⋅<!-- ⋅ --></mo>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \Gamma (\cdot )}</annotation>
+</semantics>
+</math></span><img alt="\Gamma (\cdot )" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fb56054f7834e05862ff50930fc46b4f8e3f8280" style="vertical-align: -0.838ex; width:3.909ex; height:2.843ex;"/></span> is the <a href="/wiki/Gamma_function" title="Gamma function">gamma function</a>. Using the properties of the gamma function, it can be shown that:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}\Gamma (1-1/\beta )\Gamma (1/\beta )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>B</mtext>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mi mathvariant="normal">Γ<!-- Γ --></mi>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}\Gamma (1-1/\beta )\Gamma (1/\beta )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}\Gamma (1-1/\beta )\Gamma (1/\beta )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3807b822026e9ce3849a2334856c9f461f6e476" style="vertical-align: -2.338ex; width:42.916ex; height:5.676ex;"/></span></dd></dl>
+<p>From <a class="mw-redirect" href="/wiki/Euler%27s_reflection_formula" title="Euler's reflection formula">Euler's reflection formula</a>, the expression can be simplified further:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}{\pi  \over {\sin(\pi /\beta )}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>B</mtext>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>β<!-- β --></mi>
+</mrow>
+</mfrac>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>sin</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}{\pi  \over {\sin(\pi /\beta )}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\text{B}}(1-1/\beta ,1+1/\beta )={1 \over {\beta }}{\pi  \over {\sin(\pi /\beta )}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae24e4925be391531e240f0280bb6ea8c24a1d43" style="vertical-align: -2.671ex; width:34.402ex; height:6.009ex;"/></span></dd></dl>
+<p>Finally, we may conclude that the Gini coefficient for the log-logistic distribution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle G=1/\beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>G</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle G=1/\beta }</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle G=1/\beta }" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cb479b82c5451b7cad2bc72ac117b816c7e7e050" style="vertical-align: -0.838ex; width:8.582ex; height:2.843ex;"/></span>.
+</p>
+</td></tr></tbody></table></div>
+<h3><span class="mw-headline" id="Networking">Networking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=10" title="Edit section: Networking">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The log-logistic has been used as a model for the period of time beginning when some data leaves a software user application in a computer and the response is received by the same application after travelling through and being processed by other computers, applications, and network segments, most or all of them without hard <a href="/wiki/Real-time_computing" title="Real-time computing">real-time</a> guarantees (for example, when an application is displaying data coming from a remote <a href="/wiki/Sensor" title="Sensor">sensor</a> connected to the Internet). It has been shown to be a more accurate probabilistic model for that than the <a href="/wiki/Log-normal_distribution" title="Log-normal distribution">log-normal distribution</a> or others, as long as abrupt changes of regime in the sequences of those times are properly detected.<sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Related_distributions">Related distributions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=11" title="Edit section: Related distributions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>If <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X\sim LL(\alpha ,\beta )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+<mo>∼<!-- ∼ --></mo>
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X\sim LL(\alpha ,\beta )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle X\sim LL(\alpha ,\beta )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cb1f80ffa79052aa583264d5d43f1ffb73a8e129" style="vertical-align: -0.838ex; width:13.907ex; height:2.843ex;"/></span> then <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle kX\sim LL(k\alpha ,\beta ).}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>k</mi>
+<mi>X</mi>
+<mo>∼<!-- ∼ --></mo>
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>k</mi>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle kX\sim LL(k\alpha ,\beta ).}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle kX\sim LL(k\alpha ,\beta ).}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b74e69488ad64b600844ca3e2e5e2416ce32bdfa" style="vertical-align: -0.838ex; width:16.976ex; height:2.843ex;"/></span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle LL(\alpha ,\beta )\sim {\textrm {Dagum}}(1,\alpha ,\beta )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>∼<!-- ∼ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>Dagum</mtext>
+</mrow>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle LL(\alpha ,\beta )\sim {\textrm {Dagum}}(1,\alpha ,\beta )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle LL(\alpha ,\beta )\sim {\textrm {Dagum}}(1,\alpha ,\beta )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/627695466dc570a35072e166ebab96d977f05e75" style="vertical-align: -0.838ex; width:27.115ex; height:2.843ex;"/></span> (<a href="/wiki/Dagum_distribution" title="Dagum distribution">Dagum distribution</a>).</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle LL(\alpha ,\beta )\sim {\textrm {SinghMaddala}}(1,\alpha ,\beta )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo>∼<!-- ∼ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>SinghMaddala</mtext>
+</mrow>
+</mrow>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle LL(\alpha ,\beta )\sim {\textrm {SinghMaddala}}(1,\alpha ,\beta )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle LL(\alpha ,\beta )\sim {\textrm {SinghMaddala}}(1,\alpha ,\beta )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ba24a47d4f5c8127b57c038e8c4c596f97381245" style="vertical-align: -0.838ex; width:34.323ex; height:2.843ex;"/></span> (<a class="mw-redirect" href="/wiki/Singh%E2%80%93Maddala_distribution" title="Singh–Maddala distribution">Singh–Maddala distribution</a>).</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\textrm {LL}}(\gamma ,\sigma )\sim \beta '(1,1,\gamma ,\sigma )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>LL</mtext>
+</mrow>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>γ<!-- γ --></mi>
+<mo>,</mo>
+<mi>σ<!-- σ --></mi>
+<mo stretchy="false">)</mo>
+<mo>∼<!-- ∼ --></mo>
+<msup>
+<mi>β<!-- β --></mi>
+<mo>′</mo>
+</msup>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mi>γ<!-- γ --></mi>
+<mo>,</mo>
+<mi>σ<!-- σ --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\textrm {LL}}(\gamma ,\sigma )\sim \beta '(1,1,\gamma ,\sigma )}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\textrm {LL}}(\gamma ,\sigma )\sim \beta '(1,1,\gamma ,\sigma )}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8907b71eeb9594efcef97a5dcbdce94705a49e6f" style="vertical-align: -0.838ex; width:23.289ex; height:3.009ex;"/></span> (<a href="/wiki/Beta_prime_distribution" title="Beta prime distribution">Beta prime distribution</a>).</li>
+<li>If <i>X</i> has a log-logistic distribution with scale parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span> and shape parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> then <i>Y</i> = log(<i>X</i>) has a <a href="/wiki/Logistic_distribution" title="Logistic distribution">logistic distribution</a> with location parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \log(\alpha )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \log(\alpha )}</annotation>
+</semantics>
+</math></span><img alt="\log(\alpha )" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4c01723b16efdc36ced8260011894d698fe11fe5" style="vertical-align: -0.838ex; width:6.269ex; height:2.843ex;"/></span> and scale parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 1/\beta .}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 1/\beta .}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 1/\beta .}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/48703ee4ebfe58f69df0bf4d81ae85878d895934" style="vertical-align: -0.838ex; width:4.304ex; height:2.843ex;"/></span></li>
+<li>As the shape parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta }</annotation>
+</semantics>
+</math></span><img alt="\beta " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7ed48a5e36207156fb792fa79d29925d2f7901e8" style="vertical-align: -0.671ex; width:1.332ex; height:2.509ex;"/></span> of the log-logistic distribution increases, its shape increasingly resembles that of a (very narrow) <a href="/wiki/Logistic_distribution" title="Logistic distribution">logistic distribution</a>. Informally:</li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle LL(\alpha ,\beta )\to L(\alpha ,\alpha /\beta )\quad {\text{as}}\quad \beta \to \infty .}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">→<!-- → --></mo>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">)</mo>
+<mspace width="1em"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>as</mtext>
+</mrow>
+<mspace width="1em"></mspace>
+<mi>β<!-- β --></mi>
+<mo stretchy="false">→<!-- → --></mo>
+<mi mathvariant="normal">∞<!-- ∞ --></mi>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle LL(\alpha ,\beta )\to L(\alpha ,\alpha /\beta )\quad {\text{as}}\quad \beta \to \infty .}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle LL(\alpha ,\beta )\to L(\alpha ,\alpha /\beta )\quad {\text{as}}\quad \beta \to \infty .}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6e816c228a3c814770656952476af4932cae31d6" style="vertical-align: -0.838ex; width:36.979ex; height:2.843ex;"/></span></dd></dl></dd></dl>
+<ul><li>The log-logistic distribution with shape parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \beta =1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>β<!-- β --></mi>
+<mo>=</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \beta =1}</annotation>
+</semantics>
+</math></span><img alt="\beta =1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/73416922785589e358ae2bb10c7633667b4c24a2" style="vertical-align: -0.671ex; width:5.593ex; height:2.509ex;"/></span> and scale parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span> is the same as the <a href="/wiki/Pareto_distribution#Generalized_Pareto_distributions" title="Pareto distribution">generalized Pareto distribution</a> with location parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mu =0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>μ<!-- μ --></mi>
+<mo>=</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mu =0}</annotation>
+</semantics>
+</math></span><img alt="\mu =0" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3753282c0ad2ea1e7d63f39425efd13c37da3169" style="vertical-align: -0.838ex; width:5.663ex; height:2.676ex;"/></span>, shape parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \xi =1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>ξ<!-- ξ --></mi>
+<mo>=</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \xi =1}</annotation>
+</semantics>
+</math></span><img alt="\xi =1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b58b7a875fef17a64b2cc7710225b16f72950024" style="vertical-align: -0.671ex; width:5.291ex; height:2.509ex;"/></span> and scale parameter <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha :}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>:</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha :}</annotation>
+</semantics>
+</math></span><img alt="\alpha :" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3dc633c1cfa93fe91f681273fcebb66d206e66bd" style="vertical-align: -0.338ex; width:2.78ex; height:1.676ex;"/></span></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle LL(\alpha ,1)=GPD(1,\alpha ,1).}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>L</mi>
+<mi>L</mi>
+<mo stretchy="false">(</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>G</mi>
+<mi>P</mi>
+<mi>D</mi>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mi>α<!-- α --></mi>
+<mo>,</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle LL(\alpha ,1)=GPD(1,\alpha ,1).}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle LL(\alpha ,1)=GPD(1,\alpha ,1).}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cd62bbe37f4b7ff599f370c7d64930ab00c80392" style="vertical-align: -0.838ex; width:25.59ex; height:2.843ex;"/></span></dd></dl></dd></dl>
+<ul><li>The addition of another parameter (a shift parameter) formally results in a <a href="/wiki/Shifted_log-logistic_distribution" title="Shifted log-logistic distribution">shifted log-logistic distribution</a>, but this is usually considered in a different parameterization so that the distribution can be bounded above or bounded below.</li></ul>
+<h3><span class="mw-headline" id="Generalizations">Generalizations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=12" title="Edit section: Generalizations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Several different distributions are sometimes referred to as the <b>generalized log-logistic distribution</b>, as they contain the log-logistic as a special case.<sup class="reference" id="cite_ref-KK_13-1"><a href="#cite_note-KK-13">[13]</a></sup> These include the <a class="mw-redirect" href="/wiki/Burr_Type_XII_distribution" title="Burr Type XII distribution">Burr Type XII distribution</a> (also known as the <i>Singh–Maddala distribution</i>) and the <a href="/wiki/Dagum_distribution" title="Dagum distribution">Dagum distribution</a>, both of which include a second shape parameter. Both are in turn special cases of the even more general <i>generalized beta distribution of the second kind</i>. Another more straightforward generalization of the log-logistic is the <a href="/wiki/Shifted_log-logistic_distribution" title="Shifted log-logistic distribution">shifted log-logistic distribution</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/List_of_probability_distributions#Supported_on_semi-infinite_intervals,_usually_.5B0.2C.E2.88.9E.29" title="List of probability distributions">Probability distributions: List of important distributions supported on semi-infinite intervals</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Log-logistic_distribution&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-mgf_cite-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-mgf_cite_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mgf_cite_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><a class="external free" href="http://www.math.wm.edu/~leemis/chart/UDR/PDFs/Loglogistic.pdf" rel="nofollow">http://www.math.wm.edu/~leemis/chart/UDR/PDFs/Loglogistic.pdf</a></span>
+</li>
+<li id="cite_note-mgf_cite2-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-mgf_cite2_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mgf_cite2_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFEkawatiWarsonoKurniasari2014">Ekawati, D.; Warsono; Kurniasari, D. (2014). "On the Moments, Cumulants, and Characteristic Function of the Log-Logistic Distribution". <i>IPTEK, The Journal for Technology and Science</i>. <b>25</b> (3): 78–82.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IPTEK%2C+The+Journal+for+Technology+and+Science&amp;rft.atitle=On+the+Moments%2C+Cumulants%2C+and+Characteristic+Function+of+the+Log-Logistic+Distribution&amp;rft.volume=25&amp;rft.issue=3&amp;rft.pages=78-82&amp;rft.date=2014&amp;rft.aulast=Ekawati&amp;rft.aufirst=D.&amp;rft.au=Warsono&amp;rft.au=Kurniasari%2C+D.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-Shoukri-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Shoukri_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Shoukri_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFShoukriMianTracy1988">Shoukri, M.M.; Mian, I.U.M.; Tracy, D.S. (1988), "Sampling Properties of Estimators of the Log-Logistic Distribution with Application to Canadian Precipitation Data", <i><a class="new" href="/w/index.php?title=The_Canadian_Journal_of_Statistics&amp;action=edit&amp;redlink=1" title="The Canadian Journal of Statistics (page does not exist)">The Canadian Journal of Statistics</a></i>, <b>16</b> (3): 223–236, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F3314729" rel="nofollow">10.2307/3314729</a>, <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">JSTOR</a> <a class="external text" href="//www.jstor.org/stable/3314729" rel="nofollow">3314729</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+Canadian+Journal+of+Statistics&amp;rft.atitle=Sampling+Properties+of+Estimators+of+the+Log-Logistic+Distribution+with+Application+to+Canadian+Precipitation+Data&amp;rft.volume=16&amp;rft.issue=3&amp;rft.pages=223-236&amp;rft.date=1988&amp;rft_id=info%3Adoi%2F10.2307%2F3314729&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F3314729&amp;rft.aulast=Shoukri&amp;rft.aufirst=M.M.&amp;rft.au=Mian%2C+I.U.M.&amp;rft.au=Tracy%2C+D.S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-Ashkar06-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Ashkar06_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Ashkar06_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFAshkarMahdi2006">Ashkar, Fahim; Mahdi, Smail (2006), "Fitting the log-logistic distribution by generalized moments", <i><a href="/wiki/Journal_of_Hydrology" title="Journal of Hydrology">Journal of Hydrology</a></i>, <b>328</b> (3–4): 694–703, <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">Bibcode</a>:<a class="external text" href="https://ui.adsabs.harvard.edu/abs/2006JHyd..328..694A" rel="nofollow">2006JHyd..328..694A</a>, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2Fj.jhydrol.2006.01.014" rel="nofollow">10.1016/j.jhydrol.2006.01.014</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Hydrology&amp;rft.atitle=Fitting+the+log-logistic+distribution+by+generalized+moments&amp;rft.volume=328&amp;rft.issue=3%E2%80%934&amp;rft.pages=694-703&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1016%2Fj.jhydrol.2006.01.014&amp;rft_id=info%3Abibcode%2F2006JHyd..328..694A&amp;rft.aulast=Ashkar&amp;rft.aufirst=Fahim&amp;rft.au=Mahdi%2C+Smail&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-Tadi82-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Tadi82_5-0">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFTadikamallaJohnson1982">Tadikamalla, Pandu R.; Johnson, Norman L. (1982), "Systems of Frequency Curves Generated by Transformations of Logistic Variables", <i>Biometrika</i>, <b>69</b> (2): 461–465, <a class="mw-redirect" href="/wiki/CiteSeerX_(identifier)" title="CiteSeerX (identifier)">CiteSeerX</a> <span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.153.9487" rel="nofollow">10.1.1.153.9487</a></span>, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1093%2Fbiomet%2F69.2.461" rel="nofollow">10.1093/biomet/69.2.461</a>, <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">JSTOR</a> <a class="external text" href="//www.jstor.org/stable/2335422" rel="nofollow">2335422</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Biometrika&amp;rft.atitle=Systems+of+Frequency+Curves+Generated+by+Transformations+of+Logistic+Variables&amp;rft.volume=69&amp;rft.issue=2&amp;rft.pages=461-465&amp;rft.date=1982&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.153.9487&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2335422&amp;rft_id=info%3Adoi%2F10.1093%2Fbiomet%2F69.2.461&amp;rft.aulast=Tadikamalla&amp;rft.aufirst=Pandu+R.&amp;rft.au=Johnson%2C+Norman+L.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-TadiBurr80-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-TadiBurr80_6-0">^</a></b></span> <span class="reference-text"><cite class="citation cs2" id="CITEREFTadikamalla1980">Tadikamalla, Pandu R. (1980), "A Look at the Burr and Related Distributions", <i>International Statistical Review</i>, <b>48</b> (3): 337–344, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1402945" rel="nofollow">10.2307/1402945</a>, <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">JSTOR</a> <a class="external text" href="//www.jstor.org/stable/1402945" rel="nofollow">1402945</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Statistical+Review&amp;rft.atitle=A+Look+at+the+Burr+and+Related+Distributions&amp;rft.volume=48&amp;rft.issue=3&amp;rft.pages=337-344&amp;rft.date=1980&amp;rft_id=info%3Adoi%2F10.2307%2F1402945&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F1402945&amp;rft.aulast=Tadikamalla&amp;rft.aufirst=Pandu+R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFMcLaughlin2001">McLaughlin, Michael P. (2001), <a class="external text" href="http://www.causascientia.org/math_stat/Dists/Compendium.pdf" rel="nofollow"><i>A Compendium of Common Probability Distributions</i></a> <span class="cs1-format">(PDF)</span>, p. A–37<span class="reference-accessdate">, retrieved <span class="nowrap">2008-02-15</span></span></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Compendium+of+Common+Probability+Distributions&amp;rft.pages=A-37&amp;rft.date=2001&amp;rft.aulast=McLaughlin&amp;rft.aufirst=Michael+P.&amp;rft_id=http%3A%2F%2Fwww.causascientia.org%2Fmath_stat%2FDists%2FCompendium.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFBennett1983">Bennett, Steve (1983), "Log-Logistic Regression Models for Survival Data", <i>Journal of the Royal Statistical Society, Series C</i>, <b>32</b> (2): 165–171, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F2347295" rel="nofollow">10.2307/2347295</a>, <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">JSTOR</a> <a class="external text" href="//www.jstor.org/stable/2347295" rel="nofollow">2347295</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Royal+Statistical+Society%2C+Series+C&amp;rft.atitle=Log-Logistic+Regression+Models+for+Survival+Data&amp;rft.volume=32&amp;rft.issue=2&amp;rft.pages=165-171&amp;rft.date=1983&amp;rft_id=info%3Adoi%2F10.2307%2F2347295&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2347295&amp;rft.aulast=Bennett&amp;rft.aufirst=Steve&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFCollett2003">Collett, Dave (2003), <i>Modelling Survival Data in Medical Research</i> (2nd ed.), CRC press, <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-1-58488-325-8" title="Special:BookSources/978-1-58488-325-8"><bdi>978-1-58488-325-8</bdi></a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Modelling+Survival+Data+in+Medical+Research&amp;rft.edition=2nd&amp;rft.pub=CRC+press&amp;rft.date=2003&amp;rft.isbn=978-1-58488-325-8&amp;rft.aulast=Collett&amp;rft.aufirst=Dave&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFDi_CrescenzoPellerey2019">Di Crescenzo, Antonio; Pellerey, Franco (2019), "Some results and applications of geometric counting processes", <i>Methodology and Computing in Applied Probability</i>, <b>21</b> (1): 203–233, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1007%2Fs11009-018-9649-9" rel="nofollow">10.1007/s11009-018-9649-9</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Methodology+and+Computing+in+Applied+Probability&amp;rft.atitle=Some+results+and+applications+of+geometric+counting+processes&amp;rft.volume=21&amp;rft.issue=1&amp;rft.pages=203-233&amp;rft.date=2019&amp;rft_id=info%3Adoi%2F10.1007%2Fs11009-018-9649-9&amp;rft.aulast=Di+Crescenzo&amp;rft.aufirst=Antonio&amp;rft.au=Pellerey%2C+Franco&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation cs2" id="CITEREFRitzema_(ed.)1994">Ritzema (ed.), H.P. (1994), <a class="external text" href="https://archive.org/details/drainageprincipl0000unse/page/175" rel="nofollow"><i>Frequency and Regression Analysis</i></a>, Chapter 6 in: Drainage Principles and Applications, Publication 16, International Institute for Land Reclamation and Improvement (ILRI), Wageningen, The Netherlands, pp. <a class="external text" href="https://archive.org/details/drainageprincipl0000unse/page/175" rel="nofollow">175–224</a>, <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-90-70754-33-4" title="Special:BookSources/978-90-70754-33-4"><bdi>978-90-70754-33-4</bdi></a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Frequency+and+Regression+Analysis&amp;rft.pages=175-224&amp;rft.pub=Chapter+6+in%3A+Drainage+Principles+and+Applications%2C+Publication+16%2C+International+Institute+for+Land+Reclamation+and+Improvement+%28ILRI%29%2C+Wageningen%2C+The+Netherlands&amp;rft.date=1994&amp;rft.isbn=978-90-70754-33-4&amp;rft.aulast=Ritzema+%28ed.%29&amp;rft.aufirst=H.P.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fdrainageprincipl0000unse%2Fpage%2F175&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><span class="cs1-maint citation-comment">CS1 maint: extra text: authors list (<a href="/wiki/Category:CS1_maint:_extra_text:_authors_list" title="Category:CS1 maint: extra text: authors list">link</a>)</span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFFisk1961">Fisk, P.R. (1961), "The Graduation of Income Distributions", <i>Econometrica</i>, <b>29</b> (2): 171–185, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.2307%2F1909287" rel="nofollow">10.2307/1909287</a>, <a class="mw-redirect" href="/wiki/JSTOR_(identifier)" title="JSTOR (identifier)">JSTOR</a> <a class="external text" href="//www.jstor.org/stable/1909287" rel="nofollow">1909287</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Econometrica&amp;rft.atitle=The+Graduation+of+Income+Distributions&amp;rft.volume=29&amp;rft.issue=2&amp;rft.pages=171-185&amp;rft.date=1961&amp;rft_id=info%3Adoi%2F10.2307%2F1909287&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F1909287&amp;rft.aulast=Fisk&amp;rft.aufirst=P.R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-KK-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-KK_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-KK_13-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation cs2" id="CITEREFKleiberKotz2003">Kleiber, C.; Kotz, S (2003), <i>Statistical Size Distributions in Economics and Actuarial Sciences</i>, Wiley, <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-0-471-15064-0" title="Special:BookSources/978-0-471-15064-0"><bdi>978-0-471-15064-0</bdi></a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Statistical+Size+Distributions+in+Economics+and+Actuarial+Sciences&amp;rft.pub=Wiley&amp;rft.date=2003&amp;rft.isbn=978-0-471-15064-0&amp;rft.aulast=Kleiber&amp;rft.aufirst=C.&amp;rft.au=Kotz%2C+S&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation cs2" id="CITEREFGago-Benítez,_A.Fernández-Madrigal_J.-A.,_Cruz-Martín,_A.2013">Gago-Benítez, A.; Fernández-Madrigal J.-A., Cruz-Martín, A. (2013), "Log-Logistic Modeling of Sensory Flow Delays in Networked Telerobots", <i>IEEE Sensors Journal</i>, IEEE Sensors 13(8), <b>13</b> (8): 2944–2953, <a class="mw-redirect" href="/wiki/Bibcode_(identifier)" title="Bibcode (identifier)">Bibcode</a>:<a class="external text" href="https://ui.adsabs.harvard.edu/abs/2013ISenJ..13.2944G" rel="nofollow">2013ISenJ..13.2944G</a>, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1109%2FJSEN.2013.2263381" rel="nofollow">10.1109/JSEN.2013.2263381</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Sensors+Journal&amp;rft.atitle=Log-Logistic+Modeling+of+Sensory+Flow+Delays+in+Networked+Telerobots&amp;rft.volume=13&amp;rft.issue=8&amp;rft.pages=2944-2953&amp;rft.date=2013&amp;rft_id=info%3Adoi%2F10.1109%2FJSEN.2013.2263381&amp;rft_id=info%3Abibcode%2F2013ISenJ..13.2944G&amp;rft.au=Gago-Ben%C3%ADtez%2C+A.&amp;rft.au=Fern%C3%A1ndez-Madrigal+J.-A.%2C+Cruz-Mart%C3%ADn%2C+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALog-logistic+distribution"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+</ol></div></div>
+<div aria-labelledby="Probability_distributions_(List)" class="navbox" role="navigation" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Probability_distributions" title="Template:Probability distributions"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Probability_distributions" title="Template talk:Probability distributions"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Probability_distributions&amp;action=edit"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Edit this template">e</abbr></a></li></ul></div><div id="Probability_distributions_(List)" style="font-size:114%;margin:0 4em"><a href="/wiki/Probability_distribution" title="Probability distribution">Probability distributions</a> (<a href="/wiki/List_of_probability_distributions" title="List of probability distributions">List</a>)</div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%">Discrete univariate<br/>with finite support</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Benford%27s_law" title="Benford's law">Benford</a></li>
+<li><a href="/wiki/Bernoulli_distribution" title="Bernoulli distribution">Bernoulli</a></li>
+<li><a href="/wiki/Beta-binomial_distribution" title="Beta-binomial distribution">beta-binomial</a></li>
+<li><a href="/wiki/Binomial_distribution" title="Binomial distribution">binomial</a></li>
+<li><a href="/wiki/Categorical_distribution" title="Categorical distribution">categorical</a></li>
+<li><a href="/wiki/Hypergeometric_distribution" title="Hypergeometric distribution">hypergeometric</a></li>
+<li><a href="/wiki/Poisson_binomial_distribution" title="Poisson binomial distribution">Poisson binomial</a></li>
+<li><a href="/wiki/Rademacher_distribution" title="Rademacher distribution">Rademacher</a></li>
+<li><a href="/wiki/Soliton_distribution" title="Soliton distribution">soliton</a></li>
+<li><a href="/wiki/Discrete_uniform_distribution" title="Discrete uniform distribution">discrete uniform</a></li>
+<li><a href="/wiki/Zipf%27s_law" title="Zipf's law">Zipf</a></li>
+<li><a href="/wiki/Zipf%E2%80%93Mandelbrot_law" title="Zipf–Mandelbrot law">Zipf–Mandelbrot</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Discrete univariate<br/>with infinite support</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Beta_negative_binomial_distribution" title="Beta negative binomial distribution">beta negative binomial</a></li>
+<li><a href="/wiki/Borel_distribution" title="Borel distribution">Borel</a></li>
+<li><a href="/wiki/Conway%E2%80%93Maxwell%E2%80%93Poisson_distribution" title="Conway–Maxwell–Poisson distribution">Conway–Maxwell–Poisson</a></li>
+<li><a href="/wiki/Discrete_phase-type_distribution" title="Discrete phase-type distribution">discrete phase-type</a></li>
+<li><a href="/wiki/Delaporte_distribution" title="Delaporte distribution">Delaporte</a></li>
+<li><a href="/wiki/Extended_negative_binomial_distribution" title="Extended negative binomial distribution">extended negative binomial</a></li>
+<li><a href="/wiki/Flory%E2%80%93Schulz_distribution" title="Flory–Schulz distribution">Flory–Schulz</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Kuzmin_distribution" title="Gauss–Kuzmin distribution">Gauss–Kuzmin</a></li>
+<li><a href="/wiki/Geometric_distribution" title="Geometric distribution">geometric</a></li>
+<li><a href="/wiki/Logarithmic_distribution" title="Logarithmic distribution">logarithmic</a></li>
+<li><a href="/wiki/Negative_binomial_distribution" title="Negative binomial distribution">negative binomial</a></li>
+<li><a href="/wiki/Parabolic_fractal_distribution" title="Parabolic fractal distribution">parabolic fractal</a></li>
+<li><a href="/wiki/Poisson_distribution" title="Poisson distribution">Poisson</a></li>
+<li><a href="/wiki/Skellam_distribution" title="Skellam distribution">Skellam</a></li>
+<li><a href="/wiki/Yule%E2%80%93Simon_distribution" title="Yule–Simon distribution">Yule–Simon</a></li>
+<li><a href="/wiki/Zeta_distribution" title="Zeta distribution">zeta</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Continuous univariate<br/>supported on a bounded interval</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Arcsine_distribution" title="Arcsine distribution">arcsine</a></li>
+<li><a href="/wiki/ARGUS_distribution" title="ARGUS distribution">ARGUS</a></li>
+<li><a href="/wiki/Balding%E2%80%93Nichols_model" title="Balding–Nichols model">Balding–Nichols</a></li>
+<li><a href="/wiki/Bates_distribution" title="Bates distribution">Bates</a></li>
+<li><a href="/wiki/Beta_distribution" title="Beta distribution">beta</a></li>
+<li><a href="/wiki/Beta_rectangular_distribution" title="Beta rectangular distribution">beta rectangular</a></li>
+<li><a href="/wiki/Continuous_Bernoulli_distribution" title="Continuous Bernoulli distribution">continuous Bernoulli</a></li>
+<li><a href="/wiki/Irwin%E2%80%93Hall_distribution" title="Irwin–Hall distribution">Irwin–Hall</a></li>
+<li><a href="/wiki/Kumaraswamy_distribution" title="Kumaraswamy distribution">Kumaraswamy</a></li>
+<li><a href="/wiki/Logit-normal_distribution" title="Logit-normal distribution">logit-normal</a></li>
+<li><a href="/wiki/Noncentral_beta_distribution" title="Noncentral beta distribution">noncentral beta</a></li>
+<li><a href="/wiki/Raised_cosine_distribution" title="Raised cosine distribution">raised cosine</a></li>
+<li><a href="/wiki/Reciprocal_distribution" title="Reciprocal distribution">reciprocal</a></li>
+<li><a href="/wiki/Triangular_distribution" title="Triangular distribution">triangular</a></li>
+<li><a href="/wiki/U-quadratic_distribution" title="U-quadratic distribution">U-quadratic</a></li>
+<li><a href="/wiki/Uniform_distribution_(continuous)" title="Uniform distribution (continuous)">uniform</a></li>
+<li><a href="/wiki/Wigner_semicircle_distribution" title="Wigner semicircle distribution">Wigner semicircle</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Continuous univariate<br/>supported on a semi-infinite interval</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Benini_distribution" title="Benini distribution">Benini</a></li>
+<li><a href="/wiki/Benktander_type_I_distribution" title="Benktander type I distribution">Benktander 1st kind</a></li>
+<li><a href="/wiki/Benktander_type_II_distribution" title="Benktander type II distribution">Benktander 2nd kind</a></li>
+<li><a href="/wiki/Beta_prime_distribution" title="Beta prime distribution">beta prime</a></li>
+<li><a href="/wiki/Burr_distribution" title="Burr distribution">Burr</a></li>
+<li><a class="mw-redirect" href="/wiki/Chi-squared_distribution" title="Chi-squared distribution">chi-squared</a></li>
+<li><a href="/wiki/Chi_distribution" title="Chi distribution">chi</a></li>
+<li><a href="/wiki/Dagum_distribution" title="Dagum distribution">Dagum</a></li>
+<li><a href="/wiki/Davis_distribution" title="Davis distribution">Davis</a></li>
+<li><a href="/wiki/Exponential-logarithmic_distribution" title="Exponential-logarithmic distribution">exponential-logarithmic</a></li>
+<li><a href="/wiki/Erlang_distribution" title="Erlang distribution">Erlang</a></li>
+<li><a href="/wiki/Exponential_distribution" title="Exponential distribution">exponential</a></li>
+<li><a href="/wiki/F-distribution" title="F-distribution"><i>F</i></a></li>
+<li><a href="/wiki/Folded_normal_distribution" title="Folded normal distribution">folded normal</a></li>
+<li><a href="/wiki/Fr%C3%A9chet_distribution" title="Fréchet distribution">Fréchet</a></li>
+<li><a href="/wiki/Gamma_distribution" title="Gamma distribution">gamma</a></li>
+<li><a href="/wiki/Gamma/Gompertz_distribution" title="Gamma/Gompertz distribution">gamma/Gompertz</a></li>
+<li><a href="/wiki/Generalized_gamma_distribution" title="Generalized gamma distribution">generalized gamma</a></li>
+<li><a href="/wiki/Generalized_inverse_Gaussian_distribution" title="Generalized inverse Gaussian distribution">generalized inverse Gaussian</a></li>
+<li><a href="/wiki/Gompertz_distribution" title="Gompertz distribution">Gompertz</a></li>
+<li><a href="/wiki/Half-logistic_distribution" title="Half-logistic distribution">half-logistic</a></li>
+<li><a href="/wiki/Half-normal_distribution" title="Half-normal distribution">half-normal</a></li>
+<li><a href="/wiki/Hotelling%27s_T-squared_distribution" title="Hotelling's T-squared distribution">Hotelling's <i>T</i>-squared</a></li>
+<li><a href="/wiki/Hyper-Erlang_distribution" title="Hyper-Erlang distribution">hyper-Erlang</a></li>
+<li><a href="/wiki/Hyperexponential_distribution" title="Hyperexponential distribution">hyperexponential</a></li>
+<li><a href="/wiki/Hypoexponential_distribution" title="Hypoexponential distribution">hypoexponential</a></li>
+<li><a href="/wiki/Inverse-chi-squared_distribution" title="Inverse-chi-squared distribution">inverse chi-squared</a>
+<ul><li><a href="/wiki/Scaled_inverse_chi-squared_distribution" title="Scaled inverse chi-squared distribution">scaled inverse chi-squared</a></li></ul></li>
+<li><a href="/wiki/Inverse_Gaussian_distribution" title="Inverse Gaussian distribution">inverse Gaussian</a></li>
+<li><a href="/wiki/Inverse-gamma_distribution" title="Inverse-gamma distribution">inverse gamma</a></li>
+<li><a href="/wiki/Kolmogorov%E2%80%93Smirnov_test" title="Kolmogorov–Smirnov test">Kolmogorov</a></li>
+<li><a href="/wiki/L%C3%A9vy_distribution" title="Lévy distribution">Lévy</a></li>
+<li><a href="/wiki/Log-Cauchy_distribution" title="Log-Cauchy distribution">log-Cauchy</a></li>
+<li><a href="/wiki/Log-Laplace_distribution" title="Log-Laplace distribution">log-Laplace</a></li>
+<li><a class="mw-selflink selflink">log-logistic</a></li>
+<li><a href="/wiki/Log-normal_distribution" title="Log-normal distribution">log-normal</a></li>
+<li><a href="/wiki/Lomax_distribution" title="Lomax distribution">Lomax</a></li>
+<li><a href="/wiki/Matrix-exponential_distribution" title="Matrix-exponential distribution">matrix-exponential</a></li>
+<li><a href="/wiki/Maxwell%E2%80%93Boltzmann_distribution" title="Maxwell–Boltzmann distribution">Maxwell–Boltzmann</a></li>
+<li><a href="/wiki/Maxwell%E2%80%93J%C3%BCttner_distribution" title="Maxwell–Jüttner distribution">Maxwell–Jüttner</a></li>
+<li><a href="/wiki/Mittag-Leffler_distribution" title="Mittag-Leffler distribution">Mittag-Leffler</a></li>
+<li><a href="/wiki/Nakagami_distribution" title="Nakagami distribution">Nakagami</a></li>
+<li><a href="/wiki/Noncentral_chi-squared_distribution" title="Noncentral chi-squared distribution">noncentral chi-squared</a></li>
+<li><a href="/wiki/Noncentral_F-distribution" title="Noncentral F-distribution">noncentral <i>F</i></a></li>
+<li><a href="/wiki/Pareto_distribution" title="Pareto distribution">Pareto</a></li>
+<li><a href="/wiki/Phase-type_distribution" title="Phase-type distribution">phase-type</a></li>
+<li><a href="/wiki/Poly-Weibull_distribution" title="Poly-Weibull distribution">poly-Weibull</a></li>
+<li><a href="/wiki/Rayleigh_distribution" title="Rayleigh distribution">Rayleigh</a></li>
+<li><a href="/wiki/Relativistic_Breit%E2%80%93Wigner_distribution" title="Relativistic Breit–Wigner distribution">relativistic Breit–Wigner</a></li>
+<li><a href="/wiki/Rice_distribution" title="Rice distribution">Rice</a></li>
+<li><a href="/wiki/Shifted_Gompertz_distribution" title="Shifted Gompertz distribution">shifted Gompertz</a></li>
+<li><a href="/wiki/Truncated_normal_distribution" title="Truncated normal distribution">truncated normal</a></li>
+<li><a href="/wiki/Type-2_Gumbel_distribution" title="Type-2 Gumbel distribution">type-2 Gumbel</a></li>
+<li><a href="/wiki/Weibull_distribution" title="Weibull distribution">Weibull</a>
+<ul><li><a href="/wiki/Discrete_Weibull_distribution" title="Discrete Weibull distribution">discrete Weibull</a></li></ul></li>
+<li><a href="/wiki/Wilks%27s_lambda_distribution" title="Wilks's lambda distribution">Wilks's lambda</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Continuous univariate<br/>supported on the whole real line</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cauchy_distribution" title="Cauchy distribution">Cauchy</a></li>
+<li><a href="/wiki/Generalized_normal_distribution#Version_1" title="Generalized normal distribution">exponential power</a></li>
+<li><a href="/wiki/Fisher%27s_z-distribution" title="Fisher's z-distribution">Fisher's <i>z</i></a></li>
+<li><a href="/wiki/Gaussian_q-distribution" title="Gaussian q-distribution">Gaussian <i>q</i></a></li>
+<li><a href="/wiki/Generalized_normal_distribution" title="Generalized normal distribution">generalized normal</a></li>
+<li><a href="/wiki/Generalised_hyperbolic_distribution" title="Generalised hyperbolic distribution">generalized hyperbolic</a></li>
+<li><a href="/wiki/Geometric_stable_distribution" title="Geometric stable distribution">geometric stable</a></li>
+<li><a href="/wiki/Gumbel_distribution" title="Gumbel distribution">Gumbel</a></li>
+<li><a href="/wiki/Holtsmark_distribution" title="Holtsmark distribution">Holtsmark</a></li>
+<li><a href="/wiki/Hyperbolic_secant_distribution" title="Hyperbolic secant distribution">hyperbolic secant</a></li>
+<li><a href="/wiki/Johnson%27s_SU-distribution" title="Johnson's SU-distribution">Johnson's <i>S<sub>U</sub></i></a></li>
+<li><a href="/wiki/Landau_distribution" title="Landau distribution">Landau</a></li>
+<li><a href="/wiki/Laplace_distribution" title="Laplace distribution">Laplace</a></li>
+<li><a href="/wiki/Asymmetric_Laplace_distribution" title="Asymmetric Laplace distribution">asymmetric Laplace</a></li>
+<li><a href="/wiki/Logistic_distribution" title="Logistic distribution">logistic</a></li>
+<li><a href="/wiki/Noncentral_t-distribution" title="Noncentral t-distribution">noncentral <i>t</i></a></li>
+<li><a href="/wiki/Normal_distribution" title="Normal distribution">normal (Gaussian)</a></li>
+<li><a href="/wiki/Normal-inverse_Gaussian_distribution" title="Normal-inverse Gaussian distribution">normal-inverse Gaussian</a></li>
+<li><a href="/wiki/Skew_normal_distribution" title="Skew normal distribution">skew normal</a></li>
+<li><a href="/wiki/Slash_distribution" title="Slash distribution">slash</a></li>
+<li><a href="/wiki/Stable_distribution" title="Stable distribution">stable</a></li>
+<li><a href="/wiki/Student%27s_t-distribution" title="Student's t-distribution">Student's <i>t</i></a></li>
+<li><a href="/wiki/Type-1_Gumbel_distribution" title="Type-1 Gumbel distribution">type-1 Gumbel</a></li>
+<li><a href="/wiki/Tracy%E2%80%93Widom_distribution" title="Tracy–Widom distribution">Tracy–Widom</a></li>
+<li><a href="/wiki/Variance-gamma_distribution" title="Variance-gamma distribution">variance-gamma</a></li>
+<li><a href="/wiki/Voigt_profile" title="Voigt profile">Voigt</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Continuous univariate<br/>with support whose type varies</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Generalized_chi-squared_distribution" title="Generalized chi-squared distribution">generalized chi-squared</a></li>
+<li><a href="/wiki/Generalized_extreme_value_distribution" title="Generalized extreme value distribution">generalized extreme value</a></li>
+<li><a href="/wiki/Generalized_Pareto_distribution" title="Generalized Pareto distribution">generalized Pareto</a></li>
+<li><a href="/wiki/Marchenko%E2%80%93Pastur_distribution" title="Marchenko–Pastur distribution">Marchenko–Pastur</a></li>
+<li><a href="/wiki/Q-exponential_distribution" title="Q-exponential distribution"><i>q</i>-exponential</a></li>
+<li><a href="/wiki/Q-Gaussian_distribution" title="Q-Gaussian distribution"><i>q</i>-Gaussian</a></li>
+<li><a href="/wiki/Q-Weibull_distribution" title="Q-Weibull distribution"><i>q</i>-Weibull</a></li>
+<li><a href="/wiki/Shifted_log-logistic_distribution" title="Shifted log-logistic distribution">shifted log-logistic</a></li>
+<li><a href="/wiki/Tukey_lambda_distribution" title="Tukey lambda distribution">Tukey lambda</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Mixed continuous-discrete univariate</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Rectified_Gaussian_distribution" title="Rectified Gaussian distribution">rectified Gaussian</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Joint_probability_distribution" title="Joint probability distribution">Multivariate (joint)</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<dl><dt><style data-mw-deduplicate="TemplateStyles:r886047488">.mw-parser-output .nobold{font-weight:normal}</style><span class="nobold"><i>Discrete</i></span></dt>
+<dd><a href="/wiki/Ewens%27s_sampling_formula" title="Ewens's sampling formula">Ewens</a></dd>
+<dd><a href="/wiki/Multinomial_distribution" title="Multinomial distribution">multinomial</a></dd>
+<dd><a href="/wiki/Dirichlet-multinomial_distribution" title="Dirichlet-multinomial distribution">Dirichlet-multinomial</a></dd>
+<dd><a href="/wiki/Negative_multinomial_distribution" title="Negative multinomial distribution">negative multinomial</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Continuous</i></span></dt>
+<dd><a href="/wiki/Dirichlet_distribution" title="Dirichlet distribution">Dirichlet</a></dd>
+<dd><a href="/wiki/Generalized_Dirichlet_distribution" title="Generalized Dirichlet distribution">generalized Dirichlet</a></dd>
+<dd><a href="/wiki/Multivariate_Laplace_distribution" title="Multivariate Laplace distribution">multivariate Laplace</a></dd>
+<dd><a href="/wiki/Multivariate_normal_distribution" title="Multivariate normal distribution">multivariate normal</a></dd>
+<dd><a href="/wiki/Multivariate_stable_distribution" title="Multivariate stable distribution">multivariate stable</a></dd>
+<dd><a href="/wiki/Multivariate_t-distribution" title="Multivariate t-distribution">multivariate <i>t</i></a></dd>
+<dd><a href="/wiki/Normal-inverse-gamma_distribution" title="Normal-inverse-gamma distribution">normal-inverse-gamma</a></dd>
+<dd><a href="/wiki/Normal-gamma_distribution" title="Normal-gamma distribution">normal-gamma</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i><a href="/wiki/Random_matrix" title="Random matrix">Matrix-valued</a></i></span></dt>
+<dd><a href="/wiki/Inverse_matrix_gamma_distribution" title="Inverse matrix gamma distribution">inverse matrix gamma</a></dd>
+<dd><a href="/wiki/Inverse-Wishart_distribution" title="Inverse-Wishart distribution">inverse-Wishart</a></dd>
+<dd><a href="/wiki/Matrix_normal_distribution" title="Matrix normal distribution">matrix normal</a></dd>
+<dd><a href="/wiki/Matrix_t-distribution" title="Matrix t-distribution">matrix <i>t</i></a></dd>
+<dd><a href="/wiki/Matrix_gamma_distribution" title="Matrix gamma distribution">matrix gamma</a></dd>
+<dd><a href="/wiki/Normal-inverse-Wishart_distribution" title="Normal-inverse-Wishart distribution">normal-inverse-Wishart</a></dd>
+<dd><a href="/wiki/Normal-Wishart_distribution" title="Normal-Wishart distribution">normal-Wishart</a></dd>
+<dd><a href="/wiki/Wishart_distribution" title="Wishart distribution">Wishart</a></dd></dl>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Directional_statistics" title="Directional statistics">Directional</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<dl><dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Univariate (circular) <a href="/wiki/Directional_statistics" title="Directional statistics">directional</a></i></span></dt>
+<dd><a href="/wiki/Circular_uniform_distribution" title="Circular uniform distribution">Circular uniform</a></dd>
+<dd><a href="/wiki/Von_Mises_distribution" title="Von Mises distribution">univariate von Mises</a></dd>
+<dd><a href="/wiki/Wrapped_normal_distribution" title="Wrapped normal distribution">wrapped normal</a></dd>
+<dd><a href="/wiki/Wrapped_Cauchy_distribution" title="Wrapped Cauchy distribution">wrapped Cauchy</a></dd>
+<dd><a href="/wiki/Wrapped_exponential_distribution" title="Wrapped exponential distribution">wrapped exponential</a></dd>
+<dd><a href="/wiki/Wrapped_asymmetric_Laplace_distribution" title="Wrapped asymmetric Laplace distribution">wrapped asymmetric Laplace</a></dd>
+<dd><a href="/wiki/Wrapped_L%C3%A9vy_distribution" title="Wrapped Lévy distribution">wrapped Lévy</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Bivariate (spherical)</i></span></dt>
+<dd><a href="/wiki/Kent_distribution" title="Kent distribution">Kent</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Bivariate (toroidal)</i></span></dt>
+<dd><a href="/wiki/Bivariate_von_Mises_distribution" title="Bivariate von Mises distribution">bivariate von Mises</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Multivariate</i></span></dt>
+<dd><a href="/wiki/Von_Mises%E2%80%93Fisher_distribution" title="Von Mises–Fisher distribution">von Mises–Fisher</a></dd>
+<dd><a href="/wiki/Bingham_distribution" title="Bingham distribution">Bingham</a></dd></dl>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Degenerate_distribution" title="Degenerate distribution">Degenerate</a>  and <a href="/wiki/Singular_distribution" title="Singular distribution">singular</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<dl><dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Degenerate</i></span></dt>
+<dd><a href="/wiki/Dirac_delta_function" title="Dirac delta function">Dirac delta function</a></dd>
+<dt><link href="mw-data:TemplateStyles:r886047488" rel="mw-deduplicated-inline-style"/><span class="nobold"><i>Singular</i></span></dt>
+<dd><a href="/wiki/Cantor_distribution" title="Cantor distribution">Cantor</a></dd></dl>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Families</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Circular_distribution" title="Circular distribution">Circular</a></li>
+<li><a href="/wiki/Compound_Poisson_distribution" title="Compound Poisson distribution">compound Poisson</a></li>
+<li><a href="/wiki/Elliptical_distribution" title="Elliptical distribution">elliptical</a></li>
+<li><a href="/wiki/Exponential_family" title="Exponential family">exponential</a></li>
+<li><a href="/wiki/Natural_exponential_family" title="Natural exponential family">natural exponential</a></li>
+<li><a href="/wiki/Location%E2%80%93scale_family" title="Location–scale family">location–scale</a></li>
+<li><a href="/wiki/Maximum_entropy_probability_distribution" title="Maximum entropy probability distribution">maximum entropy</a></li>
+<li><a href="/wiki/Mixture_distribution" title="Mixture distribution">mixture</a></li>
+<li><a href="/wiki/Pearson_distribution" title="Pearson distribution">Pearson</a></li>
+<li><a href="/wiki/Tweedie_distribution" title="Tweedie distribution">Tweedie</a></li>
+<li><a href="/wiki/Wrapped_distribution" title="Wrapped distribution">wrapped</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw2360
+Cached time: 20200927072849
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.384 seconds
+Real time usage: 0.568 seconds
+Preprocessor visited node count: 1920/1000000
+Post‐expand include size: 76225/2097152 bytes
+Template argument size: 2432/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 59107/5000000 bytes
+Lua time usage: 0.116/10.000 seconds
+Lua memory usage: 3.88 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  260.110      1 -total
+ 56.41%  146.720      1 Template:Reflist
+ 31.18%   81.107      1 Template:Cite_journal
+ 24.84%   64.617      1 Template:Probability_distribution
+ 20.82%   54.143      1 Template:Infobox3cols
+ 18.15%   47.199     12 Template:Citation
+ 12.17%   31.666      1 Template:ProbDistributions
+ 10.14%   26.369      1 Template:Navbox
+  3.27%    8.511      9 Template:Nobold
+  1.66%    4.318      1 Template:Collapse_top
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:15657106-0!canonical!math=5 and timestamp 20200927072859 and revision id 980570057
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Log-logistic_distribution&amp;oldid=980570057">https://en.wikipedia.org/w/index.php?title=Log-logistic_distribution&amp;oldid=980570057</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Continuous_distributions" title="Category:Continuous distributions">Continuous distributions</a></li><li><a href="/wiki/Category:Survival_analysis" title="Category:Survival analysis">Survival analysis</a></li><li><a href="/wiki/Category:Probability_distributions_with_non-finite_variance" title="Category:Probability distributions with non-finite variance">Probability distributions with non-finite variance</a></li></ul></div><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_extra_text:_authors_list" title="Category:CS1 maint: extra text: authors list">CS1 maint: extra text: authors list</a></li><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Log-logistic+distribution" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Log-logistic+distribution" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Log-logistic_distribution" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Log-logistic_distribution" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Log-logistic_distribution">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Log-logistic_distribution&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Log-logistic_distribution&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Log-logistic_distribution" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Log-logistic_distribution" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Log-logistic_distribution&amp;oldid=980570057" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Log-logistic_distribution&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Log-logistic_distribution&amp;id=980570057&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q3258534" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Log-logistic_distribution&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Log-logistic_distribution&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-fr"><a class="interlanguage-link-target" href="https://fr.wikipedia.org/wiki/Loi_log-logistique" hreflang="fr" lang="fr" title="Loi log-logistique – French">Français</a></li><li class="interlanguage-link interwiki-sl"><a class="interlanguage-link-target" href="https://sl.wikipedia.org/wiki/Logaritemska_logisti%C4%8Dna_porazdelitev" hreflang="sl" lang="sl" title="Logaritemska logistična porazdelitev – Slovenian">Slovenščina</a></li></ul>
+<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q3258534#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 27 September 2020, at 07:28<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Log-logistic_distribution&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.384","walltime":"0.568","ppvisitednodes":{"value":1920,"limit":1000000},"postexpandincludesize":{"value":76225,"limit":2097152},"templateargumentsize":{"value":2432,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":59107,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  260.110      1 -total"," 56.41%  146.720      1 Template:Reflist"," 31.18%   81.107      1 Template:Cite_journal"," 24.84%   64.617      1 Template:Probability_distribution"," 20.82%   54.143      1 Template:Infobox3cols"," 18.15%   47.199     12 Template:Citation"," 12.17%   31.666      1 Template:ProbDistributions"," 10.14%   26.369      1 Template:Navbox","  3.27%    8.511      9 Template:Nobold","  1.66%    4.318      1 Template:Collapse_top"]},"scribunto":{"limitreport-timeusage":{"value":"0.116","limit":"10.000"},"limitreport-memusage":{"value":4066905,"limit":52428800}},"cachereport":{"origin":"mw2360","timestamp":"20200927072849","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Log-logistic distribution","url":"https:\/\/en.wikipedia.org\/wiki\/Log-logistic_distribution","sameAs":"http:\/\/www.wikidata.org\/entity\/Q3258534","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q3258534","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2008-02-08T17:39:28Z","dateModified":"2020-09-27T07:28:59Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/e\/e1\/Loglogisticpdf.svg","headline":"continuous probability distribution for a non-negative random variable"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":121,"wgHostname":"mw2303"});});</script>
+</body></html>
