@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Generalized assignment problem - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"6897975a-fef3-44a9-aa48-311440bb62de","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Generalized_assignment_problem","wgTitle":"Generalized assignment problem","wgCurRevisionId":967345114,"wgRevisionId":967345114,"wgArticleId":9124553,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: missing periodical","Articles with short description","Short description matches Wikidata","NP-complete problems","Combinatorial optimization"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Generalized_assignment_problem","wgRelevantArticleId":9124553,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q5532462"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready",
+"skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<link href="//en.m.wikipedia.org/wiki/Generalized_assignment_problem" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Generalized_assignment_problem" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Generalized_assignment_problem rootpage-Generalized_assignment_problem skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Generalized assignment problem</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">combinatorial optimization problem</div>
+<p>In <a href="/wiki/Applied_mathematics" title="Applied mathematics">applied mathematics</a>, the maximum <b>generalized assignment problem</b> is a problem in <a href="/wiki/Combinatorial_optimization" title="Combinatorial optimization">combinatorial optimization</a>.  This problem is a <a href="/wiki/Generalization" title="Generalization">generalization</a> of the <a href="/wiki/Assignment_problem" title="Assignment problem">assignment problem</a> in which both tasks and <a href="/wiki/Agent-based_model" title="Agent-based model">agents</a> have a size. Moreover, the size of each task might vary from one agent to the other.
+</p><p>This problem in its most general form is as follows: There are a number of agents and a number of tasks. Any agent can be assigned to perform any task, incurring some cost and profit that may vary depending on the agent-task assignment. Moreover, each agent has a budget and the sum of the costs of tasks assigned to it cannot exceed this budget. It is required to find an assignment in which all agents do not exceed their budget and total profit of the assignment is maximized.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#In_special_cases"><span class="tocnumber">1</span> <span class="toctext">In special cases</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Explanation_of_definition"><span class="tocnumber">2</span> <span class="toctext">Explanation of definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Complexity"><span class="tocnumber">3</span> <span class="toctext">Complexity</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Greedy_approximation_algorithm"><span class="tocnumber">4</span> <span class="toctext">Greedy approximation algorithm</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="In_special_cases">In special cases</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=1" title="Edit section: In special cases">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the special case in which all the agents' budgets and all tasks' costs are equal to 1, this problem reduces to the <a href="/wiki/Assignment_problem" title="Assignment problem">assignment problem</a>. When the costs and profits of all tasks do not vary between different agents, this problem reduces to the multiple knapsack problem. If there is a single agent, then, this problem reduces to the <a href="/wiki/Knapsack_problem" title="Knapsack problem">knapsack problem</a>.
+</p>
+<h2><span class="mw-headline" id="Explanation_of_definition">Explanation of definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=2" title="Edit section: Explanation of definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In the following, we have <i>n</i> kinds of items, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{1}}</annotation>
+</semantics>
+</math></span><img alt="a_{1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bbf42ecda092975c9c69dae84e16182ba5fe2e07" style="vertical-align: -0.671ex; width:2.284ex; height:2.009ex;"/></span> through <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{n}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{n}}</annotation>
+</semantics>
+</math></span><img alt="a_{n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/790f9209748c2dca7ed7b81932c37c02af1dbc31" style="vertical-align: -0.671ex; width:2.448ex; height:2.009ex;"/></span> and <i>m</i> kinds of bins <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{1}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{1}}</annotation>
+</semantics>
+</math></span><img alt="b_{1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9af2720c91be489f57ecde4bb651b95e113d0144" style="vertical-align: -0.671ex; width:2.052ex; height:2.509ex;"/></span> through <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{m}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{m}}</annotation>
+</semantics>
+</math></span><img alt="b_{m}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/330e36691c8285b9c890d82a7c11855f3259dd58" style="vertical-align: -0.671ex; width:2.673ex; height:2.509ex;"/></span>. Each bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{i}}</annotation>
+</semantics>
+</math></span><img alt="b_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a8c2db2990a53c683e75961826167c5adac7c3" style="vertical-align: -0.671ex; width:1.797ex; height:2.509ex;"/></span> is associated with a budget <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle t_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle t_{i}}</annotation>
+</semantics>
+</math></span><img alt="t_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b61e3d4d909be4a19c9a554a301684232f59e5a" style="vertical-align: -0.671ex; width:1.639ex; height:2.343ex;"/></span>. For a bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{i}}</annotation>
+</semantics>
+</math></span><img alt="b_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a8c2db2990a53c683e75961826167c5adac7c3" style="vertical-align: -0.671ex; width:1.797ex; height:2.509ex;"/></span>, each item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a_{j}}</annotation>
+</semantics>
+</math></span><img alt="a_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d0096fb78d6843c9fb67a840dc796b61ad93eec2" style="vertical-align: -1.005ex; width:2.14ex; height:2.343ex;"/></span> has a profit <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{ij}}</annotation>
+</semantics>
+</math></span><img alt="p_{ij}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca46e6d560ac4e615adcd6d053cd476f4aadfcbd" style="vertical-align: -1.005ex; margin-left: -0.089ex; width:2.736ex; height:2.343ex;"/></span> and a weight <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle w_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle w_{ij}}</annotation>
+</semantics>
+</math></span><img alt="w_{ij}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3302ff355269436b43bc2fbe180303881c09321" style="vertical-align: -1.005ex; width:3.141ex; height:2.343ex;"/></span>.  A solution is an assignment from items to bins. A feasible solution is a solution in which for each bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{i}}</annotation>
+</semantics>
+</math></span><img alt="b_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a8c2db2990a53c683e75961826167c5adac7c3" style="vertical-align: -0.671ex; width:1.797ex; height:2.509ex;"/></span> the total weight of assigned items is at most <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle t_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle t_{i}}</annotation>
+</semantics>
+</math></span><img alt="t_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b61e3d4d909be4a19c9a554a301684232f59e5a" style="vertical-align: -0.671ex; width:1.639ex; height:2.343ex;"/></span>. The solution's profit is the sum of profits for each item-bin assignment. The goal is to find a maximum profit feasible solution.
+</p><p>Mathematically the generalized assignment problem can be formulated as an <a href="/wiki/Integer_programming" title="Integer programming">integer program</a>:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\begin{aligned}{\text{maximize }}&amp;\sum _{i=1}^{m}\sum _{j=1}^{n}p_{ij}x_{ij}.\\{\text{subject to }}&amp;\sum _{j=1}^{n}w_{ij}x_{ij}\leq t_{i}&amp;&amp;i=1,\ldots ,m;\\&amp;\sum _{i=1}^{m}x_{ij}=1&amp;&amp;j=1,\ldots ,n;\\&amp;x_{ij}\in \{0,1\}&amp;&amp;i=1,\ldots ,m,\quad j=1,\ldots ,n;\end{aligned}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="3pt">
+<mtr>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>maximize </mtext>
+</mrow>
+</mtd>
+<mtd>
+<mi></mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</munderover>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>.</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>subject to </mtext>
+</mrow>
+</mtd>
+<mtd>
+<mi></mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>w</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>≤<!-- ≤ --></mo>
+<msub>
+<mi>t</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mtd>
+<mtd></mtd>
+<mtd>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>m</mi>
+<mo>;</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<mi></mi>
+<munderover>
+<mo>∑<!-- ∑ --></mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>m</mi>
+</mrow>
+</munderover>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mn>1</mn>
+</mtd>
+<mtd></mtd>
+<mtd>
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>n</mi>
+<mo>;</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>∈<!-- ∈ --></mo>
+<mo fence="false" stretchy="false">{</mo>
+<mn>0</mn>
+<mo>,</mo>
+<mn>1</mn>
+<mo fence="false" stretchy="false">}</mo>
+</mtd>
+<mtd></mtd>
+<mtd>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>m</mi>
+<mo>,</mo>
+<mspace width="1em"></mspace>
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>n</mi>
+<mo>;</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}{\text{maximize }}&amp;\sum _{i=1}^{m}\sum _{j=1}^{n}p_{ij}x_{ij}.\\{\text{subject to }}&amp;\sum _{j=1}^{n}w_{ij}x_{ij}\leq t_{i}&amp;&amp;i=1,\ldots ,m;\\&amp;\sum _{i=1}^{m}x_{ij}=1&amp;&amp;j=1,\ldots ,n;\\&amp;x_{ij}\in \{0,1\}&amp;&amp;i=1,\ldots ,m,\quad j=1,\ldots ,n;\end{aligned}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle {\begin{aligned}{\text{maximize }}&amp;\sum _{i=1}^{m}\sum _{j=1}^{n}p_{ij}x_{ij}.\\{\text{subject to }}&amp;\sum _{j=1}^{n}w_{ij}x_{ij}\leq t_{i}&amp;&amp;i=1,\ldots ,m;\\&amp;\sum _{i=1}^{m}x_{ij}=1&amp;&amp;j=1,\ldots ,n;\\&amp;x_{ij}\in \{0,1\}&amp;&amp;i=1,\ldots ,m,\quad j=1,\ldots ,n;\end{aligned}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7cdd7d55a4b7983d124c28a9056d191e70f98e55" style="vertical-align: -11.678ex; margin-bottom: -0.327ex; width:58.7ex; height:25.176ex;"/></span></dd></dl>
+<h2><span class="mw-headline" id="Complexity">Complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=3" title="Edit section: Complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The generalized assignment problem is <a class="mw-redirect" href="/wiki/NP-hard" title="NP-hard">NP-hard</a>,<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup> However, there are linear-programming relaxations which give a <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle (1-1/e)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mi>e</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle (1-1/e)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle (1-1/e)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d60bec91d88fd0dda9c72adb869b82e2f967cf07" style="vertical-align: -0.838ex; width:9.221ex; height:2.843ex;"/></span>-approximation.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+</p>
+<h2><span class="mw-headline" id="Greedy_approximation_algorithm">Greedy approximation algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=4" title="Edit section: Greedy approximation algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>For the problem variant in which not every item must be assigned to a bin, there is a family of algorithms for solving the GAP by using a combinatorial translation of any algorithm for the knapsack problem into an approximation algorithm for the GAP.<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>Using any <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha }</annotation>
+</semantics>
+</math></span><img alt="\alpha " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3" style="vertical-align: -0.338ex; width:1.488ex; height:1.676ex;"/></span>-approximation algorithm ALG for the <a href="/wiki/Knapsack_problem" title="Knapsack problem">knapsack problem</a>, it is possible to construct a (<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \alpha +1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>α<!-- α --></mi>
+<mo>+</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \alpha +1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \alpha +1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c8de281682e16a35de79915ddc9e3582d215e0ca" style="vertical-align: -0.505ex; width:5.49ex; height:2.343ex;"/></span>)-approximation for the generalized assignment problem in a greedy manner using a residual profit concept.
+The algorithm constructs a schedule in iterations, where during iteration <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+</semantics>
+</math></span><img alt="j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" style="vertical-align: -0.671ex; margin-left: -0.027ex; width:0.985ex; height:2.509ex;"/></span> a tentative selection of items to bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{j}}</annotation>
+</semantics>
+</math></span><img alt="b_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa56eff4488494085785b7b0d6e2069bd45a3ce5" style="vertical-align: -1.005ex; width:1.907ex; height:2.843ex;"/></span> is selected.
+The selection for bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{j}}</annotation>
+</semantics>
+</math></span><img alt="b_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa56eff4488494085785b7b0d6e2069bd45a3ce5" style="vertical-align: -1.005ex; width:1.907ex; height:2.843ex;"/></span> might change as items might be reselected in a later iteration for other bins.
+The residual profit of an item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> for bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{j}}</annotation>
+</semantics>
+</math></span><img alt="b_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa56eff4488494085785b7b0d6e2069bd45a3ce5" style="vertical-align: -1.005ex; width:1.907ex; height:2.843ex;"/></span> is <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{ij}}</annotation>
+</semantics>
+</math></span><img alt="p_{ij}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca46e6d560ac4e615adcd6d053cd476f4aadfcbd" style="vertical-align: -1.005ex; margin-left: -0.089ex; width:2.736ex; height:2.343ex;"/></span> if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is not selected for any other bin or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{ij}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle p_{ij}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ca46e6d560ac4e615adcd6d053cd476f4aadfcbd" style="vertical-align: -1.005ex; margin-left: -0.089ex; width:2.736ex; height:2.343ex;"/></span> – <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle p_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle p_{ik}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle p_{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c51b9deb2a2272d50cc2f1eb0519947e295607d9" style="vertical-align: -0.671ex; margin-left: -0.089ex; width:2.915ex; height:2.009ex;"/></span> if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is selected for bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{k}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{k}}</annotation>
+</semantics>
+</math></span><img alt="b_{k}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9ca33a19a52bbe58090767bcfb0aae551c925dcb" style="vertical-align: -0.671ex; width:2.086ex; height:2.509ex;"/></span>.
+</p><p>Formally: We use a vector <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+</semantics>
+</math></span><img alt="T" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;"/></span> to indicate the tentative schedule during the algorithm. Specifically, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=j}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ecf70352d15a33bd071eacbbaa335cab3c445f25" style="vertical-align: -0.838ex; width:7.789ex; height:2.843ex;"/></span> means the item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is scheduled on bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{j}}</annotation>
+</semantics>
+</math></span><img alt="b_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa56eff4488494085785b7b0d6e2069bd45a3ce5" style="vertical-align: -1.005ex; width:1.907ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=-1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=-1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3801d56543a44698441a22c570ac2586f74a076a" style="vertical-align: -0.838ex; width:9.801ex; height:2.843ex;"/></span> means that item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is not scheduled. The residual profit in iteration <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle j}</annotation>
+</semantics>
+</math></span><img alt="j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2f461e54f5c093e92a55547b9764291390f0b5d0" style="vertical-align: -0.671ex; margin-left: -0.027ex; width:0.985ex; height:2.509ex;"/></span> is denoted by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle P_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle P_{j}}</annotation>
+</semantics>
+</math></span><img alt="P_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a5da6c3564a2129f714ef11acd8ba649d18e604" style="vertical-align: -1.005ex; width:2.402ex; height:2.843ex;"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle P_{j}[i]=p_{ij}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle P_{j}[i]=p_{ij}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle P_{j}[i]=p_{ij}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6b71b072bfa5f1923fe8a3dd9b3c1e909305e0af" style="vertical-align: -1.005ex; width:10.243ex; height:3.009ex;"/></span> if item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is not scheduled (i.e. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=-1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=-1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=-1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3801d56543a44698441a22c570ac2586f74a076a" style="vertical-align: -0.838ex; width:9.801ex; height:2.843ex;"/></span>) and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle P_{j}[i]=p_{ij}-p_{ik}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>p</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle P_{j}[i]=p_{ij}-p_{ik}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle P_{j}[i]=p_{ij}-p_{ik}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c20c409d3e4904d6184d8125e48a142ed9e319c" style="vertical-align: -1.005ex; width:15.909ex; height:3.009ex;"/></span> if item <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>x</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+</semantics>
+</math></span><img alt="x_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;"/></span> is scheduled on bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{k}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>k</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{k}}</annotation>
+</semantics>
+</math></span><img alt="b_{k}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9ca33a19a52bbe58090767bcfb0aae551c925dcb" style="vertical-align: -0.671ex; width:2.086ex; height:2.509ex;"/></span> (i.e. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=k}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mi>k</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=k}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=k}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/aa5e72ae4c03b149d61bc04280960fcb91fb716b" style="vertical-align: -0.838ex; width:8.042ex; height:2.843ex;"/></span>).
+</p><p>Formally:
+</p>
+<dl><dd>Set <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=-1{\text{ for }}i=1\ldots n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext> for </mtext>
+</mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>…<!-- … --></mo>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=-1{\text{ for }}i=1\ldots n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=-1{\text{ for }}i=1\ldots n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4d7c83f8450a5e56ac92cc3f12c26435efad953e" style="vertical-align: -0.838ex; width:23.704ex; height:2.843ex;"/></span></dd>
+<dd>For <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle j=1,\ldots ,m}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>m</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle j=1,\ldots ,m}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle j=1,\ldots ,m}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/745ead100813850e9d68e2a6cb6be14124998279" style="vertical-align: -0.671ex; margin-left: -0.027ex; width:12.464ex; height:2.509ex;"/></span> do:
+<dl><dd>Call ALG to find a solution to bin <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{j}}</annotation>
+</semantics>
+</math></span><img alt="b_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa56eff4488494085785b7b0d6e2069bd45a3ce5" style="vertical-align: -1.005ex; width:1.907ex; height:2.843ex;"/></span> using the residual profit function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle P_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>P</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle P_{j}}</annotation>
+</semantics>
+</math></span><img alt="P_{j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4a5da6c3564a2129f714ef11acd8ba649d18e604" style="vertical-align: -1.005ex; width:2.402ex; height:2.843ex;"/></span>. Denote the selected items by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle S_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle S_{j}}</annotation>
+</semantics>
+</math></span><img alt="S_j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/222db49df2eefdb67737ba2d2dbd221a1bae0bf0" style="vertical-align: -1.005ex; width:2.335ex; height:2.843ex;"/></span>.</dd>
+<dd>Update <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+</semantics>
+</math></span><img alt="T" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;"/></span> using <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle S_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle S_{j}}</annotation>
+</semantics>
+</math></span><img alt="S_j" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/222db49df2eefdb67737ba2d2dbd221a1bae0bf0" style="vertical-align: -1.005ex; width:2.335ex; height:2.843ex;"/></span>, i.e., <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T[i]=j}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo stretchy="false">[</mo>
+<mi>i</mi>
+<mo stretchy="false">]</mo>
+<mo>=</mo>
+<mi>j</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T[i]=j}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T[i]=j}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ecf70352d15a33bd071eacbbaa335cab3c445f25" style="vertical-align: -0.838ex; width:7.789ex; height:2.843ex;"/></span> for all <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle i\in S_{j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>i</mi>
+<mo>∈<!-- ∈ --></mo>
+<msub>
+<mi>S</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle i\in S_{j}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle i\in S_{j}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b93fd5c04cb4159d077bc8d2c3b3f6dc83b60f3f" style="vertical-align: -1.005ex; width:5.978ex; height:2.843ex;"/></span>.</dd></dl></dd></dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Assignment_problem" title="Assignment problem">Assignment problem</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation cs2" id="CITEREFÖzbakirBaykasoğluTapkan2010">Özbakir, Lale; Baykasoğlu, Adil; Tapkan, Pınar (2010), <i>Bees algorithm for generalized assignment problem</i>, Applied Mathematics and Computation, <b>215</b>, Elsevier, pp. 3782–3795, <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2Fj.amc.2009.11.018" rel="nofollow">10.1016/j.amc.2009.11.018</a></cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Bees+algorithm+for+generalized+assignment+problem&amp;rft.series=Applied+Mathematics+and+Computation&amp;rft.pages=3782-3795&amp;rft.pub=Elsevier&amp;rft.date=2010&amp;rft_id=info%3Adoi%2F10.1016%2Fj.amc.2009.11.018&amp;rft.aulast=%C3%96zbakir&amp;rft.aufirst=Lale&amp;rft.au=Baykaso%C4%9Flu%2C+Adil&amp;rft.au=Tapkan%2C+P%C4%B1nar&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneralized+assignment+problem"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style>.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFFleischerGoemansMirrokniSviridenko2006">Fleischer, Lisa; Goemans, Michel X.; Mirrokni, Vahab S.; Sviridenko, Maxim (2006). "Tight approximation algorithms for maximum general assignment problems".</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Tight+approximation+algorithms+for+maximum+general+assignment+problems&amp;rft.date=2006&amp;rft.aulast=Fleischer&amp;rft.aufirst=Lisa&amp;rft.au=Goemans%2C+Michel+X.&amp;rft.au=Mirrokni%2C+Vahab+S.&amp;rft.au=Sviridenko%2C+Maxim&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneralized+assignment+problem"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">|journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFCohenKatzirRaz2006">Cohen, Reuven; Katzir, Liran; Raz, Danny (2006). "An efficient approximation for the Generalized Assignment Problem". <i>Information Processing Letters</i>. <b>100</b> (4): 162–166. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2Fj.ipl.2006.06.003" rel="nofollow">10.1016/j.ipl.2006.06.003</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Information+Processing+Letters&amp;rft.atitle=An+efficient+approximation+for+the+Generalized+Assignment+Problem&amp;rft.volume=100&amp;rft.issue=4&amp;rft.pages=162-166&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1016%2Fj.ipl.2006.06.003&amp;rft.aulast=Cohen&amp;rft.aufirst=Reuven&amp;rft.au=Katzir%2C+Liran&amp;rft.au=Raz%2C+Danny&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneralized+assignment+problem"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=7" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><cite class="citation book cs1" id="CITEREFKellererPferschyPisinger2013">Kellerer, Hans; Pferschy, Ulrich; Pisinger, David (2013-03-19). <i>Knapsack Problems</i>. <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-3-540-24777-7" title="Special:BookSources/978-3-540-24777-7"><bdi>978-3-540-24777-7</bdi></a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Knapsack+Problems&amp;rft.date=2013-03-19&amp;rft.isbn=978-3-540-24777-7&amp;rft.aulast=Kellerer&amp;rft.aufirst=Hans&amp;rft.au=Pferschy%2C+Ulrich&amp;rft.au=Pisinger%2C+David&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AGeneralized+assignment+problem"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/>
+</p>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<!-- 
+NewPP limit report
+Parsed by mw2233
+Cached time: 20200916212835
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.252 seconds
+Real time usage: 0.642 seconds
+Preprocessor visited node count: 612/1000000
+Post‐expand include size: 7913/2097152 bytes
+Template argument size: 416/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 16596/5000000 bytes
+Lua time usage: 0.109/10.000 seconds
+Lua memory usage: 2.88 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  216.379      1 -total
+ 56.00%  121.169      1 Template:Reflist
+ 45.29%   98.007      1 Template:Citation
+ 35.64%   77.115      1 Template:Short_description
+ 19.44%   42.068      1 Template:Pagetype
+  8.99%   19.447      3 Template:Main_other
+  6.95%   15.039      1 Template:SDcat
+  5.98%   12.942      2 Template:Cite_journal
+  3.44%    7.452      1 Template:Cite_book
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:9124553-0!canonical!math=5 and timestamp 20200916212834 and revision id 967345114
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Generalized_assignment_problem&amp;oldid=967345114">https://en.wikipedia.org/w/index.php?title=Generalized_assignment_problem&amp;oldid=967345114</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:NP-complete_problems" title="Category:NP-complete problems">NP-complete problems</a></li><li><a href="/wiki/Category:Combinatorial_optimization" title="Category:Combinatorial optimization">Combinatorial optimization</a></li></ul></div><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden categories: <ul><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_matches_Wikidata" title="Category:Short description matches Wikidata">Short description matches Wikidata</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Generalized+assignment+problem" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Generalized+assignment+problem" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Generalized_assignment_problem" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Generalized_assignment_problem" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Generalized_assignment_problem">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Generalized_assignment_problem&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Generalized_assignment_problem&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-navigation" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Generalized_assignment_problem" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Generalized_assignment_problem" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Generalized_assignment_problem&amp;oldid=967345114" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Generalized_assignment_problem&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Generalized_assignment_problem&amp;id=967345114&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q5532462" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Generalized_assignment_problem&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Generalized_assignment_problem&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-ru"><a class="interlanguage-link-target" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D0%BE%D0%B1%D1%89%D1%91%D0%BD%D0%BD%D0%B0%D1%8F_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE_%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F%D1%85" hreflang="ru" lang="ru" title="Обобщённая задача о назначениях – Russian">Русский</a></li></ul>
+<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q5532462#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 12 July 2020, at 18:14<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Generalized_assignment_problem&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.252","walltime":"0.642","ppvisitednodes":{"value":612,"limit":1000000},"postexpandincludesize":{"value":7913,"limit":2097152},"templateargumentsize":{"value":416,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":16596,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  216.379      1 -total"," 56.00%  121.169      1 Template:Reflist"," 45.29%   98.007      1 Template:Citation"," 35.64%   77.115      1 Template:Short_description"," 19.44%   42.068      1 Template:Pagetype","  8.99%   19.447      3 Template:Main_other","  6.95%   15.039      1 Template:SDcat","  5.98%   12.942      2 Template:Cite_journal","  3.44%    7.452      1 Template:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.109","limit":"10.000"},"limitreport-memusage":{"value":3017643,"limit":52428800}},"cachereport":{"origin":"mw2233","timestamp":"20200916212835","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Generalized assignment problem","url":"https:\/\/en.wikipedia.org\/wiki\/Generalized_assignment_problem","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5532462","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5532462","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-01-26T12:44:15Z","dateModified":"2020-07-12T18:14:34Z","headline":"combinatorial optimization problem"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":110,"wgHostname":"mw2355"});});</script>
+</body></html>
