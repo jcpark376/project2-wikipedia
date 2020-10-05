@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tridiagonal matrix - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"8680f4d0-d707-4cfd-a868-e1688a700625","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Tridiagonal_matrix","wgTitle":"Tridiagonal matrix","wgCurRevisionId":974868025,"wgRevisionId":974868025,"wgArticleId":519218,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1: long volume value","Sparse matrices"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Tridiagonal_matrix","wgRelevantArticleId":519218,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q1755277"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","mediawiki.toc.styles":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready",
+"wikibase.client.init":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<link href="//en.m.wikipedia.org/wiki/Tridiagonal_matrix" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Tridiagonal_matrix" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Tridiagonal_matrix rootpage-Tridiagonal_matrix skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Tridiagonal matrix</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>In <a href="/wiki/Linear_algebra" title="Linear algebra">linear algebra</a>, a <i>tridiagonal matrix</i> is a <a href="/wiki/Band_matrix" title="Band matrix">band matrix</a> that has nonzero elements on the <a href="/wiki/Main_diagonal" title="Main diagonal">main diagonal</a>, the first diagonal below this, and the first diagonal above the main diagonal only.
+</p><p>For example, the following matrix is tridiagonal:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\begin{pmatrix}1&amp;4&amp;0&amp;0\\3&amp;4&amp;1&amp;0\\0&amp;2&amp;3&amp;4\\0&amp;0&amp;1&amp;3\\\end{pmatrix}}.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>(</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<mn>1</mn>
+</mtd>
+<mtd>
+<mn>4</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>3</mn>
+</mtd>
+<mtd>
+<mn>4</mn>
+</mtd>
+<mtd>
+<mn>1</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>2</mn>
+</mtd>
+<mtd>
+<mn>3</mn>
+</mtd>
+<mtd>
+<mn>4</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>0</mn>
+</mtd>
+<mtd>
+<mn>1</mn>
+</mtd>
+<mtd>
+<mn>3</mn>
+</mtd>
+</mtr>
+</mtable>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\begin{pmatrix}1&amp;4&amp;0&amp;0\\3&amp;4&amp;1&amp;0\\0&amp;2&amp;3&amp;4\\0&amp;0&amp;1&amp;3\\\end{pmatrix}}.}</annotation>
+</semantics>
+</math></span><img alt="{\begin{pmatrix}1&amp;4&amp;0&amp;0\\3&amp;4&amp;1&amp;0\\0&amp;2&amp;3&amp;4\\0&amp;0&amp;1&amp;3\\\end{pmatrix}}." aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/353a4862130008599653ed68ed0e2ae49cc2c455" style="vertical-align: -5.671ex; width:17.083ex; height:12.509ex;"/></span></dd></dl>
+<p>The <a href="/wiki/Determinant" title="Determinant">determinant</a> of a tridiagonal matrix is given by the <b><a href="/wiki/Continuant_(mathematics)" title="Continuant (mathematics)">continuant</a></b> of its elements.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>
+</p><p>An <a href="/wiki/Orthogonal_transformation" title="Orthogonal transformation">orthogonal transformation</a> of a symmetric (or Hermitian) matrix to tridiagonal form can be done with the <a href="/wiki/Lanczos_algorithm" title="Lanczos algorithm">Lanczos algorithm</a>.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Properties"><span class="tocnumber">1</span> <span class="toctext">Properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Determinant"><span class="tocnumber">1.1</span> <span class="toctext">Determinant</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Inversion"><span class="tocnumber">1.2</span> <span class="toctext">Inversion</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Solution_of_linear_system"><span class="tocnumber">1.3</span> <span class="toctext">Solution of linear system</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Eigenvalues"><span class="tocnumber">1.4</span> <span class="toctext">Eigenvalues</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Similarity_to_symmetric_tridiagonal_matrix"><span class="tocnumber">1.5</span> <span class="toctext">Similarity to symmetric tridiagonal matrix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Computer_programming"><span class="tocnumber">2</span> <span class="toctext">Computer programming</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Notes"><span class="tocnumber">4</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=1" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A tridiagonal matrix is a matrix that is both upper and lower <a href="/wiki/Hessenberg_matrix" title="Hessenberg matrix">Hessenberg matrix</a>.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup> In particular, a tridiagonal matrix is a <a href="/wiki/Direct_sum" title="Direct sum">direct sum</a> of <i>p</i> 1-by-1 and <i>q</i> 2-by-2 matrices such that <i>p</i> + <i>q</i>/2 = <i>n</i> — the dimension of the tridiagonal. Although a general tridiagonal matrix is not necessarily <a href="/wiki/Symmetric_matrix" title="Symmetric matrix">symmetric</a> or <a href="/wiki/Hermitian_matrix" title="Hermitian matrix">Hermitian</a>, many of those that arise when solving linear algebra problems have one of these properties. Furthermore, if a real tridiagonal matrix <i>A</i> satisfies <i>a</i><sub><i>k</i>,<i>k</i>+1</sub> <i>a</i><sub><i>k</i>+1,<i>k</i></sub> &gt; 0 for all <i>k</i>, so that the signs of its entries are symmetric, then it is <a class="mw-redirect" href="/wiki/Similar_(linear_algebra)" title="Similar (linear algebra)">similar</a> to a Hermitian matrix, by a diagonal change of basis matrix. Hence, its <a class="mw-redirect" href="/wiki/Eigenvalue" title="Eigenvalue">eigenvalues</a> are real. If we replace the strict inequality by <i>a</i><sub><i>k</i>,<i>k</i>+1</sub> <i>a</i><sub><i>k</i>+1,<i>k</i></sub> ≥ 0, then by continuity, the eigenvalues are still guaranteed to be real, but the matrix need no longer be similar to a Hermitian matrix.<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p><p>The <a href="/wiki/Set_(mathematics)" title="Set (mathematics)">set</a> of all <i>n × n</i> tridiagonal matrices forms a <i>3n-2</i>
+<a class="mw-redirect" href="/wiki/Dimensional" title="Dimensional">dimensional</a> <a href="/wiki/Vector_space" title="Vector space">vector space</a>.
+</p><p>Many linear algebra <a href="/wiki/Algorithm" title="Algorithm">algorithms</a> require significantly less <a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">computational effort</a> when applied to diagonal matrices, and this improvement often carries over to tridiagonal matrices as well.
+</p>
+<h3><span class="mw-headline" id="Determinant">Determinant</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=2" title="Edit section: Determinant">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote navigation-not-searchable" role="note">Main article: <a href="/wiki/Continuant_(mathematics)" title="Continuant (mathematics)">continuant (mathematics)</a></div>
+<p>The <a href="/wiki/Determinant" title="Determinant">determinant</a> of a tridiagonal matrix <i>A</i> of order <i>n</i> can be computed from a three-term <a href="/wiki/Recurrence_relation" title="Recurrence relation">recurrence relation</a>.<sup class="reference" id="cite_ref-4"><a href="#cite_note-4">[4]</a></sup> Write <i>f</i><sub>1</sub> = |<i>a</i><sub>1</sub>| = <i>a</i><sub>1</sub> (i.e., <i>f</i><sub>1</sub> is the determinant of the 1 by 1 matrix consisting only of <i>a</i><sub>1</sub>), and let
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle f_{n}={\begin{vmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{vmatrix}}.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>|</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>|</mo>
+</mrow>
+</mrow>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle f_{n}={\begin{vmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{vmatrix}}.}</annotation>
+</semantics>
+</math></span><img alt="f_{n}={\begin{vmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{vmatrix}}." aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c9d73391d289f85af5878dc6ea5f2dce0634120e" style="vertical-align: -9.005ex; width:33.628ex; height:19.176ex;"/></span></dd></dl>
+<p>The sequence (<i>f</i><sub><i>i</i></sub>) is called the <a href="/wiki/Continuant_(mathematics)" title="Continuant (mathematics)">continuant</a> and satisfies the recurrence relation
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle f_{n}=a_{n}f_{n-1}-c_{n-1}b_{n-1}f_{n-2}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>f</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle f_{n}=a_{n}f_{n-1}-c_{n-1}b_{n-1}f_{n-2}}</annotation>
+</semantics>
+</math></span><img alt="f_n = a_n f_{n-1} - c_{n-1}b_{n-1}f_{n-2}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d173ac4664b9990b20db77dc0fa5b88f7353906f" style="vertical-align: -0.671ex; width:28.304ex; height:2.509ex;"/></span></dd></dl>
+<p>with initial values <i>f</i><sub>0</sub> = 1 and <i>f</i><sub>−1</sub> = 0. The cost of computing the determinant of a tridiagonal matrix using this formula is linear in <i>n</i>, while the cost is cubic for a general matrix.
+</p>
+<h3><span class="mw-headline" id="Inversion">Inversion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=3" title="Edit section: Inversion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a class="mw-redirect" href="/wiki/Inverse_matrix" title="Inverse matrix">inverse</a> of a non-singular tridiagonal matrix <i>T</i>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T={\begin{pmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{pmatrix}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>(</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T={\begin{pmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{pmatrix}}}</annotation>
+</semantics>
+</math></span><img alt="T = \begin{pmatrix}
+a_1 &amp; b_1 \\
+c_1 &amp; a_2 &amp; b_2 \\
+&amp; c_2 &amp; \ddots &amp; \ddots \\
+&amp; &amp; \ddots &amp; \ddots &amp; b_{n-1} \\
+&amp; &amp; &amp; c_{n-1} &amp; a_n
+\end{pmatrix}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47bb996cd5cd95b3d1c9bf5c63a22cf592448fbe" style="vertical-align: -9.005ex; width:35.033ex; height:19.176ex;"/></span></dd></dl>
+<p>is given by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle (T^{-1})_{ij}={\begin{cases}(-1)^{i+j}b_{i}\cdots b_{j-1}\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i&lt;j\\\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i=j\\(-1)^{i+j}c_{j}\cdots c_{i-1}\theta _{j-1}\phi _{i+1}/\theta _{n}&amp;{\text{ if }}i&gt;j\\\end{cases}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<msup>
+<mi>T</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<msub>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>{</mo>
+<mtable columnalign="left left" columnspacing="1em" displaystyle="false" rowspacing=".2em">
+<mtr>
+<mtd>
+<mo stretchy="false">(</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>+</mo>
+<mi>j</mi>
+</mrow>
+</msup>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>⋯<!-- ⋯ --></mo>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext> if </mtext>
+</mrow>
+<mi>i</mi>
+<mo>&lt;</mo>
+<mi>j</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext> if </mtext>
+</mrow>
+<mi>i</mi>
+<mo>=</mo>
+<mi>j</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mo stretchy="false">(</mo>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<msup>
+<mo stretchy="false">)</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>+</mo>
+<mi>j</mi>
+</mrow>
+</msup>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+</mrow>
+</msub>
+<mo>⋯<!-- ⋯ --></mo>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>j</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext> if </mtext>
+</mrow>
+<mi>i</mi>
+<mo>&gt;</mo>
+<mi>j</mi>
+</mtd>
+</mtr>
+</mtable>
+<mo fence="true" stretchy="true" symmetric="true"></mo>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle (T^{-1})_{ij}={\begin{cases}(-1)^{i+j}b_{i}\cdots b_{j-1}\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i&lt;j\\\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i=j\\(-1)^{i+j}c_{j}\cdots c_{i-1}\theta _{j-1}\phi _{i+1}/\theta _{n}&amp;{\text{ if }}i&gt;j\\\end{cases}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle (T^{-1})_{ij}={\begin{cases}(-1)^{i+j}b_{i}\cdots b_{j-1}\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i&lt;j\\\theta _{i-1}\phi _{j+1}/\theta _{n}&amp;{\text{ if }}i=j\\(-1)^{i+j}c_{j}\cdots c_{i-1}\theta _{j-1}\phi _{i+1}/\theta _{n}&amp;{\text{ if }}i&gt;j\\\end{cases}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68b87b9548e276c441f8e59ca3ab0e99c76ade76" style="vertical-align: -4.005ex; width:51.671ex; height:9.176ex;"/></span></dd></dl>
+<p>where the <i>θ<sub>i</sub></i> satisfy the recurrence relation
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \theta _{i}=a_{i}\theta _{i-1}-b_{i-1}c_{i-1}\theta _{i-2}\qquad i=2,3,\ldots ,n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>θ<!-- θ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+</mrow>
+</msub>
+<mspace width="2em"></mspace>
+<mi>i</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mn>3</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \theta _{i}=a_{i}\theta _{i-1}-b_{i-1}c_{i-1}\theta _{i-2}\qquad i=2,3,\ldots ,n}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \theta _{i}=a_{i}\theta _{i-1}-b_{i-1}c_{i-1}\theta _{i-2}\qquad i=2,3,\ldots ,n}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d1b955d6bd765889488522c4ac63d90368fab214" style="vertical-align: -0.671ex; width:44.122ex; height:2.509ex;"/></span></dd></dl>
+<p>with initial conditions <i>θ</i><sub>0</sub> = 1, <i>θ</i><sub>1</sub> = <i>a</i><sub>1</sub> and the <i>ϕ</i><sub><i>i</i></sub> satisfy
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \phi _{i}=a_{i}\phi _{i+1}-b_{i}c_{i}\phi _{i+2}\qquad i=n-1,\ldots ,1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>=</mo>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>−<!-- − --></mo>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>ϕ<!-- ϕ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>+</mo>
+<mn>2</mn>
+</mrow>
+</msub>
+<mspace width="2em"></mspace>
+<mi>i</mi>
+<mo>=</mo>
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \phi _{i}=a_{i}\phi _{i+1}-b_{i}c_{i}\phi _{i+2}\qquad i=n-1,\ldots ,1}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle \phi _{i}=a_{i}\phi _{i+1}-b_{i}c_{i}\phi _{i+2}\qquad i=n-1,\ldots ,1}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/751210ed4fa8afd39c2db6e5fd60e86c0ded7acd" style="vertical-align: -0.671ex; width:42.613ex; height:2.509ex;"/></span></dd></dl>
+<p>with initial conditions <i>ϕ</i><sub><i>n</i>+1</sub> = 1 and <i>ϕ</i><sub><i>n</i></sub> = <i>a<sub>n</sub></i>.<sup class="reference" id="cite_ref-5"><a href="#cite_note-5">[5]</a></sup><sup class="reference" id="cite_ref-6"><a href="#cite_note-6">[6]</a></sup>
+</p><p>Closed form solutions can be computed for special cases such as <a href="/wiki/Symmetric_matrix" title="Symmetric matrix">symmetric matrices</a> with all diagonal and off-diagonal elements equal<sup class="reference" id="cite_ref-7"><a href="#cite_note-7">[7]</a></sup> or <a class="mw-redirect" href="/wiki/Toeplitz_matrices" title="Toeplitz matrices">Toeplitz matrices</a><sup class="reference" id="cite_ref-8"><a href="#cite_note-8">[8]</a></sup> and for the general case as well.<sup class="reference" id="cite_ref-9"><a href="#cite_note-9">[9]</a></sup><sup class="reference" id="cite_ref-10"><a href="#cite_note-10">[10]</a></sup>
+</p><p>In general, the inverse of a tridiagonal matrix is a <a class="new" href="/w/index.php?title=Semiseparable_matrix&amp;action=edit&amp;redlink=1" title="Semiseparable matrix (page does not exist)">semiseparable matrix</a> and vice versa.<sup class="reference" id="cite_ref-VandebrilBarel2008_11-0"><a href="#cite_note-VandebrilBarel2008-11">[11]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Solution_of_linear_system">Solution of linear system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=4" title="Edit section: Solution of linear system">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote navigation-not-searchable" role="note">Main article: <a href="/wiki/Tridiagonal_matrix_algorithm" title="Tridiagonal matrix algorithm">tridiagonal matrix algorithm</a></div>
+<p>A system of equations <i>Ax</i> = <i>b</i> for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b\in \mathbb {R} ^{n}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>b</mi>
+<mo>∈<!-- ∈ --></mo>
+<msup>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="double-struck">R</mi>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b\in \mathbb {R} ^{n}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle b\in \mathbb {R} ^{n}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/76d249a48ea295259b826259e484d5bacad0e068" style="vertical-align: -0.338ex; width:6.735ex; height:2.343ex;"/></span> can be solved by an efficient form of Gaussian elimination when <i>A</i> is tridiagonal called <a href="/wiki/Tridiagonal_matrix_algorithm" title="Tridiagonal matrix algorithm">tridiagonal matrix algorithm</a>, requiring <i>O</i>(<i>n</i>) operations.<sup class="reference" id="cite_ref-12"><a href="#cite_note-12">[12]</a></sup>
+</p>
+<h3><span class="mw-headline" id="Eigenvalues">Eigenvalues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=5" title="Edit section: Eigenvalues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When a tridiagonal matrix is also <a href="/wiki/Toeplitz_matrix" title="Toeplitz matrix">Toeplitz</a>, there is a simple closed-form solution for its eigenvalues, namely:<sup class="reference" id="cite_ref-13"><a href="#cite_note-13">[13]</a></sup><sup class="reference" id="cite_ref-14"><a href="#cite_note-14">[14]</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a-2{\sqrt {bc}}\cos \left({\frac {k\pi }{n+1}}\right),\qquad k=1,\ldots ,n.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>a</mi>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mi>b</mi>
+<mi>c</mi>
+</msqrt>
+</mrow>
+<mi>cos</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mrow>
+<mo>(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mfrac>
+<mrow>
+<mi>k</mi>
+<mi>π<!-- π --></mi>
+</mrow>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>,</mo>
+<mspace width="2em"></mspace>
+<mi>k</mi>
+<mo>=</mo>
+<mn>1</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>n</mi>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a-2{\sqrt {bc}}\cos \left({\frac {k\pi }{n+1}}\right),\qquad k=1,\ldots ,n.}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a-2{\sqrt {bc}}\cos \left({\frac {k\pi }{n+1}}\right),\qquad k=1,\ldots ,n.}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f97ca4cf531d85818640e012659d547ee03fd61" style="vertical-align: -2.505ex; width:40.697ex; height:6.176ex;"/></span></dd></dl>
+<p>A real <a href="/wiki/Symmetric_matrix" title="Symmetric matrix">symmetric</a> tridiagonal matrix has real eigenvalues, and all the eigenvalues are <a href="/wiki/Eigenvalues_and_eigenvectors#Algebraic_multiplicity" title="Eigenvalues and eigenvectors">distinct (simple)</a> if all off-diagonal elements are nonzero.<sup class="reference" id="cite_ref-15"><a href="#cite_note-15">[15]</a></sup> Numerous methods exist for the numerical computation of the eigenvalues of a real symmetric tridiagonal matrix to arbitrary finite precision, typically requiring <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n^{2})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>n</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n^{2})}</annotation>
+</semantics>
+</math></span><img alt="O(n^{2})" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6cd9594a16cb898b8f2a2dff9227a385ec183392" style="vertical-align: -0.838ex; width:6.032ex; height:3.176ex;"/></span> operations for a matrix of size <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle n\times n}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>n</mi>
+<mo>×<!-- × --></mo>
+<mi>n</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle n\times n}</annotation>
+</semantics>
+</math></span><img alt="n\times n" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/59d2b4cb72e304526cf5b5887147729ea259da78" style="vertical-align: -0.338ex; width:5.63ex; height:1.676ex;"/></span>, although fast algorithms exist which (without parallel computation) require only <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(n\log n)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<mi>log</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mi>n</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(n\log n)}</annotation>
+</semantics>
+</math></span><img alt="O(n\log n)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9d2320768fb54880ca4356e61f60eb02a3f9d9f1" style="vertical-align: -0.838ex; width:10.118ex; height:2.843ex;"/></span>.<sup class="reference" id="cite_ref-16"><a href="#cite_note-16">[16]</a></sup>
+</p><p>As a side note, an <b>unreduced</b> symmetric tridiagonal matrix is a matrix containing non-zero off-diagonal elements of the tridiagonal, where the eigenvalues are distinct while the eigenvectors are unique up to a scale factor and are mutually orthogonal.<sup class="reference" id="cite_ref-17"><a href="#cite_note-17">[17]</a></sup>
+</p><p>For <i>unsymmetric</i> tridiagonal matrices one can compute the eigendecomposition using a <a href="/wiki/Tridiagonal_matrix#Similarity_to_symmetric_tridiagonal_matrix" title="Tridiagonal matrix">similarity transformation</a>.
+</p>
+<h3><span class="mw-headline" id="Similarity_to_symmetric_tridiagonal_matrix">Similarity to symmetric tridiagonal matrix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=6" title="Edit section: Similarity to symmetric tridiagonal matrix">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Given a real tridiagonal, <i>nonsymmetic</i> matrix 
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T={\begin{pmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{pmatrix}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>(</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T={\begin{pmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{pmatrix}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle T={\begin{pmatrix}a_{1}&amp;b_{1}\\c_{1}&amp;a_{2}&amp;b_{2}\\&amp;c_{2}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;b_{n-1}\\&amp;&amp;&amp;c_{n-1}&amp;a_{n}\end{pmatrix}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/47bb996cd5cd95b3d1c9bf5c63a22cf592448fbe" style="vertical-align: -9.005ex; width:35.033ex; height:19.176ex;"/></span></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{i}\neq c_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>≠<!-- ≠ --></mo>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{i}\neq c_{i}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle b_{i}\neq c_{i}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d0055dbbf2b103801c6bdec4d0ab80bc82d3a102" style="vertical-align: -0.838ex; width:6.702ex; height:2.676ex;"/></span>.
+</p><p>Assume that each product of off-diagonal entries is <i>strictly</i> positive <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle b_{i}c_{i}&gt;0}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>&gt;</mo>
+<mn>0</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle b_{i}c_{i}&gt;0}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle b_{i}c_{i}&gt;0}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ddd0353c8d020692b4475010948a33edc9f7903" style="vertical-align: -0.671ex; width:7.865ex; height:2.509ex;"/></span> and define a transformation matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle D}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>D</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle D}</annotation>
+</semantics>
+</math></span><img alt="D" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f34a0c600395e5d4345287e21fb26efd386990e6" style="vertical-align: -0.338ex; width:1.924ex; height:2.176ex;"/></span> by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle D:=\operatorname {diag} (\delta _{1},\dots ,\delta _{n})\quad {\text{for}}\quad \delta _{i}:={\begin{cases}1&amp;,\,i=1\\{\sqrt {\frac {c_{i-1}\dots c_{1}}{b_{i-1}\dots b_{1}}}}&amp;,\,i=2,\dots ,n\,.\end{cases}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>D</mi>
+<mo>:=</mo>
+<mi>diag</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo>
+<mspace width="1em"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mtext>for</mtext>
+</mrow>
+<mspace width="1em"></mspace>
+<msub>
+<mi>δ<!-- δ --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+<mo>:=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>{</mo>
+<mtable columnalign="left left" columnspacing="1em" displaystyle="false" rowspacing=".2em">
+<mtr>
+<mtd>
+<mn>1</mn>
+</mtd>
+<mtd>
+<mo>,</mo>
+<mspace width="thinmathspace"></mspace>
+<mi>i</mi>
+<mo>=</mo>
+<mn>1</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mfrac>
+<mrow>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>…<!-- … --></mo>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mrow>
+<mrow>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<mo>…<!-- … --></mo>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mrow>
+</mfrac>
+</msqrt>
+</mrow>
+</mtd>
+<mtd>
+<mo>,</mo>
+<mspace width="thinmathspace"></mspace>
+<mi>i</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mo>,</mo>
+<mo>…<!-- … --></mo>
+<mo>,</mo>
+<mi>n</mi>
+<mspace width="thinmathspace"></mspace>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+<mo fence="true" stretchy="true" symmetric="true"></mo>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle D:=\operatorname {diag} (\delta _{1},\dots ,\delta _{n})\quad {\text{for}}\quad \delta _{i}:={\begin{cases}1&amp;,\,i=1\\{\sqrt {\frac {c_{i-1}\dots c_{1}}{b_{i-1}\dots b_{1}}}}&amp;,\,i=2,\dots ,n\,.\end{cases}}}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle D:=\operatorname {diag} (\delta _{1},\dots ,\delta _{n})\quad {\text{for}}\quad \delta _{i}:={\begin{cases}1&amp;,\,i=1\\{\sqrt {\frac {c_{i-1}\dots c_{1}}{b_{i-1}\dots b_{1}}}}&amp;,\,i=2,\dots ,n\,.\end{cases}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c23bb8eed1d3fe360263b582ab59ce9ea1ffed2f" style="vertical-align: -3.171ex; width:62.977ex; height:7.509ex;"/></span></dd></dl>
+<p>The <a href="/wiki/Matrix_similarity" title="Matrix similarity">similarity transformation</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle D^{-1}TD}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>D</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mi>T</mi>
+<mi>D</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle D^{-1}TD}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle D^{-1}TD}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4ef66d482d83ea5e66203f4783341379fec011c2" style="vertical-align: -0.338ex; width:7.818ex; height:2.676ex;"/></span> yields a <i>symmetric</i><sup class="reference" id="cite_ref-18"><a href="#cite_note-18">[18]</a></sup> tridiagonal matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>J</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J}</annotation>
+</semantics>
+</math></span><img alt="J" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/359e4f407b49910e02c27c2f52e87a36cd74c053" style="vertical-align: -0.338ex; width:1.471ex; height:2.176ex;"/></span> by
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J:=D^{-1}TD={\begin{pmatrix}a_{1}&amp;{\sqrt {b_{1}c_{1}}}\\{\sqrt {b_{1}c_{1}}}&amp;a_{2}&amp;{\sqrt {b_{2}c_{2}}}\\&amp;{\sqrt {b_{2}c_{2}}}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;{\sqrt {b_{n-1}c_{n-1}}}\\&amp;&amp;&amp;{\sqrt {b_{n-1}c_{n-1}}}&amp;a_{n}\end{pmatrix}}\,.}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>J</mi>
+<mo>:=</mo>
+<msup>
+<mi>D</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msup>
+<mi>T</mi>
+<mi>D</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>(</mo>
+<mtable columnspacing="1em" rowspacing="4pt">
+<mtr>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>2</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mo>⋱<!-- ⋱ --></mo>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd></mtd>
+<mtd></mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<msub>
+<mi>b</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+<msub>
+<mi>c</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+</mrow>
+</msub>
+</msqrt>
+</mrow>
+</mtd>
+<mtd>
+<msub>
+<mi>a</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>n</mi>
+</mrow>
+</msub>
+</mtd>
+</mtr>
+</mtable>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+<mo>.</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J:=D^{-1}TD={\begin{pmatrix}a_{1}&amp;{\sqrt {b_{1}c_{1}}}\\{\sqrt {b_{1}c_{1}}}&amp;a_{2}&amp;{\sqrt {b_{2}c_{2}}}\\&amp;{\sqrt {b_{2}c_{2}}}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;{\sqrt {b_{n-1}c_{n-1}}}\\&amp;&amp;&amp;{\sqrt {b_{n-1}c_{n-1}}}&amp;a_{n}\end{pmatrix}}\,.}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle J:=D^{-1}TD={\begin{pmatrix}a_{1}&amp;{\sqrt {b_{1}c_{1}}}\\{\sqrt {b_{1}c_{1}}}&amp;a_{2}&amp;{\sqrt {b_{2}c_{2}}}\\&amp;{\sqrt {b_{2}c_{2}}}&amp;\ddots &amp;\ddots \\&amp;&amp;\ddots &amp;\ddots &amp;{\sqrt {b_{n-1}c_{n-1}}}\\&amp;&amp;&amp;{\sqrt {b_{n-1}c_{n-1}}}&amp;a_{n}\end{pmatrix}}\,.}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8a606d8bccb88e75284112e1a08ad2979fa6b51b" style="vertical-align: -10.171ex; width:72.517ex; height:21.509ex;"/></span></dd></dl>
+<p>Note that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle T}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>T</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+</semantics>
+</math></span><img alt="T" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle J}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>J</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle J}</annotation>
+</semantics>
+</math></span><img alt="J" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/359e4f407b49910e02c27c2f52e87a36cd74c053" style="vertical-align: -0.338ex; width:1.471ex; height:2.176ex;"/></span> have the same eigenvalues.
+</p>
+<h2><span class="mw-headline" id="Computer_programming">Computer programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=7" title="Edit section: Computer programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A transformation that reduces a general matrix to Hessenberg form will reduce a Hermitian matrix to <i>tridiagonal</i> form.  So, many <a href="/wiki/Eigenvalue_algorithm" title="Eigenvalue algorithm">eigenvalue algorithms</a>, when applied to a Hermitian matrix, reduce the input Hermitian matrix to (symmetric real) tridiagonal form as a first step.
+</p><p>A <i>tridiagonal matrix</i> can also be stored more efficiently than a general matrix by using a special <a href="/wiki/Matrix_representation" title="Matrix representation">storage scheme</a>. For instance, the <a href="/wiki/LAPACK" title="LAPACK">LAPACK</a> <a href="/wiki/Fortran" title="Fortran">Fortran</a> package stores an unsymmetric tridiagonal matrix of order <i>n</i> in three one-dimensional arrays, one of length <i>n</i> containing the diagonal elements, and two of length <i>n</i> − 1 containing the <a class="mw-redirect" href="/wiki/Subdiagonal" title="Subdiagonal">subdiagonal</a> and <a class="mw-redirect" href="/wiki/Superdiagonal" title="Superdiagonal">superdiagonal</a> elements.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Pentadiagonal_matrix" title="Pentadiagonal matrix">Pentadiagonal matrix</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=9" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFThomas_Muir1960"><a href="/wiki/Thomas_Muir_(mathematician)" title="Thomas Muir (mathematician)">Thomas Muir</a> (1960). <span class="cs1-lock-registration" title="Free registration required"><a class="external text" href="https://archive.org/details/treatiseontheory0000muir" rel="nofollow"><i>A treatise on the theory of determinants</i></a></span>. <a href="/wiki/Dover_Publications" title="Dover Publications">Dover Publications</a>. pp. <a class="external text" href="https://archive.org/details/treatiseontheory0000muir/page/516" rel="nofollow">516–525</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+treatise+on+the+theory+of+determinants&amp;rft.pages=516-525&amp;rft.pub=Dover+Publications&amp;rft.date=1960&amp;rft.au=Thomas+Muir&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Ftreatiseontheory0000muir&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFHornJohnson1985">Horn, Roger A.; Johnson, Charles R. (1985). <i>Matrix Analysis</i>. Cambridge University Press. p. 28. <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/0521386322" title="Special:BookSources/0521386322"><bdi>0521386322</bdi></a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Matrix+Analysis&amp;rft.pages=28&amp;rft.pub=Cambridge+University+Press&amp;rft.date=1985&amp;rft.isbn=0521386322&amp;rft.aulast=Horn&amp;rft.aufirst=Roger+A.&amp;rft.au=Johnson%2C+Charles+R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Horn &amp; Johnson, page 174</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFEl-Mikkawy2004">El-Mikkawy, M. E. A. (2004). "On the inverse of a general tridiagonal matrix". <i>Applied Mathematics and Computation</i>. <b>150</b> (3): 669–679. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2FS0096-3003%2803%2900298-4" rel="nofollow">10.1016/S0096-3003(03)00298-4</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Applied+Mathematics+and+Computation&amp;rft.atitle=On+the+inverse+of+a+general+tridiagonal+matrix&amp;rft.volume=150&amp;rft.issue=3&amp;rft.pages=669-679&amp;rft.date=2004&amp;rft_id=info%3Adoi%2F10.1016%2FS0096-3003%2803%2900298-4&amp;rft.aulast=El-Mikkawy&amp;rft.aufirst=M.+E.+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFDa_Fonseca2007">Da Fonseca, C. M. (2007). <a class="external text" href="https://doi.org/10.1016/j.cam.2005.08.047" rel="nofollow">"On the eigenvalues of some tridiagonal matrices"</a>. <i>Journal of Computational and Applied Mathematics</i>. <b>200</b>: 283–286. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="https://doi.org/10.1016%2Fj.cam.2005.08.047" rel="nofollow">10.1016/j.cam.2005.08.047</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Computational+and+Applied+Mathematics&amp;rft.atitle=On+the+eigenvalues+of+some+tridiagonal+matrices&amp;rft.volume=200&amp;rft.pages=283-286&amp;rft.date=2007&amp;rft_id=info%3Adoi%2F10.1016%2Fj.cam.2005.08.047&amp;rft.aulast=Da+Fonseca&amp;rft.aufirst=C.+M.&amp;rft_id=%2F%2Fdoi.org%2F10.1016%2Fj.cam.2005.08.047&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFUsmani1994">Usmani, R. A. (1994). <a class="external text" href="https://doi.org/10.1016/0024-3795(94)90414-6" rel="nofollow">"Inversion of a tridiagonal jacobi matrix"</a>. <i>Linear Algebra and its Applications</i>. 212-213: 413–414. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="https://doi.org/10.1016%2F0024-3795%2894%2990414-6" rel="nofollow">10.1016/0024-3795(94)90414-6</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Linear+Algebra+and+its+Applications&amp;rft.atitle=Inversion+of+a+tridiagonal+jacobi+matrix&amp;rft.volume=212-213&amp;rft.pages=413-414&amp;rft.date=1994&amp;rft_id=info%3Adoi%2F10.1016%2F0024-3795%2894%2990414-6&amp;rft.aulast=Usmani&amp;rft.aufirst=R.+A.&amp;rft_id=%2F%2Fdoi.org%2F10.1016%2F0024-3795%2894%2990414-6&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFHuO'Connell1996">Hu, G. Y.; O'Connell, R. F. (1996). "Analytical inversion of symmetric tridiagonal matrices". <i>Journal of Physics A: Mathematical and General</i>. <b>29</b> (7): 1511. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1088%2F0305-4470%2F29%2F7%2F020" rel="nofollow">10.1088/0305-4470/29/7/020</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Physics+A%3A+Mathematical+and+General&amp;rft.atitle=Analytical+inversion+of+symmetric+tridiagonal+matrices&amp;rft.volume=29&amp;rft.issue=7&amp;rft.pages=1511&amp;rft.date=1996&amp;rft_id=info%3Adoi%2F10.1088%2F0305-4470%2F29%2F7%2F020&amp;rft.aulast=Hu&amp;rft.aufirst=G.+Y.&amp;rft.au=O%27Connell%2C+R.+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFHuangMcColl1997">Huang, Y.; McColl, W. F. (1997). "Analytical inversion of general tridiagonal matrices". <i>Journal of Physics A: Mathematical and General</i>. <b>30</b> (22): 7919. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1088%2F0305-4470%2F30%2F22%2F026" rel="nofollow">10.1088/0305-4470/30/22/026</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Physics+A%3A+Mathematical+and+General&amp;rft.atitle=Analytical+inversion+of+general+tridiagonal+matrices&amp;rft.volume=30&amp;rft.issue=22&amp;rft.pages=7919&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1088%2F0305-4470%2F30%2F22%2F026&amp;rft.aulast=Huang&amp;rft.aufirst=Y.&amp;rft.au=McColl%2C+W.+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFMallik2001">Mallik, R. K. (2001). <a class="external text" href="https://doi.org/10.1016/S0024-3795(00)00262-7" rel="nofollow">"The inverse of a tridiagonal matrix"</a>. <i>Linear Algebra and its Applications</i>. <b>325</b>: 109–139. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="https://doi.org/10.1016%2FS0024-3795%2800%2900262-7" rel="nofollow">10.1016/S0024-3795(00)00262-7</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Linear+Algebra+and+its+Applications&amp;rft.atitle=The+inverse+of+a+tridiagonal+matrix&amp;rft.volume=325&amp;rft.pages=109-139&amp;rft.date=2001&amp;rft_id=info%3Adoi%2F10.1016%2FS0024-3795%2800%2900262-7&amp;rft.aulast=Mallik&amp;rft.aufirst=R.+K.&amp;rft_id=%2F%2Fdoi.org%2F10.1016%2FS0024-3795%2800%2900262-7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFKılıç2008">Kılıç, E. (2008). "Explicit formula for the inverse of a tridiagonal matrix by backward continued fractions". <i>Applied Mathematics and Computation</i>. <b>197</b>: 345–357. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2Fj.amc.2007.07.046" rel="nofollow">10.1016/j.amc.2007.07.046</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Applied+Mathematics+and+Computation&amp;rft.atitle=Explicit+formula+for+the+inverse+of+a+tridiagonal+matrix+by+backward+continued+fractions&amp;rft.volume=197&amp;rft.pages=345-357&amp;rft.date=2008&amp;rft_id=info%3Adoi%2F10.1016%2Fj.amc.2007.07.046&amp;rft.aulast=K%C4%B1l%C4%B1%C3%A7&amp;rft.aufirst=E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-VandebrilBarel2008-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-VandebrilBarel2008_11-0">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFRaf_VandebrilMarc_Van_BarelNicola_Mastronardi2008">Raf Vandebril; Marc Van Barel; Nicola Mastronardi (2008). <i>Matrix Computations and Semiseparable Matrices. Volume I: Linear Systems</i>. JHU Press. Theorem 1.38, p. 41. <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/978-0-8018-8714-7" title="Special:BookSources/978-0-8018-8714-7"><bdi>978-0-8018-8714-7</bdi></a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Matrix+Computations+and+Semiseparable+Matrices.+Volume+I%3A+Linear+Systems&amp;rft.pages=Theorem+1.38%2C+p.+41&amp;rft.pub=JHU+Press&amp;rft.date=2008&amp;rft.isbn=978-0-8018-8714-7&amp;rft.au=Raf+Vandebril&amp;rft.au=Marc+Van+Barel&amp;rft.au=Nicola+Mastronardi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFGolubVan_Loan1996"><a href="/wiki/Gene_H._Golub" title="Gene H. Golub">Golub, Gene H.</a>; <a href="/wiki/Charles_F._Van_Loan" title="Charles F. Van Loan">Van Loan, Charles F.</a> (1996). <i>Matrix Computations</i> (3rd ed.). The Johns Hopkins University Press. <a class="mw-redirect" href="/wiki/ISBN_(identifier)" title="ISBN (identifier)">ISBN</a> <a href="/wiki/Special:BookSources/0-8018-5414-8" title="Special:BookSources/0-8018-5414-8"><bdi>0-8018-5414-8</bdi></a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Matrix+Computations&amp;rft.edition=3rd&amp;rft.pub=The+Johns+Hopkins+University+Press&amp;rft.date=1996&amp;rft.isbn=0-8018-5414-8&amp;rft.aulast=Golub&amp;rft.aufirst=Gene+H.&amp;rft.au=Van+Loan%2C+Charles+F.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFNoschesePasquiniReichel2013">Noschese, S.; Pasquini, L.; Reichel, L. (2013). "Tridiagonal Toeplitz matrices: Properties and novel applications". <i>Numerical Linear Algebra with Applications</i>. <b>20</b> (2): 302. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1002%2Fnla.1811" rel="nofollow">10.1002/nla.1811</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Numerical+Linear+Algebra+with+Applications&amp;rft.atitle=Tridiagonal+Toeplitz+matrices%3A+Properties+and+novel+applications&amp;rft.volume=20&amp;rft.issue=2&amp;rft.pages=302&amp;rft.date=2013&amp;rft_id=info%3Adoi%2F10.1002%2Fnla.1811&amp;rft.aulast=Noschese&amp;rft.aufirst=S.&amp;rft.au=Pasquini%2C+L.&amp;rft.au=Reichel%2C+L.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">This can also be written as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle a-2{\sqrt {bc}}\cos(k\pi /{(n+1)})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>a</mi>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+<mrow class="MJX-TeXAtom-ORD">
+<msqrt>
+<mi>b</mi>
+<mi>c</mi>
+</msqrt>
+</mrow>
+<mi>cos</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>k</mi>
+<mi>π<!-- π --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mo>/</mo>
+</mrow>
+<mrow class="MJX-TeXAtom-ORD">
+<mo stretchy="false">(</mo>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle a-2{\sqrt {bc}}\cos(k\pi /{(n+1)})}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle a-2{\sqrt {bc}}\cos(k\pi /{(n+1)})}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a6c6b4dc8c6cebda71b249d1f3e664bacac4b93" style="vertical-align: -0.838ex; width:25.393ex; height:3.176ex;"/></span> because <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \cos(x)=-\cos(\pi -x)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>cos</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mi>cos</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>π<!-- π --></mi>
+<mo>−<!-- − --></mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \cos(x)=-\cos(\pi -x)}</annotation>
+</semantics>
+</math></span><img alt=" \cos(x) = -\cos(\pi-x) " aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a46bfc85f8961098ef2ab7a39a7e96223ead21f" style="vertical-align: -0.838ex; width:21.966ex; height:2.843ex;"/></span>, as is done in: <cite class="citation journal cs1" id="CITEREFKulkarniSchmidtTsui1999">Kulkarni, D.; Schmidt, D.; Tsui, S. K. (1999). <a class="external text" href="https://hal.archives-ouvertes.fr/hal-01461924/file/KST.pdf" rel="nofollow">"Eigenvalues of tridiagonal pseudo-Toeplitz matrices"</a> <span class="cs1-format">(PDF)</span>. <i>Linear Algebra and its Applications</i>. <b>297</b>: 63. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2FS0024-3795%2899%2900114-7" rel="nofollow">10.1016/S0024-3795(99)00114-7</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Linear+Algebra+and+its+Applications&amp;rft.atitle=Eigenvalues+of+tridiagonal+pseudo-Toeplitz+matrices&amp;rft.volume=297&amp;rft.pages=63&amp;rft.date=1999&amp;rft_id=info%3Adoi%2F10.1016%2FS0024-3795%2899%2900114-7&amp;rft.aulast=Kulkarni&amp;rft.aufirst=D.&amp;rft.au=Schmidt%2C+D.&amp;rft.au=Tsui%2C+S.+K.&amp;rft_id=https%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-01461924%2Ffile%2FKST.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFParlett1980">Parlett, B.N. (1980). <i>The Symmetric Eigenvalue Problem</i>. Prentice Hall, Inc.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Symmetric+Eigenvalue+Problem&amp;rft.pub=Prentice+Hall%2C+Inc.&amp;rft.date=1980&amp;rft.aulast=Parlett&amp;rft.aufirst=B.N.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFCoakleyRokhlin2012">Coakley, E.S.; Rokhlin, V. (2012). <a class="external text" href="https://doi.org/10.1016/j.acha.2012.06.003" rel="nofollow">"A fast divide-and-conquer algorithm for computing the spectra of real symmetric tridiagonal matrices"</a>. <i>Applied and Computational Harmonic Analysis</i>. <b>34</b> (3): 379–414. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="https://doi.org/10.1016%2Fj.acha.2012.06.003" rel="nofollow">10.1016/j.acha.2012.06.003</a></span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Applied+and+Computational+Harmonic+Analysis&amp;rft.atitle=A+fast+divide-and-conquer+algorithm+for+computing+the+spectra+of+real+symmetric+tridiagonal+matrices&amp;rft.volume=34&amp;rft.issue=3&amp;rft.pages=379-414&amp;rft.date=2012&amp;rft_id=info%3Adoi%2F10.1016%2Fj.acha.2012.06.003&amp;rft.aulast=Coakley&amp;rft.aufirst=E.S.&amp;rft.au=Rokhlin%2C+V.&amp;rft_id=%2F%2Fdoi.org%2F10.1016%2Fj.acha.2012.06.003&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation book cs1" id="CITEREFDhillon">Dhillon, Inderjit Singh. <a class="external text" href="http://www.cs.utexas.edu/~inderjit/public_papers/thesis.pdf" rel="nofollow"><i>A New O(n 2 ) Algorithm for the Symmetric Tridiagonal Eigenvalue/Eigenvector Problem</i></a> <span class="cs1-format">(PDF)</span>. p. 8.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+New+O%28n+2+%29+Algorithm+for+the+Symmetric+Tridiagonal+Eigenvalue%2FEigenvector+Problem&amp;rft.pages=8&amp;rft.aulast=Dhillon&amp;rft.aufirst=Inderjit+Singh&amp;rft_id=http%3A%2F%2Fwww.cs.utexas.edu%2F~inderjit%2Fpublic_papers%2Fthesis.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web cs1"><a class="external text" href="http://www.math.hkbu.edu.hk/ICM/LecturesAndSeminars/08OctMaterials/1/Slide3.pdf" rel="nofollow">"www.math.hkbu.edu.hk math lecture"</a> <span class="cs1-format">(PDF)</span>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=www.math.hkbu.edu.hk+math+lecture&amp;rft_id=http%3A%2F%2Fwww.math.hkbu.edu.hk%2FICM%2FLecturesAndSeminars%2F08OctMaterials%2F1%2FSlide3.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external text" href="http://www.netlib.org/lapack/lug/node125.html" rel="nofollow">Tridiagonal and Bidiagonal Matrices</a> in the LAPACK manual.</li>
+<li><cite class="citation journal cs1" id="CITEREFMoawwad_El-Mikkawy,_Abdelrahman_Karawia2006">Moawwad El-Mikkawy, Abdelrahman Karawia (2006). <a class="external text" href="https://web.archive.org/web/20110720131242/http://app2.mans.edu.eg/eulc/Libraries/itemsAttach/IssueArticle/1037592/papermik.pdf" rel="nofollow">"Inversion of general tridiagonal matrices"</a> <span class="cs1-format">(PDF)</span>. <i>Applied Mathematics Letters</i>. <b>19</b> (8): 712–720. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1016%2Fj.aml.2005.11.012" rel="nofollow">10.1016/j.aml.2005.11.012</a>. Archived from <a class="external text" href="http://app2.mans.edu.eg/eulc/Libraries/itemsAttach/IssueArticle/1037592/papermik.pdf" rel="nofollow">the original</a> <span class="cs1-format">(PDF)</span> on 2011-07-20.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Applied+Mathematics+Letters&amp;rft.atitle=Inversion+of+general+tridiagonal+matrices&amp;rft.volume=19&amp;rft.issue=8&amp;rft.pages=712-720&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1016%2Fj.aml.2005.11.012&amp;rft.au=Moawwad+El-Mikkawy%2C+Abdelrahman+Karawia&amp;rft_id=http%3A%2F%2Fapp2.mans.edu.eg%2Feulc%2FLibraries%2FitemsAttach%2FIssueArticle%2F1037592%2Fpapermik.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATridiagonal+matrix"></span><link href="mw-data:TemplateStyles:r951705291" rel="mw-deduplicated-inline-style"/></li>
+<li><a class="external text" href="http://www.cs.utexas.edu/users/flame/pubs/flawn53.pdf" rel="nofollow">High performance algorithms</a> for reduction to condensed (Hessenberg, tridiagonal, bidiagonal) form</li>
+<li><a class="external text" href="https://web.archive.org/web/20140310122757/http://michal.is/projects/tridiagonal-system-solver-sor-c/" rel="nofollow">Tridiagonal linear system solver</a> in C++</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw2225
+Cached time: 20200924135836
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.292 seconds
+Real time usage: 0.370 seconds
+Preprocessor visited node count: 969/1000000
+Post‐expand include size: 30924/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 71131/5000000 bytes
+Lua time usage: 0.149/10.000 seconds
+Lua memory usage: 3.54 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  255.132      1 -total
+ 48.67%  124.164      6 Template:Cite_book
+ 21.61%   55.134     11 Template:Cite_journal
+ 12.18%   31.070      2 Template:Main
+  3.09%    7.871      1 Template:Cite_web
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:519218-0!canonical!math=5 and timestamp 20200924135835 and revision id 974868025
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Tridiagonal_matrix&amp;oldid=974868025">https://en.wikipedia.org/w/index.php?title=Tridiagonal_matrix&amp;oldid=974868025</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Sparse_matrices" title="Category:Sparse matrices">Sparse matrices</a></li></ul></div><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden categories: <ul><li><a href="/wiki/Category:CS1:_long_volume_value" title="Category:CS1: long volume value">CS1: long volume value</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Tridiagonal+matrix" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Tridiagonal+matrix" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Tridiagonal_matrix" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Tridiagonal_matrix" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Tridiagonal_matrix">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Tridiagonal_matrix&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Tridiagonal_matrix&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-moved" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Tridiagonal_matrix" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Tridiagonal_matrix" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Tridiagonal_matrix&amp;oldid=974868025" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Tridiagonal_matrix&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Tridiagonal_matrix&amp;id=974868025&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q1755277" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Tridiagonal_matrix&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Tridiagonal_matrix&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-de"><a class="interlanguage-link-target" href="https://de.wikipedia.org/wiki/Tridiagonalmatrix" hreflang="de" lang="de" title="Tridiagonalmatrix – German">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a class="interlanguage-link-target" href="https://es.wikipedia.org/wiki/Matriz_tridiagonal" hreflang="es" lang="es" title="Matriz tridiagonal – Spanish">Español</a></li><li class="interlanguage-link interwiki-eo"><a class="interlanguage-link-target" href="https://eo.wikipedia.org/wiki/Tridiagonala_matrico" hreflang="eo" lang="eo" title="Tridiagonala matrico – Esperanto">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a class="interlanguage-link-target" href="https://eu.wikipedia.org/wiki/Matrize_tridiagonal" hreflang="eu" lang="eu" title="Matrize tridiagonal – Basque">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a class="interlanguage-link-target" href="https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3_%D8%B3%D9%87%E2%80%8C%D9%82%D8%B7%D8%B1%DB%8C" hreflang="fa" lang="fa" title="ماتریس سه‌قطری – Persian">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a class="interlanguage-link-target" href="https://fr.wikipedia.org/wiki/Matrice_tridiagonale" hreflang="fr" lang="fr" title="Matrice tridiagonale – French">Français</a></li><li class="interlanguage-link interwiki-ko"><a class="interlanguage-link-target" href="https://ko.wikipedia.org/wiki/3%EC%A4%91_%EB%8C%80%EA%B0%81_%ED%96%89%EB%A0%AC" hreflang="ko" lang="ko" title="3중 대각 행렬 – Korean">한국어</a></li><li class="interlanguage-link interwiki-hi"><a class="interlanguage-link-target" href="https://hi.wikipedia.org/wiki/%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%95_%E0%A4%86%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A5%82%E0%A4%B9" hreflang="hi" lang="hi" title="त्रिविकर्णिक आव्यूह – Hindi">हिन्दी</a></li><li class="interlanguage-link interwiki-it"><a class="interlanguage-link-target" href="https://it.wikipedia.org/wiki/Matrice_tridiagonale" hreflang="it" lang="it" title="Matrice tridiagonale – Italian">Italiano</a></li><li class="interlanguage-link interwiki-he"><a class="interlanguage-link-target" href="https://he.wikipedia.org/wiki/%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%94_%D7%AA%D7%9C%D7%AA-%D7%90%D7%9C%D7%9B%D7%A1%D7%95%D7%A0%D7%99%D7%AA" hreflang="he" lang="he" title="מטריצה תלת-אלכסונית – Hebrew">עברית</a></li><li class="interlanguage-link interwiki-hu"><a class="interlanguage-link-target" href="https://hu.wikipedia.org/wiki/Tridiagon%C3%A1lis_m%C3%A1trix" hreflang="hu" lang="hu" title="Tridiagonális mátrix – Hungarian">Magyar</a></li><li class="interlanguage-link interwiki-ru"><a class="interlanguage-link-target" href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D1%91%D1%85%D0%B4%D0%B8%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0" hreflang="ru" lang="ru" title="Трёхдиагональная матрица – Russian">Русский</a></li><li class="interlanguage-link interwiki-sl"><a class="interlanguage-link-target" href="https://sl.wikipedia.org/wiki/Tridiagonalna_matrika" hreflang="sl" lang="sl" title="Tridiagonalna matrika – Slovenian">Slovenščina</a></li><li class="interlanguage-link interwiki-sv"><a class="interlanguage-link-target" href="https://sv.wikipedia.org/wiki/Tridiagonal_matris" hreflang="sv" lang="sv" title="Tridiagonal matris – Swedish">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a class="interlanguage-link-target" href="https://ta.wikipedia.org/wiki/%E0%AE%AE%E0%AF%81%E0%AE%AE%E0%AF%8D%E0%AE%AE%E0%AF%82%E0%AE%B2%E0%AF%88%E0%AE%B5%E0%AE%BF%E0%AE%9F%E0%AF%8D%E0%AE%9F_%E0%AE%85%E0%AE%A3%E0%AE%BF" hreflang="ta" lang="ta" title="மும்மூலைவிட்ட அணி – Tamil">தமிழ்</a></li><li class="interlanguage-link interwiki-uk"><a class="interlanguage-link-target" href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B8%D0%B4%D1%96%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0_%D0%BC%D0%B0%D1%82%D1%80%D0%B8%D1%86%D1%8F" hreflang="uk" lang="uk" title="Тридіагональна матриця – Ukrainian">Українська</a></li><li class="interlanguage-link interwiki-zh"><a class="interlanguage-link-target" href="https://zh.wikipedia.org/wiki/%E4%B8%89%E5%AF%B9%E8%A7%92%E7%9F%A9%E9%98%B5" hreflang="zh" lang="zh" title="三对角矩阵 – Chinese">中文</a></li></ul>
+<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q1755277#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 25 August 2020, at 13:54<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Tridiagonal_matrix&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.292","walltime":"0.370","ppvisitednodes":{"value":969,"limit":1000000},"postexpandincludesize":{"value":30924,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":71131,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  255.132      1 -total"," 48.67%  124.164      6 Template:Cite_book"," 21.61%   55.134     11 Template:Cite_journal"," 12.18%   31.070      2 Template:Main","  3.09%    7.871      1 Template:Cite_web"]},"scribunto":{"limitreport-timeusage":{"value":"0.149","limit":"10.000"},"limitreport-memusage":{"value":3714051,"limit":52428800}},"cachereport":{"origin":"mw2225","timestamp":"20200924135836","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Tridiagonal matrix","url":"https:\/\/en.wikipedia.org\/wiki\/Tridiagonal_matrix","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1755277","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1755277","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-03-11T08:11:20Z","dateModified":"2020-08-25T13:54:13Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":141,"wgHostname":"mw2227"});});</script>
+</body></html>
