@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html class="client-nojs" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Hirschberg's algorithm - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"a25dcc9a-f046-4177-9a16-3a3a08c22d75","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Hirschberg's_algorithm","wgTitle":"Hirschberg's algorithm","wgCurRevisionId":963712565,"wgRevisionId":963712565,"wgArticleId":10171509,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example pseudocode","Sequence alignment algorithms","Bioinformatics algorithms","Dynamic programming"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Hirschberg's_algorithm","wgRelevantArticleId":10171509,"wgIsProbablyEditable":
+!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0,"wgULSPosition":"interlanguage","wgWikibaseItemId":"Q1620364"};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles"
+:"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","wikibase.client.init":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.extra-toolbar-buttons","ext.gadget.refToolbar","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta content="" name="ResourceLoaderDynamicStyles"/>
+<link href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector" rel="stylesheet"/>
+<meta content="MediaWiki 1.36.0-wmf.10" name="generator"/>
+<meta content="origin" name="referrer"/>
+<meta content="origin-when-crossorigin" name="referrer"/>
+<meta content="origin-when-cross-origin" name="referrer"/>
+<link href="//en.m.wikipedia.org/wiki/Hirschberg%27s_algorithm" media="only screen and (max-width: 720px)" rel="alternate"/>
+<link href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit" rel="alternate" title="Edit this page" type="application/x-wiki"/>
+<link href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit" rel="edit" title="Edit this page"/>
+<link href="/static/apple-touch/wikipedia.png" rel="apple-touch-icon"/>
+<link href="/static/favicon/wikipedia.ico" rel="shortcut icon"/>
+<link href="/w/opensearch_desc.php" rel="search" title="Wikipedia (en)" type="application/opensearchdescription+xml"/>
+<link href="//en.wikipedia.org/w/api.php?action=rsd" rel="EditURI" type="application/rsd+xml"/>
+<link href="//creativecommons.org/licenses/by-sa/3.0/" rel="license"/>
+<link href="https://en.wikipedia.org/wiki/Hirschberg%27s_algorithm" rel="canonical"/>
+<link href="//login.wikimedia.org" rel="dns-prefetch"/>
+<link href="//meta.wikimedia.org" rel="dns-prefetch"/>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Hirschberg_s_algorithm rootpage-Hirschberg_s_algorithm skin-vector action-view skin-vector-legacy"><div class="noprint" id="mw-page-base"></div>
+<div class="noprint" id="mw-head-base"></div>
+<div class="mw-body" id="content" role="main">
+<a id="top"></a>
+<div class="mw-body-content" id="siteNotice"><!-- CentralNotice --></div>
+<div class="mw-indicators mw-body-content">
+</div>
+<h1 class="firstHeading" id="firstHeading" lang="en">Hirschberg's algorithm</h1>
+<div class="mw-body-content" id="bodyContent">
+<div class="noprint" id="siteSub">From Wikipedia, the free encyclopedia</div>
+<div id="contentSub"></div>
+<div id="contentSub2"></div>
+<div id="jump-to-nav"></div>
+<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+<div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="en"><div class="mw-parser-output"><p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, <b>Hirschberg's algorithm</b>, named after its inventor, <a href="/wiki/Dan_Hirschberg" title="Dan Hirschberg">Dan Hirschberg</a>, is a <a href="/wiki/Dynamic_programming" title="Dynamic programming">dynamic programming</a> <a href="/wiki/Algorithm" title="Algorithm">algorithm</a> that finds the optimal <a href="/wiki/Sequence_alignment" title="Sequence alignment">sequence alignment</a> between two <a href="/wiki/String_(computer_science)" title="String (computer science)">strings</a>. Optimality is measured with the <a href="/wiki/Levenshtein_distance" title="Levenshtein distance">Levenshtein distance</a>, defined to be the sum of the costs of insertions, replacements, deletions, and null actions needed to change one string into the other.  Hirschberg's algorithm is simply described as a more space efficient version of the <a href="/wiki/Needleman%E2%80%93Wunsch_algorithm" title="Needleman–Wunsch algorithm">Needleman–Wunsch algorithm</a> that uses <a class="mw-redirect" href="/wiki/Divide_and_conquer_algorithm" title="Divide and conquer algorithm">divide and conquer</a>.<sup class="reference" id="cite_ref-1"><a href="#cite_note-1">[1]</a></sup>  Hirschberg's algorithm is commonly used in <a href="/wiki/Computational_biology" title="Computational biology">computational biology</a> to find maximal global alignments of <a href="/wiki/DNA" title="DNA">DNA</a> and <a href="/wiki/Protein" title="Protein">protein</a> sequences.
+</p>
+<div aria-labelledby="mw-toc-heading" class="toc" id="toc" role="navigation"><input class="toctogglecheckbox" id="toctogglecheckbox" role="button" style="display:none" type="checkbox"/><div class="toctitle" dir="ltr" lang="en"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Algorithm_information"><span class="tocnumber">1</span> <span class="toctext">Algorithm information</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Algorithm_description"><span class="tocnumber">2</span> <span class="toctext">Algorithm description</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Example"><span class="tocnumber">3</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="Algorithm_information">Algorithm information</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit&amp;section=1" title="Edit section: Algorithm information">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Hirschberg's algorithm is a generally applicable algorithm for optimal sequence alignment. <a class="mw-redirect" href="/wiki/BLAST" title="BLAST">BLAST</a> and <a href="/wiki/FASTA" title="FASTA">FASTA</a> are suboptimal <a href="/wiki/Heuristic_(computer_science)" title="Heuristic (computer science)">heuristics</a>.  If <i>x</i> and <i>y</i> are strings, where length(<i>x</i>) = <i>n</i> and length(<i>y</i>) = <i>m</i>, the <a class="mw-redirect" href="/wiki/Needleman-Wunsch_algorithm" title="Needleman-Wunsch algorithm">Needleman-Wunsch algorithm</a> finds an optimal alignment in <a class="mw-redirect" href="/wiki/Big_O_Notation" title="Big O Notation">O</a>(<i>nm</i>) time, using O(<i>nm</i>) space.  Hirschberg's algorithm is a clever modification of the Needleman-Wunsch Algorithm which still takes O(<i>nm</i>) time, but needs only O(min{<i>n</i>,<i>m</i>}) space and is much faster in practice.<sup class="reference" id="cite_ref-2"><a href="#cite_note-2">[2]</a></sup>
+One application of the algorithm is finding sequence alignments of DNA or protein sequences.  It is also a space-efficient way to calculate the <a href="/wiki/Longest_common_subsequence_problem" title="Longest common subsequence problem">longest common subsequence</a> between two sets of data such as with the common <a href="/wiki/Diff" title="Diff">diff</a> tool.
+</p><p>The Hirschberg algorithm can be derived from the Needleman-Wunsch algorithm by observing that:<sup class="reference" id="cite_ref-3"><a href="#cite_note-3">[3]</a></sup>
+</p>
+<ol><li>one can compute the optimal alignment score by only storing the current and previous row of the Needleman-Wunsch score matrix;</li>
+<li>if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle (Z,W)=\operatorname {NW} (X,Y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<mi>Z</mi>
+<mo>,</mo>
+<mi>W</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>NW</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo>,</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle (Z,W)=\operatorname {NW} (X,Y)}</annotation>
+</semantics>
+</math></span><img alt="(Z,W)=\operatorname {NW}(X,Y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6f7e34ca35aaa3ebc34c600dc0db28202e9244b8" style="vertical-align: -0.838ex; width:20.786ex; height:2.843ex;"/></span> is the optimal alignment of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle (X,Y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo>,</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle (X,Y)}</annotation>
+</semantics>
+</math></span><img alt="(X,Y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/41f29b9537685f499713112d6802e811cbf51bba" style="vertical-align: -0.838ex; width:6.597ex; height:2.843ex;"/></span>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X=X^{l}+X^{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+<mo>=</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X=X^{l}+X^{r}}</annotation>
+</semantics>
+</math></span><img alt="X=X^{l}+X^{r}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3bcbfb65a884cec3f090f91765c6b18e819aa687" style="vertical-align: -0.505ex; width:13.609ex; height:2.843ex;"/></span> is an arbitrary partition of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>, there exists a partition <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y^{l}+Y^{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y^{l}+Y^{r}}</annotation>
+</semantics>
+</math></span><img alt="Y^{l}+Y^{r}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b7949f886eeb324dbd3ae3c6ec0c66376f627b32" style="vertical-align: -0.505ex; width:8.337ex; height:2.843ex;"/></span> of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+</semantics>
+</math></span><img alt="Y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;"/></span> such that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NW} (X,Y)=\operatorname {NW} (X^{l},Y^{l})+\operatorname {NW} (X^{r},Y^{r})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NW</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo>,</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mi>NW</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo>,</mo>
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mi>NW</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+<mo>,</mo>
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NW} (X,Y)=\operatorname {NW} (X^{l},Y^{l})+\operatorname {NW} (X^{r},Y^{r})}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NW}(X,Y)=\operatorname {NW}(X^{l},Y^{l})+\operatorname {NW}(X^{r},Y^{r})" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0856590ffbca11b39bc804e42e5545ec516ccc5a" style="vertical-align: -0.838ex; width:41.804ex; height:3.176ex;"/></span>.</li></ol>
+<h2><span class="mw-headline" id="Algorithm_description">Algorithm description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit&amp;section=2" title="Edit section: Algorithm description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X_{i}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X_{i}}</annotation>
+</semantics>
+</math></span><img alt="X_{i}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af4a0955af42beb5f85aa05fb8c07abedc13990d" style="vertical-align: -0.671ex; width:2.724ex; height:2.509ex;"/></span> denotes the i-th character of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle 1\leqslant i\leqslant \operatorname {length} (X)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mn>1</mn>
+<mo>⩽<!-- ⩽ --></mo>
+<mi>i</mi>
+<mo>⩽<!-- ⩽ --></mo>
+<mi>length</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle 1\leqslant i\leqslant \operatorname {length} (X)}</annotation>
+</semantics>
+</math></span><img alt="{\displaystyle 1\leqslant i\leqslant \operatorname {length} (X)}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45f2b34da16c8363e5f9deb9e3c16cfa129f5712" style="vertical-align: -0.838ex; width:18.283ex; height:2.843ex;"/></span>. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X_{i:j}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msub>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>i</mi>
+<mo>:</mo>
+<mi>j</mi>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X_{i:j}}</annotation>
+</semantics>
+</math></span><img alt="X_{{i:j}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/028afa8195c82986c3b10f9fe01097ce1adb8093" style="vertical-align: -1.005ex; width:3.859ex; height:2.843ex;"/></span> denotes a substring of size <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle j-i+1}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>j</mi>
+<mo>−<!-- − --></mo>
+<mi>i</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle j-i+1}</annotation>
+</semantics>
+</math></span><img alt="j-i+1" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5752f98fbf3c7f9c7e84efdfbf495765d9f5b079" style="vertical-align: -0.671ex; margin-left: -0.027ex; width:8.63ex; height:2.509ex;"/></span>, ranging from i-th to the j-th character of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {rev} (X)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>rev</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {rev} (X)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {rev}(X)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8c16f0cb1f310c0364a237ad6802e60641e474e3" style="vertical-align: -0.838ex; width:6.961ex; height:2.843ex;"/></span> is the reversed version of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>.
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+</semantics>
+</math></span><img alt="Y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;"/></span> are sequences to be aligned. Let <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+</semantics>
+</math></span><img alt="x" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;"/></span> be a character from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+</semantics>
+</math></span><img alt="y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;"/></span> be a character from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y}</annotation>
+</semantics>
+</math></span><img alt="Y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/961d67d6b454b4df2301ac571808a3538b3a6d3f" style="vertical-align: -0.171ex; width:1.773ex; height:2.009ex;"/></span>. We assume that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {Del} (x)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Del</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {Del} (x)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {Del}(x)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b0d83abebb6aa33574eeede263a6f74950126e6" style="vertical-align: -0.838ex; width:6.594ex; height:2.843ex;"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {Ins} (y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Ins</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {Ins} (y)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {Ins}(y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0aeeaad0b72bf987f0822a8146e8bd08fc57d6f7" style="vertical-align: -0.838ex; width:6.013ex; height:2.843ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {Sub} (x,y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Sub</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>,</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {Sub} (x,y)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {Sub}(x,y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/62aeaf6e8f87f815ca2f28bbb4d9bac039dad822" style="vertical-align: -0.838ex; width:9.206ex; height:2.843ex;"/></span> are well defined integer-valued functions. These functions represent the cost of deleting <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+</semantics>
+</math></span><img alt="x" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;"/></span>, inserting <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+</semantics>
+</math></span><img alt="y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;"/></span>, and replacing <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle x}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>x</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+</semantics>
+</math></span><img alt="x" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;"/></span> with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle y}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>y</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+</semantics>
+</math></span><img alt="y" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;"/></span>, respectively.
+</p><p>We define <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NWScore} (X,Y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NWScore</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo>,</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NWScore} (X,Y)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NWScore}(X,Y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/482a90fc16259461781778a67b0c3fde15d55a1f" style="vertical-align: -0.838ex; width:16.16ex; height:2.843ex;"/></span>, which returns the last line of the Needleman-Wunsch score matrix <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm {Score} (i,j)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">S</mi>
+<mi mathvariant="normal">c</mi>
+<mi mathvariant="normal">o</mi>
+<mi mathvariant="normal">r</mi>
+<mi mathvariant="normal">e</mi>
+</mrow>
+<mo stretchy="false">(</mo>
+<mi>i</mi>
+<mo>,</mo>
+<mi>j</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm {Score} (i,j)}</annotation>
+</semantics>
+</math></span><img alt="{\mathrm  {Score}}(i,j)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/964a6b443ae3a9d7a5794ea2c5d89964eeb733b1" style="vertical-align: -0.838ex; width:10.035ex; height:2.843ex;"/></span>:
+</p>
+<pre>   <b>function</b> NWScore(X, Y)
+       Score(0,0) = 0 // 2 * (length(Y) + 1) array
+       <b>for</b> j=1 <b>to</b> length(Y)
+           Score(0,j) = Score(0, j - 1) + Ins(Y<sub>j</sub>)
+       <b>for</b> i=1 <b>to</b> length(X) // Init array
+           Score(1,0) = Score(0, 0) + Del(X<sub>i</sub>)
+           <b>for</b> j=1 <b>to</b> length(Y)
+               scoreSub = Score(0, j - 1) + Sub(X<sub>i</sub>, Y<sub>j</sub>)
+               scoreDel = Score(0, j) + Del(X<sub>i</sub>)
+               scoreIns = Score(1, j - 1) + Ins(Y<sub>j</sub>)
+               Score(1, j) = max(scoreSub, scoreDel, scoreIns)
+           <b>end</b>
+           // Copy Score[1] to Score[0]
+           Score(0,:) = Score(1,:)
+       <b>end</b>
+       <b>for</b> j=0 <b>to</b> length(Y)
+           LastLine(j) = Score(1, j)
+       <b>return</b> LastLine
+</pre>
+<p>Note that at any point, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NWScore} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NWScore</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NWScore} }</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NWScore}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d080a2c99ea846478b0a7cc08cf2884800fce8ea" style="vertical-align: -0.338ex; width:9.563ex; height:2.176ex;"/></span> only requires the two most recent rows of the score matrix. Thus, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NWScore} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NWScore</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NWScore} }</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NWScore}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d080a2c99ea846478b0a7cc08cf2884800fce8ea" style="vertical-align: -0.338ex; width:9.563ex; height:2.176ex;"/></span> is implemented in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle O(\operatorname {min} \{\operatorname {length} (X),\operatorname {length} (Y)\})}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>O</mi>
+<mo stretchy="false">(</mo>
+<mi>min</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo fence="false" stretchy="false">{</mo>
+<mi>length</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>X</mi>
+<mo stretchy="false">)</mo>
+<mo>,</mo>
+<mi>length</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+<mo fence="false" stretchy="false">}</mo>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle O(\operatorname {min} \{\operatorname {length} (X),\operatorname {length} (Y)\})}</annotation>
+</semantics>
+</math></span><img alt="O(\operatorname {min}\{\operatorname {length}(X),\operatorname {length}(Y)\})" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/05db2551a0ef3d24405325244aa37ff06d6c09af" style="vertical-align: -0.838ex; width:30.851ex; height:2.843ex;"/></span> space
+</p><p>The Hirschberg algorithm follows:
+</p>
+<pre>   <b>function</b> Hirschberg(X, Y)
+       Z = ""
+       W = ""
+       <b>if</b> length(X) == 0
+           <b>for</b> i=1 <b>to</b> length(Y)
+               Z = Z + '-'
+               W = W + Y<sub>i</sub>
+           <b>end</b>
+       <b>else if</b> length(Y) == 0
+           <b>for</b> i=1 <b>to</b> length(X)
+               Z = Z + X<sub>i</sub>
+               W = W + '-'
+           <b>end</b>
+       <b>else if</b> length(X) == 1 <b>or</b> length(Y) == 1
+           (Z,W) = NeedlemanWunsch(X, Y)
+       <b>else</b>
+           xlen = length(X)
+           xmid = length(X) / 2
+           ylen = length(Y)
+   
+           ScoreL = NWScore(X<sub>1:xmid</sub>, Y)
+           ScoreR = NWScore(rev(X<sub>xmid+1:xlen</sub>), rev(Y))
+           ymid = <a href="/wiki/Arg_max" title="Arg max">arg max</a> ScoreL + rev(ScoreR)
+   
+           (Z,W) = Hirschberg(X<sub>1:xmid</sub>, y<sub>1:ymid</sub>) + Hirschberg(X<sub>xmid+1:xlen</sub>, Y<sub>ymid+1:ylen</sub>)
+       <b>end</b>
+       <b>return</b> (Z, W)
+</pre>
+<p>In the context of Observation (2), assume that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X^{l}+X^{r}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>X</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X^{l}+X^{r}}</annotation>
+</semantics>
+</math></span><img alt="X^{l}+X^{r}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8802531d390e2b0a36cf7979a4adb06cd5ba61c9" style="vertical-align: -0.505ex; width:8.53ex; height:2.843ex;"/></span> is a partition of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X}</annotation>
+</semantics>
+</math></span><img alt="X" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68baa052181f707c662844a465bfeeb135e82bab" style="vertical-align: -0.338ex; width:1.98ex; height:2.176ex;"/></span>. Index <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \mathrm {ymid} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">y</mi>
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">d</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \mathrm {ymid} }</annotation>
+</semantics>
+</math></span><img alt="{\mathrm  {ymid}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ef8243b02f5f00690d10480ba3de466c7c979cc0" style="vertical-align: -0.671ex; width:5.103ex; height:2.509ex;"/></span> is computed such that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y^{l}=Y_{1:\mathrm {ymid} }}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>l</mi>
+</mrow>
+</msup>
+<mo>=</mo>
+<msub>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mn>1</mn>
+<mo>:</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">y</mi>
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">d</mi>
+</mrow>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y^{l}=Y_{1:\mathrm {ymid} }}</annotation>
+</semantics>
+</math></span><img alt="Y^{l}=Y_{{1:{\mathrm  {ymid}}}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/92f2fb57da9afed09f38d3442750e18614509061" style="vertical-align: -1.005ex; width:12.192ex; height:3.343ex;"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y^{r}=Y_{\mathrm {ymid} +1:\operatorname {length} (Y)}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<msup>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</msup>
+<mo>=</mo>
+<msub>
+<mi>Y</mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">y</mi>
+<mi mathvariant="normal">m</mi>
+<mi mathvariant="normal">i</mi>
+<mi mathvariant="normal">d</mi>
+</mrow>
+<mo>+</mo>
+<mn>1</mn>
+<mo>:</mo>
+<mi>length</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+</msub>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y^{r}=Y_{\mathrm {ymid} +1:\operatorname {length} (Y)}}</annotation>
+</semantics>
+</math></span><img alt="Y^{r}=Y_{{{\mathrm  {ymid}}+1:\operatorname {length}(Y)}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/def7e873f77eceb8c0bdd5790396210faa2a0f2e" style="vertical-align: -1.171ex; width:20.732ex; height:3.176ex;"/></span>.
+</p>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit&amp;section=3" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Let
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle {\begin{aligned}X&amp;=\mathrm {AGTACGCA} ,\\Y&amp;=\mathrm {TATGC} ,\\\operatorname {Del} (x)&amp;=-2,\\\operatorname {Ins} (y)&amp;=-2,\\\operatorname {Sub} (x,y)&amp;={\begin{cases}+2,&amp;{\mbox{if }}x=y\\-1,&amp;{\mbox{if }}x\neq y.\end{cases}}\end{aligned}}}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mrow class="MJX-TeXAtom-ORD">
+<mtable columnalign="right left right left right left right left right left right left" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true" rowspacing="3pt">
+<mtr>
+<mtd>
+<mi>X</mi>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo>,</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>Y</mi>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+</mrow>
+<mo>,</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>Del</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+<mo>,</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>Ins</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mo>−<!-- − --></mo>
+<mn>2</mn>
+<mo>,</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mi>Sub</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo>,</mo>
+<mi>y</mi>
+<mo stretchy="false">)</mo>
+</mtd>
+<mtd>
+<mi></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mrow>
+<mo>{</mo>
+<mtable columnalign="left left" columnspacing="1em" displaystyle="false" rowspacing=".2em">
+<mtr>
+<mtd>
+<mo>+</mo>
+<mn>2</mn>
+<mo>,</mo>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="false" scriptlevel="0">
+<mtext>if </mtext>
+</mstyle>
+</mrow>
+<mi>x</mi>
+<mo>=</mo>
+<mi>y</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mo>−<!-- − --></mo>
+<mn>1</mn>
+<mo>,</mo>
+</mtd>
+<mtd>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="false" scriptlevel="0">
+<mtext>if </mtext>
+</mstyle>
+</mrow>
+<mi>x</mi>
+<mo>≠<!-- ≠ --></mo>
+<mi>y</mi>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+<mo fence="true" stretchy="true" symmetric="true"></mo>
+</mrow>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}X&amp;=\mathrm {AGTACGCA} ,\\Y&amp;=\mathrm {TATGC} ,\\\operatorname {Del} (x)&amp;=-2,\\\operatorname {Ins} (y)&amp;=-2,\\\operatorname {Sub} (x,y)&amp;={\begin{cases}+2,&amp;{\mbox{if }}x=y\\-1,&amp;{\mbox{if }}x\neq y.\end{cases}}\end{aligned}}}</annotation>
+</semantics>
+</math></span><img alt="{\begin{aligned}X&amp;={\mathrm  {AGTACGCA}},\\Y&amp;={\mathrm  {TATGC}},\\\operatorname {Del}(x)&amp;=-2,\\\operatorname {Ins}(y)&amp;=-2,\\\operatorname {Sub}(x,y)&amp;={\begin{cases}+2,&amp;{\mbox{if }}x=y\\-1,&amp;{\mbox{if }}x\neq y.\end{cases}}\end{aligned}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f63752197809eda25d81fd3abdd58b2c0b0a42c6" style="vertical-align: -8.671ex; width:29.66ex; height:18.509ex;"/></span>
+</p><p>The optimal alignment is given by
+</p>
+<pre> W = AGTACGCA
+ Z = --TATGC-
+</pre>
+<p>Indeed, this can be verified by backtracking its corresponding Needleman-Wunsch matrix:
+</p>
+<pre>         <b>T   A   T   G   C</b>
+     <b>0</b>  -2  -4  -6  -8 -10
+ <b>A</b>  <b>-2</b>  -1   0  -2  -4  -6
+ <b>G</b>  <b>-4</b>  -3  -2  -1   0  -2
+ <b>T</b>  -6  <b>-2</b>  -4   0  -2  -1
+ <b>A</b>  -8  -4   <b>0</b>  -2  -1  -3
+ <b>C</b> -10  -6  -2  <b>-1</b>  -3   1
+ <b>G</b> -12  -8  -4  -3   <b>1</b>  -1
+ <b>C</b> -14 -10  -6  -5  -1   <b>3</b>
+ <b>A</b> -16 -12  -8  -7  -3   <b>1</b>
+</pre>
+<p>One starts with the top level call to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {Hirschberg} (\mathrm {AGTACGCA} ,\mathrm {TATGC} )}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Hirschberg</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo>,</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {Hirschberg} (\mathrm {AGTACGCA} ,\mathrm {TATGC} )}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {Hirschberg}({\mathrm  {AGTACGCA}},{\mathrm  {TATGC}})" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7d32c19423b4f9e336f6cfcb750fa9e524b56545" style="vertical-align: -0.838ex; width:36.299ex; height:2.843ex;"/></span>, which splits the first argument in half: <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle X=\mathrm {AGTA} +\mathrm {CGCA} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>X</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle X=\mathrm {AGTA} +\mathrm {CGCA} }</annotation>
+</semantics>
+</math></span><img alt="X={\mathrm  {AGTA}}+{\mathrm  {CGCA}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f866a4386c5ccacb07c570fd744f6efeedbd1e9e" style="vertical-align: -0.505ex; width:21.831ex; height:2.343ex;"/></span>. The call to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NWScore} (\mathrm {AGTA} ,Y)}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NWScore</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">A</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo>,</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NWScore} (\mathrm {AGTA} ,Y)}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NWScore}({\mathrm  {AGTA}},Y)" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fd2013e4e8a69f03e7251143993e1c60f1fc6c85" style="vertical-align: -0.838ex; width:21.168ex; height:2.843ex;"/></span> produces the following matrix:
+</p>
+<pre>        <b>T   A   T   G   C</b>
+    0  -2  -4  -6  -8 -10
+ <b>A</b> -2  -1   0  -2  -4  -6
+ <b>G</b> -4  -3  -2  -1   0  -2
+ <b>T</b> -6  -2  -4   0  -2  -1
+ <b>A</b> -8  -4   0  -2  -1  -3
+</pre>
+<p>Likewise, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle \operatorname {NWScore} (\operatorname {rev} (\mathrm {CGCA} ),\operatorname {rev} (Y))}" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>NWScore</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>rev</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo stretchy="false">)</mo>
+<mo>,</mo>
+<mi>rev</mi>
+<mo>⁡<!-- ⁡ --></mo>
+<mo stretchy="false">(</mo>
+<mi>Y</mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">)</mo>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle \operatorname {NWScore} (\operatorname {rev} (\mathrm {CGCA} ),\operatorname {rev} (Y))}</annotation>
+</semantics>
+</math></span><img alt="\operatorname {NWScore}(\operatorname {rev}({\mathrm  {CGCA}}),\operatorname {rev}(Y))" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1e7d77645bc98a32a79de4dea76e60270ecc4316" style="vertical-align: -0.838ex; width:31.065ex; height:2.843ex;"/></span> generates the following matrix:
+</p>
+<pre>       <b>C   G   T   A   T</b>
+    0 -2  -4  -6  -8 -10
+ <b>A</b> -2 -1  -3  -5  -4  -6
+ <b>C</b> -4  0  -2  -4  -6  -5
+ <b>G</b> -6 -2   2   0  -2  -4
+ <b>C</b> -8 -4   0   1  -1  -3
+</pre>
+<p>Their last lines (after reversing the latter) and sum of those are respectively
+</p>
+<pre> ScoreL      = [ -8 -4  0 -2 -1 -3 ]
+ rev(ScoreR) = [ -3 -1  1  0 -4 -8 ]
+ Sum         = [-11 -5  <b>1</b> -2 -5 -11]
+</pre>
+<p>The maximum (shown in bold) appears at <tt>ymid = 2</tt>, producing the partition <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math alttext="{\displaystyle Y=\mathrm {TA} +\mathrm {TGC} }" xmlns="http://www.w3.org/1998/Math/MathML">
+<semantics>
+<mrow class="MJX-TeXAtom-ORD">
+<mstyle displaystyle="true" scriptlevel="0">
+<mi>Y</mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">A</mi>
+</mrow>
+<mo>+</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi mathvariant="normal">T</mi>
+<mi mathvariant="normal">G</mi>
+<mi mathvariant="normal">C</mi>
+</mrow>
+</mstyle>
+</mrow>
+<annotation encoding="application/x-tex">{\displaystyle Y=\mathrm {TA} +\mathrm {TGC} }</annotation>
+</semantics>
+</math></span><img alt="Y={\mathrm  {TA}}+{\mathrm  {TGC}}" aria-hidden="true" class="mwe-math-fallback-image-inline" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9535a1385c464a23c294620d816c3905945fac20" style="vertical-align: -0.505ex; width:16.314ex; height:2.343ex;"/></span>.
+</p><p>The entire Hirschberg recursion (which we omit for brevity) produces the following tree:
+</p>
+<pre>               (AGTACGCA,TATGC)
+               /               \
+        (AGTA,TA)             (CGCA,TGC)
+         /     \              /        \
+     (AG, )   (TA,TA)      (CG,TG)     (CA,C)
+              /   \        /   \       
+           (T,T) (A,A)  (C,T) (G,G) 
+</pre>
+<p>The leaves of the tree contain the optimal alignment.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Longest_common_subsequence_problem" title="Longest common subsequence problem">Longest Common Subsequence</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a class="external text" href="http://www.csse.monash.edu.au/~lloyd/tildeAlgDS/Dynamic/Hirsch/" rel="nofollow">Hirschberg's algorithm</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a class="external free" href="http://www.cs.tau.ac.il/~rshamir/algmb/98/scribe/html/lec02/node10.html" rel="nofollow">http://www.cs.tau.ac.il/~rshamir/algmb/98/scribe/html/lec02/node10.html</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal cs1" id="CITEREFHirschberg1975"><a href="/wiki/Dan_Hirschberg" title="Dan Hirschberg">Hirschberg, D. S.</a> (1975). "A linear space algorithm for computing maximal common subsequences". <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Communications of the ACM</a></i>. <b>18</b> (6): 341–343. <a class="mw-redirect" href="/wiki/CiteSeerX_(identifier)" title="CiteSeerX (identifier)">CiteSeerX</a> <span class="cs1-lock-free" title="Freely accessible"><a class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.348.4774" rel="nofollow">10.1.1.348.4774</a></span>. <a class="mw-redirect" href="/wiki/Doi_(identifier)" title="Doi (identifier)">doi</a>:<a class="external text" href="https://doi.org/10.1145%2F360825.360861" rel="nofollow">10.1145/360825.360861</a>. <a class="mw-redirect" href="/wiki/MR_(identifier)" title="MR (identifier)">MR</a> <a class="external text" href="//www.ams.org/mathscinet-getitem?mr=0375829" rel="nofollow">0375829</a>.</cite><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.atitle=A+linear+space+algorithm+for+computing+maximal+common+subsequences&amp;rft.volume=18&amp;rft.issue=6&amp;rft.pages=341-343&amp;rft.date=1975&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.348.4774&amp;rft_id=%2F%2Fwww.ams.org%2Fmathscinet-getitem%3Fmr%3D0375829&amp;rft_id=info%3Adoi%2F10.1145%2F360825.360861&amp;rft.aulast=Hirschberg&amp;rft.aufirst=D.+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHirschberg%27s+algorithm"></span><style data-mw-deduplicate="TemplateStyles:r951705291">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg");background-repeat:no-repeat;background-size:9px;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background-image:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png");background-image:linear-gradient(transparent,transparent),url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg");background-repeat:no-repeat;background-size:12px;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style></span>
+</li>
+</ol></div></div>
+<div aria-labelledby="Strings" class="navbox" role="navigation" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th class="navbox-title" colspan="2" scope="col"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Strings" title="Template:Strings"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Strings" title="Template talk:Strings"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Strings&amp;action=edit"><abbr style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;" title="Edit this template">e</abbr></a></li></ul></div><div id="Strings" style="font-size:114%;margin:0 4em"><a href="/wiki/String_(computer_science)" title="String (computer science)">Strings</a></div></th></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/String_metric" title="String metric">String metric</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Approximate_string_matching" title="Approximate string matching">Approximate string matching</a></li>
+<li><a href="/wiki/Bitap_algorithm" title="Bitap algorithm">Bitap algorithm</a></li>
+<li><a href="/wiki/Damerau%E2%80%93Levenshtein_distance" title="Damerau–Levenshtein distance">Damerau–Levenshtein distance</a></li>
+<li><a href="/wiki/Edit_distance" title="Edit distance">Edit distance</a></li>
+<li><a href="/wiki/Gestalt_Pattern_Matching" title="Gestalt Pattern Matching">Gestalt Pattern Matching</a></li>
+<li><a href="/wiki/Hamming_distance" title="Hamming distance">Hamming distance</a></li>
+<li><a href="/wiki/Jaro%E2%80%93Winkler_distance" title="Jaro–Winkler distance">Jaro–Winkler distance</a></li>
+<li><a href="/wiki/Lee_distance" title="Lee distance">Lee distance</a></li>
+<li><a href="/wiki/Levenshtein_automaton" title="Levenshtein automaton">Levenshtein automaton</a></li>
+<li><a href="/wiki/Levenshtein_distance" title="Levenshtein distance">Levenshtein distance</a></li>
+<li><a href="/wiki/Wagner%E2%80%93Fischer_algorithm" title="Wagner–Fischer algorithm">Wagner–Fischer algorithm </a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/String-searching_algorithm" title="String-searching algorithm">String-searching algorithm</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apostolico%E2%80%93Giancarlo_algorithm" title="Apostolico–Giancarlo algorithm">Apostolico–Giancarlo algorithm</a></li>
+<li><a href="/wiki/Boyer%E2%80%93Moore_string-search_algorithm" title="Boyer–Moore string-search algorithm">Boyer–Moore string-search algorithm</a></li>
+<li><a href="/wiki/Boyer%E2%80%93Moore%E2%80%93Horspool_algorithm" title="Boyer–Moore–Horspool algorithm">Boyer–Moore–Horspool algorithm</a></li>
+<li><a href="/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm" title="Knuth–Morris–Pratt algorithm">Knuth–Morris–Pratt algorithm</a></li>
+<li><a href="/wiki/Rabin%E2%80%93Karp_algorithm" title="Rabin–Karp algorithm">Rabin–Karp algorithm</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Multiple string searching</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Aho%E2%80%93Corasick_algorithm" title="Aho–Corasick algorithm">Aho–Corasick</a></li>
+<li><a href="/wiki/Commentz-Walter_algorithm" title="Commentz-Walter algorithm">Commentz-Walter algorithm</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Regular_expression" title="Regular expression">Regular expression</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_regular-expression_engines" title="Comparison of regular-expression engines">Comparison of regular-expression engines</a></li>
+<li><a href="/wiki/Regular_grammar" title="Regular grammar">Regular grammar</a></li>
+<li><a href="/wiki/Thompson%27s_construction" title="Thompson's construction">Thompson's construction</a></li>
+<li><a href="/wiki/Nondeterministic_finite_automaton" title="Nondeterministic finite automaton">Nondeterministic finite automaton</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Sequence_alignment" title="Sequence alignment">Sequence alignment</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Hirschberg's algorithm</a></li>
+<li><a href="/wiki/Needleman%E2%80%93Wunsch_algorithm" title="Needleman–Wunsch algorithm">Needleman–Wunsch algorithm</a></li>
+<li><a href="/wiki/Smith%E2%80%93Waterman_algorithm" title="Smith–Waterman algorithm">Smith–Waterman algorithm</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%"><a href="/wiki/Data_structure" title="Data structure">Data structure</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Deterministic_acyclic_finite_state_automaton" title="Deterministic acyclic finite state automaton">DAFSA</a></li>
+<li><a href="/wiki/Suffix_array" title="Suffix array">Suffix array</a></li>
+<li><a href="/wiki/Suffix_automaton" title="Suffix automaton">Suffix automaton</a></li>
+<li><a href="/wiki/Suffix_tree" title="Suffix tree">Suffix tree</a></li>
+<li><a href="/wiki/Generalized_suffix_tree" title="Generalized suffix tree">Generalized suffix tree</a></li>
+<li><a href="/wiki/Rope_(data_structure)" title="Rope (data structure)">Rope</a></li>
+<li><a href="/wiki/Ternary_search_tree" title="Ternary search tree">Ternary search tree</a></li>
+<li><a href="/wiki/Trie" title="Trie">Trie</a></li></ul>
+</div></td></tr><tr><th class="navbox-group" scope="row" style="width:1%">Other</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Parsing" title="Parsing">Parsing</a></li>
+<li><a href="/wiki/Pattern_matching" title="Pattern matching">Pattern matching</a></li>
+<li><a href="/wiki/Compressed_pattern_matching" title="Compressed pattern matching">Compressed pattern matching</a></li>
+<li><a href="/wiki/Longest_common_subsequence_problem" title="Longest common subsequence problem">Longest common subsequence</a></li>
+<li><a href="/wiki/Longest_common_substring_problem" title="Longest common substring problem">Longest common substring</a></li>
+<li><a href="/wiki/Sequential_pattern_mining" title="Sequential pattern mining">Sequential pattern mining</a></li>
+<li><a href="/wiki/Category:String_sorting_algorithms" title="Category:String sorting algorithms">Sorting</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw2311
+Cached time: 20200922182509
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.184 seconds
+Real time usage: 0.306 seconds
+Preprocessor visited node count: 462/1000000
+Post‐expand include size: 15678/2097152 bytes
+Template argument size: 90/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 6799/5000000 bytes
+Lua time usage: 0.077/10.000 seconds
+Lua memory usage: 1.69 MB/50 MB
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  139.816      1 -total
+ 86.40%  120.796      1 Template:Reflist
+ 75.84%  106.041      1 Template:Cite_journal
+ 13.52%   18.909      1 Template:Strings
+ 10.63%   14.869      1 Template:Navbox
+  2.61%    3.653      1 Template:Main_other
+-->
+<!-- Saved in parser cache with key enwiki:pcache:idhash:10171509-0!canonical!math=5 and timestamp 20200922182509 and revision id 963712565
+ -->
+</div><noscript><img alt="" height="1" src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" style="border: none; position: absolute;" title="" width="1"/></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Hirschberg%27s_algorithm&amp;oldid=963712565">https://en.wikipedia.org/w/index.php?title=Hirschberg%27s_algorithm&amp;oldid=963712565</a>"</div></div>
+<div class="catlinks" data-mw="interface" id="catlinks"><div class="mw-normal-catlinks" id="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Sequence_alignment_algorithms" title="Category:Sequence alignment algorithms">Sequence alignment algorithms</a></li><li><a href="/wiki/Category:Bioinformatics_algorithms" title="Category:Bioinformatics algorithms">Bioinformatics algorithms</a></li><li><a href="/wiki/Category:Dynamic_programming" title="Category:Dynamic programming">Dynamic programming</a></li></ul></div><div class="mw-hidden-catlinks mw-hidden-cats-hidden" id="mw-hidden-catlinks">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_example_pseudocode" title="Category:Articles with example pseudocode">Articles with example pseudocode</a></li></ul></div></div>
+</div>
+</div>
+<div id="mw-data-after-content">
+<div class="read-more-container"></div>
+</div>
+<div id="mw-navigation">
+<h2>Navigation menu</h2>
+<div id="mw-head">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-personal-label" class="vector-menu" id="p-personal" role="navigation">
+<h3 id="p-personal-label">
+<span>Personal tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a accesskey="n" href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]">Talk</a></li><li id="pt-anoncontribs"><a accesskey="y" href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Hirschberg%27s+algorithm" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a accesskey="o" href="/w/index.php?title=Special:UserLogin&amp;returnto=Hirschberg%27s+algorithm" title="You're encouraged to log in; however, it's not mandatory. [o]">Log in</a></li></ul>
+</div>
+</nav>
+<div id="left-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-namespaces-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-namespaces" role="navigation">
+<h3 id="p-namespaces-label">
+<span>Namespaces</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-nstab-main"><a accesskey="c" href="/wiki/Hirschberg%27s_algorithm" title="View the content page [c]">Article</a></li><li id="ca-talk"><a accesskey="t" href="/wiki/Talk:Hirschberg%27s_algorithm" rel="discussion" title="Discuss improvements to the content page [t]">Talk</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-variants-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-variants" role="navigation">
+<input aria-labelledby="p-variants-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-variants-label">
+<span>Variants</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+</div>
+<div id="right-navigation">
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-views-label" class="vector-menu vector-menu-tabs vectorTabs" id="p-views" role="navigation">
+<h3 id="p-views-label">
+<span>Views</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="selected" id="ca-view"><a href="/wiki/Hirschberg%27s_algorithm">Read</a></li><li id="ca-edit"><a accesskey="e" href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=edit" title="Edit this page [e]">Edit</a></li><li id="ca-history"><a accesskey="h" href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=history" title="Past revisions of this page [h]">View history</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-cactions-label" class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu" id="p-cactions" role="navigation">
+<input aria-labelledby="p-cactions-label" class="vector-menu-checkbox vectorMenuCheckbox" type="checkbox"/>
+<h3 id="p-cactions-label">
+<span>More</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="menu vector-menu-content-list"></ul>
+</div>
+</nav>
+<div id="p-search" role="search">
+<h3>
+<label for="searchInput">Search</label>
+</h3>
+<form action="/w/index.php" id="searchform">
+<div data-search-loc="header-moved" id="simpleSearch">
+<input accesskey="f" id="searchInput" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" type="search"/>
+<input name="title" type="hidden" value="Special:Search"/>
+<input class="searchButton mw-fallbackSearchButton" id="mw-searchButton" name="fulltext" title="Search Wikipedia for this text" type="submit" value="Search"/>
+<input class="searchButton" id="searchButton" name="go" title="Go to a page with this exact name if it exists" type="submit" value="Go"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div id="mw-panel">
+<div id="p-logo" role="banner">
+<a class="mw-wiki-logo" href="/wiki/Main_Page" title="Visit the main page"></a>
+</div>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-navigation-label" class="vector-menu vector-menu-portal portal portal-first" id="p-navigation" role="navigation">
+<h3 id="p-navigation-label">
+<span>Navigation</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-mainpage-description"><a accesskey="z" href="/wiki/Main_Page" title="Visit the main page [z]">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Articles related to current events">Current events</a></li><li id="n-randompage"><a accesskey="x" href="/wiki/Special:Random" title="Visit a randomly selected article [x]">Random article</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works">About Wikipedia</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact us</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us by donating to the Wikimedia Foundation">Donate</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-interaction-label" class="vector-menu vector-menu-portal portal" id="p-interaction" role="navigation">
+<h3 id="p-interaction-label">
+<span>Contribute</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-introduction"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia">Learn to edit</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors">Community portal</a></li><li id="n-recentchanges"><a accesskey="r" href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]">Recent changes</a></li><li id="n-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Add images or other media for use on Wikipedia">Upload file</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-tb-label" class="vector-menu vector-menu-portal portal" id="p-tb" role="navigation">
+<h3 id="p-tb-label">
+<span>Tools</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="t-whatlinkshere"><a accesskey="j" href="/wiki/Special:WhatLinksHere/Hirschberg%27s_algorithm" title="List of all English Wikipedia pages containing links to this page [j]">What links here</a></li><li id="t-recentchangeslinked"><a accesskey="k" href="/wiki/Special:RecentChangesLinked/Hirschberg%27s_algorithm" rel="nofollow" title="Recent changes in pages linked from this page [k]">Related changes</a></li><li id="t-upload"><a accesskey="u" href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]">Upload file</a></li><li id="t-specialpages"><a accesskey="q" href="/wiki/Special:SpecialPages" title="A list of all special pages [q]">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;oldid=963712565" title="Permanent link to this revision of this page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Hirschberg%27s_algorithm&amp;action=info" title="More information about this page">Page information</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Hirschberg%27s_algorithm&amp;id=963712565&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li><li id="t-wikibase"><a accesskey="g" href="https://www.wikidata.org/wiki/Special:EntityPage/Q1620364" title="Structured data on this page hosted by Wikidata [g]">Wikidata item</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-coll-print_export-label" class="vector-menu vector-menu-portal portal" id="p-coll-print_export" role="navigation">
+<h3 id="p-coll-print_export-label">
+<span>Print/export</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Hirschberg%27s_algorithm&amp;action=show-download-screen" title="Download this page as a PDF file">Download as PDF</a></li><li id="t-print"><a accesskey="p" href="/w/index.php?title=Hirschberg%27s_algorithm&amp;printable=yes" title="Printable version of this page [p]">Printable version</a></li></ul>
+</div>
+</nav>
+<!-- Please do not use role attribute as CSS selector, it is deprecated. -->
+<nav aria-labelledby="p-lang-label" class="vector-menu vector-menu-portal portal" id="p-lang" role="navigation">
+<h3 id="p-lang-label">
+<span>Languages</span>
+</h3>
+<!-- Please do not use the .body class, it is deprecated. -->
+<div class="body vector-menu-content">
+<!-- Please do not use the .menu class, it is deprecated. -->
+<ul class="vector-menu-content-list"><li class="interlanguage-link interwiki-de"><a class="interlanguage-link-target" href="https://de.wikipedia.org/wiki/Hirschberg-Algorithmus" hreflang="de" lang="de" title="Hirschberg-Algorithmus – German">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a class="interlanguage-link-target" href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85_%D9%87%DB%8C%D8%B1%D8%B4%D8%A8%D8%B1%DA%AF" hreflang="fa" lang="fa" title="الگوریتم هیرشبرگ – Persian">فارسی</a></li><li class="interlanguage-link interwiki-sr"><a class="interlanguage-link-target" href="https://sr.wikipedia.org/wiki/Hirsbergov_algoritam" hreflang="sr" lang="sr" title="Hirsbergov algoritam – Serbian">Српски / srpski</a></li><li class="interlanguage-link interwiki-th"><a class="interlanguage-link-target" href="https://th.wikipedia.org/wiki/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AE%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%8A%E0%B9%80%E0%B8%9A%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%81" hreflang="th" lang="th" title="ขั้นตอนวิธีของเฮิร์ชเบิร์ก – Thai">ไทย</a></li></ul>
+<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a class="wbc-editpage" href="https://www.wikidata.org/wiki/Special:EntityPage/Q1620364#sitelinks-wikipedia" title="Edit interlanguage links">Edit links</a></span></div>
+</div>
+</nav>
+</div>
+</div>
+<footer class="mw-footer" id="footer" role="contentinfo">
+<ul id="footer-info">
+<li id="footer-info-lastmod"> This page was last edited on 21 June 2020, at 10:42<span class="anonymous-show"> (UTC)</span>.</li>
+<li id="footer-info-copyright">Text is available under the <a href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" rel="license">Creative Commons Attribution-ShareAlike License</a><a href="//creativecommons.org/licenses/by-sa/3.0/" rel="license" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+<ul id="footer-places">
+<li id="footer-places-privacy"><a class="extiw" href="https://foundation.wikimedia.org/wiki/Privacy_policy" title="wmf:Privacy policy">Privacy policy</a></li>
+<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+<li id="footer-places-mobileview"><a class="noprint stopMobileRedirectToggle" href="//en.m.wikipedia.org/w/index.php?title=Hirschberg%27s_algorithm&amp;mobileaction=toggle_view_mobile">Mobile view</a></li>
+<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+</ul>
+<ul class="noprint" id="footer-icons">
+<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img alt="Wikimedia Foundation" height="31" loading="lazy" src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88"/></a></li>
+<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img alt="Powered by MediaWiki" height="31" loading="lazy" src="/static/images/footer/poweredby_mediawiki_88x31.png" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88"/></a></li>
+</ul>
+<div style="clear: both;"></div>
+</footer>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.184","walltime":"0.306","ppvisitednodes":{"value":462,"limit":1000000},"postexpandincludesize":{"value":15678,"limit":2097152},"templateargumentsize":{"value":90,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":6799,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  139.816      1 -total"," 86.40%  120.796      1 Template:Reflist"," 75.84%  106.041      1 Template:Cite_journal"," 13.52%   18.909      1 Template:Strings"," 10.63%   14.869      1 Template:Navbox","  2.61%    3.653      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.077","limit":"10.000"},"limitreport-memusage":{"value":1777008,"limit":52428800}},"cachereport":{"origin":"mw2311","timestamp":"20200922182509","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Hirschberg's algorithm","url":"https:\/\/en.wikipedia.org\/wiki\/Hirschberg%27s_algorithm","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1620364","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1620364","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-03-21T01:16:39Z","dateModified":"2020-06-21T10:42:49Z","headline":"algorithm"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":114,"wgHostname":"mw2367"});});</script>
+</body></html>
