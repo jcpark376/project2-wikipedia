@@ -1,0 +1,3 @@
+alpha_value for Lasso obtained for the normalizaed_wiki_nlp data
+Through LassoCV
+0.012894995195664925
