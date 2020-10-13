@@ -1,5 +1,0 @@
-0.8436
-For the entire dataset
-
-0.0438 for a training set
-interesting
